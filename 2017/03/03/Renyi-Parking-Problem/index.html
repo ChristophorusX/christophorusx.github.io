@@ -55,14 +55,14 @@
     <section class="post-content">
       <p>Renyi’s parking problem (or 1D sequential interval packing problem) dates back to 1958, when Renyi studied the following random process:</p>
 <blockquote>
-<p>Consider an interval <span class="math inline">\(I\)</span> of length <span class="math inline">\(x\)</span>, and sequentially and randomly pack disjoint unit intervals in <span class="math inline">\(I\)</span> until the remaining space prevents placing any new segment. The expected value of the measure of the covered part of <span class="math inline">\(I\)</span> is <span class="math inline">\(M(x)\)</span>, so that the ratio <span class="math inline">\(M(x)/x\)</span> is the expected filling density of the random process. <a href="https://arxiv.org/pdf/1406.1781.pdf" target="_blank" rel="external">[1]</a></p>
+<p>Consider an interval $I$ of length $x$, and sequentially and randomly pack disjoint unit intervals in $I$ until the remaining space prevents placing any new segment. The expected value of the measure of the covered part of $I$ is $M(x)$, so that the ratio $M(x)/x$ is the expected filling density of the random process. <a href="https://arxiv.org/pdf/1406.1781.pdf" target="_blank" rel="external">[1]</a></p>
 </blockquote>
-<h2 id="background">Background</h2>
-<h3 id="one-dimensional-random-walk">One dimensional random walk</h3>
-Let <span class="math inline">\(X_n\)</span> denotes the step of the walker at time n, <span class="math inline">\(S_n\)</span> denotes the position of the walker at time n. <span class="math display">\[
-S_n = x + X_1 + X_2 + \cdots + X_n    
-\]</span>
-
+<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><h3 id="One-dimensional-random-walk"><a href="#One-dimensional-random-walk" class="headerlink" title="One dimensional random walk"></a>One dimensional random walk</h3><p>Let $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n.<br>$$<br>S_n = x + X_1 + X_2 + \cdots + X_n<br>$$</p>
+<ul>
+<li>$\mathbb{P} {X_j=1} = \mathbb{P} {X_j=-1} = \frac{1}{2}$</li>
+<li>$\mathbb{E} [X] = \sum_z z\ \mathbb{P} {X=z} = 0$</li>
+<li>$\text{Var} [S_n] = \mathbb{E} [S_n^2] = n$</li>
+</ul>
 
     </section>
     <footer class="post-footer">
