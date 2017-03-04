@@ -52,25 +52,20 @@
     <h1 class="post-title">Random Walk and Discrete Heat Equation</h1>
     <section class="post-content">
       <hr>
-<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><hr>
-<h4 id="One-dimensional-random-walk"><a href="#One-dimensional-random-walk" class="headerlink" title="One dimensional random walk"></a>One dimensional random walk</h4><hr>
-<p>Let $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:<br>$$<br>S_n = x_0 + X_1 + X_2 + \cdots + X_n<br>$$<br>where $x_0$ is the initial starting point of the walker.</p>
+<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><h4 id="One-dimensional-random-walk"><a href="#One-dimensional-random-walk" class="headerlink" title="One dimensional random walk"></a>One dimensional random walk</h4><p>Let $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:<br>$$<br>S_n = x_0 + X_1 + X_2 + \cdots + X_n<br>$$<br>where $x_0$ is the initial starting point of the walker.</p>
 <p>Here are some properties of each step $X_n$:</p>
 <ul>
 <li>$\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}$</li>
 <li>$\mathbb{E} X = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0$</li>
 <li>$\text{Var}(S_n) = \mathbb{E} S_n^2 = n$</li>
 </ul>
-<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><hr>
-<p>Let $T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
+<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
 <p><strong>Definition</strong> Function $F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]$<br>$$<br>F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace<br>$$<br>then we can get boundary conditions $F(0) = 0,\ F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.</p>
 <p>$\Rightarrow$ The function $F$ that satisfies with the boundary conditions is the linear function $F(x) = x/N$.</p>
 <p><strong>Theorem</strong> Suppose $a,\ b$ are real numbers and $N$ is a positive integer. Then the only function $F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}$ satisfying the equation above with $F(0) = a\ \text{and}\ F(N) = b$ is the linear function $F(x) = a + \frac{x(b - a)}{N}$.</p>
-<h4 id="Higher-dimensional-case"><a href="#Higher-dimensional-case" class="headerlink" title="Higher dimensional case"></a>Higher dimensional case</h4><hr>
-<p>Replace $\lbrace1,\ldots,N\rbrace$ with finite connected subset $A \subset \mathbb{Z}^d$ and define $\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace$. And it is helpful to know the following definition.</p>
+<h4 id="Higher-dimensional-case"><a href="#Higher-dimensional-case" class="headerlink" title="Higher dimensional case"></a>Higher dimensional case</h4><p>Replace $\lbrace1,\ldots,N\rbrace$ with finite connected subset $A \subset \mathbb{Z}^d$ and define $\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace$. And it is helpful to know the following definition.</p>
 <p><strong>Definition</strong> Linear operators $\mathcal{Q},\ \mathcal{L}$ on functions<br>$$<br>\begin{align<em>}<br>    \mathcal{Q}F(x) = \frac{1}{2 d} \sum<em>{y \in \mathbb{Z}^d, |x-y| = 1} F(y), \qquad \qquad \qquad \<br>    \mathcal{L}F(x) = (\mathcal{Q} - I)F(x) = \frac{1}{2d} \sum</em>{y \in \mathbb{Z}^d, |x-y| = 1} [F(y) - F(x)]<br>\end{align</em>}<br>$$</p>
-<h4 id="Dirichlet-problem-for-discrete-harmonic-functions"><a href="#Dirichlet-problem-for-discrete-harmonic-functions" class="headerlink" title="Dirichlet problem for discrete harmonic functions"></a>Dirichlet problem for discrete harmonic functions</h4><hr>
-<p><strong>Definition</strong>  Given a set $A \subset \mathbb{Z}^d$ and a function $F : \partial A \rightarrow \mathbb{R}$ in an extension of $F$ to $\bar{A}$, $F$ is harmonic in $A$ if<br>$$<br>\mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\ |\ S_0 = x] = 0\ \text{for all}\ x \in A<br>$$</p>
+<h4 id="Dirichlet-problem-for-discrete-harmonic-functions"><a href="#Dirichlet-problem-for-discrete-harmonic-functions" class="headerlink" title="Dirichlet problem for discrete harmonic functions"></a>Dirichlet problem for discrete harmonic functions</h4><p><strong>Definition</strong>  Given a set $A \subset \mathbb{Z}^d$ and a function $F : \partial A \rightarrow \mathbb{R}$ in an extension of $F$ to $\bar{A}$, $F$ is harmonic in $A$ if<br>$$<br>\mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\ |\ S_0 = x] = 0\ \text{for all}\ x \in A<br>$$</p>
 
     </section>
     <footer class="post-footer">
