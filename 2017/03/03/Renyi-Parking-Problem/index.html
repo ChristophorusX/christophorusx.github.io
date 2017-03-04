@@ -55,13 +55,29 @@
     <section class="post-content">
       <p>Renyi’s parking problem (or 1D sequential interval packing problem) dates back to 1958, when Renyi studied the following random process:</p>
 <blockquote>
-<p>Consider an interval $I$ of length $x$, and sequentially and randomly pack disjoint unit intervals in $I$ until the remaining space prevents placing any new segment. The expected value of the measure of the covered part of $I$ is $M(x)$, so that the ratio $M(x)/x$ is the expected filling density of the random process. <a href="https://arxiv.org/pdf/1406.1781.pdf" target="_blank" rel="external">[1]</a></p>
+<p>Consider an interval <span class="math inline">\(I\)</span> of length <span class="math inline">\(x\)</span>, and sequentially and randomly pack disjoint unit intervals in <span class="math inline">\(I\)</span> until the remaining space prevents placing any new segment. The expected value of the measure of the covered part of <span class="math inline">\(I\)</span> is <span class="math inline">\(M(x)\)</span>, so that the ratio <span class="math inline">\(M(x)/x\)</span> is the expected filling density of the random process. <a href="https://arxiv.org/pdf/1406.1781.pdf" target="_blank" rel="external">[1]</a></p>
 </blockquote>
-<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><h4 id="One-dimensional-random-walk"><a href="#One-dimensional-random-walk" class="headerlink" title="One dimensional random walk"></a>One dimensional random walk</h4><p>Let $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:<br>$$<br>S_n = x_0 + X_1 + X_2 + \cdots + X_n<br>$$<br>where $x_0$ is the initial starting point of the walker.</p>
+<h3 id="background">Background</h3>
+<h4 id="one-dimensional-random-walk">One dimensional random walk</h4>
+<p>Let <span class="math inline">\(X_n\)</span> denotes the step of the walker at time n, <span class="math inline">\(S_n\)</span> denotes the position of the walker at time n. We have the following relationship: <span class="math display">\[
+S_n = x_0 + X_1 + X_2 + \cdots + X_n    
+\]</span> where <span class="math inline">\(x_0\)</span> is the initial starting point of the walker.</p>
 <ul>
-<li>$\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}$</li>
-<li>$\mathbb{E} [X] = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0$</li>
-<li>$\text{Var}(S_n) = \mathbb{E} S_n^2 = n$</li>
+<li><span class="math inline">\(\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}\)</span></li>
+<li><span class="math inline">\(\mathbb{E} [X] = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0\)</span></li>
+<li><span class="math inline">\(\text{Var}(S_n) = \mathbb{E} S_n^2 = n\)</span></li>
+</ul>
+<h4 id="boundary-value-problems">Boundary value problems</h4>
+<ul>
+<li><span class="math inline">\(T = \min \{n:S_n = 0 \ \text{or} \ N\}\)</span></li>
+<li><span class="math inline">\(\mathbb{P}\lbrace T &lt; \infty\rbrace\)</span> <span class="math display">\[
+\begin{definition}
+Function $F : \{0,\ldots,N\} \rightarrow [0,1]$
+\begin{align*}
+    F(x) =\ &amp;\mathbb{P}\{S_T = N\ |\ S_0 = x\}
+\end{align*}
+\end{definition}
+\]</span></li>
 </ul>
 
     </section>
