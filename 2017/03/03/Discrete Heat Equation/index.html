@@ -71,7 +71,7 @@ F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace
 <p>By observation, the function <span class="math inline">\(F(x) = x/N\)</span> satisfies the boundary conditions. Actually, we can prove that it is the only such function.</p>
 <p><strong>Theorem</strong> Suppose <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(N\)</span> is a positive integer. Then the only function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}\)</span> satisfying the equation above with <span class="math inline">\(F(0) = a\ \text{and}\ F(N) = b\)</span> is the linear function <span class="math inline">\(F(x) = a + \frac{x(b - a)}{N}\)</span>.</p>
 <h4 id="higher-dimensional-case">Higher dimensional case</h4>
-<p>In higher dimensional space, we can do pretty much the same thing. Replace <span class="math inline">\(\lbrace1,\ldots,N\rbrace\)</span> with finite connected subset <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and define <span class="math inline">\(\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace\)</span> be all the boundary points. Plus, it is helpful to know the following definition.</p>
+<p>In higher dimensional space, we can do pretty much the same thing. Replace <span class="math inline">\(\lbrace1,\ldots,N\rbrace\)</span> with finite connected subset <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and define <span class="math inline">\(\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace\)</span> to be all the boundary points. Plus, it is helpful to know the following definition.</p>
 <p><strong>Definition</strong> <span class="math inline">\(\mathcal{Q},\ \mathcal{L}\)</span> are linear operatos on function <span class="math inline">\(F\)</span>, s.t. <span class="math display">\[
 \begin{align}
     \mathcal{Q}F(x) = \frac{1}{2 d} \sum_{y \in \mathbb{Z}^d,\ |x-y| = 1} F(y), \qquad \qquad \qquad \\
@@ -82,6 +82,16 @@ F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace
 <p>Now we define a harmonic function as the following.</p>
 <p><strong>Definition</strong> Given a set <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and a function <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span> in an extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span>, <span class="math inline">\(F\)</span> is harmonic in <span class="math inline">\(A\)</span> if <span class="math display">\[
 \mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\ |\ S_0 = x] = 0\ \text{for all}\ x \in A
+\]</span> Similar to one dimensional case, we have</p>
+<ul>
+<li><span class="math inline">\(T_A = \min \lbrace n \geq 0 : S_n \notin A \rbrace\)</span></li>
+<li><span class="math inline">\(\mathbb{P} \lbrace T_A &lt; \infty\rbrace = 1\)</span></li>
+</ul>
+<p>An important theorem therefore follows</p>
+<p><strong>Theorem</strong> If <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> is finite, then for every <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span>, there is an unique extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span> that satisfies <span class="math inline">\(\mathcal{L}F(x) = 0\)</span>. <span class="math display">\[
+\begin{align}
+    F(x) = \mathbb{E}[F(S_{T_A})\ |\ S_0 = x] = \sum_{y \in \partial A} \mathbb{P}\lbraceS_{T_A} = y\ |\ S_0 = x\rbrace F(y)
+\end{align}
 \]</span></p>
 
     </section>
