@@ -104,6 +104,20 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
     p_n(x) = 0, \quad x \in \partial A.
 \end{align}
 \]</span></p>
+<h4 id="brownian-motion">Brownian motion</h4>
+<p>Basic properties of Brownian motion:</p>
+<ul>
+<li><span class="math inline">\(W_t\)</span> be the position of the Brownian motion at time <span class="math inline">\(t\)</span>.</li>
+<li><span class="math inline">\(\Delta t = \delta = 1/N\)</span></li>
+<li>For large <span class="math inline">\(N\)</span>, <span class="math display">\[
+\begin{align*}
+    W_{k\delta} &amp;\approx \Delta x\, S_k\\
+    \mathbb{E}[(W_1)^2] = \mathbb{E}[(\Delta x S_N)^2] &amp;= (\Delta x)^2 \mathbb{E} [S_N^2] = (\Delta x)^2 N = 1
+\end{align*}
+\]</span></li>
+<li><span class="math inline">\(\Delta x = 1/ \sqrt{N} = \sqrt{\delta}\)</span></li>
+<li><span class="math inline">\(t = j\delta = j/N \Rightarrow W_t = W_{j/N} \approx \frac{S_j}{\sqrt{N}}\)</span></li>
+</ul>
 
     </section>
     <footer class="post-footer">
