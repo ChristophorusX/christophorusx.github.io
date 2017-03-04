@@ -62,18 +62,16 @@
 <p>Let <span class="math inline">\(X_n\)</span> denotes the step of the walker at time n, <span class="math inline">\(S_n\)</span> denotes the position of the walker at time n. We have the following relationship: <span class="math display">\[
 S_n = x_0 + X_1 + X_2 + \cdots + X_n    
 \]</span> where <span class="math inline">\(x_0\)</span> is the initial starting point of the walker.</p>
+<p>Here are some properties of each step <span class="math inline">\(X_n\)</span>:</p>
 <ul>
 <li><span class="math inline">\(\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}\)</span></li>
 <li><span class="math inline">\(\mathbb{E} [X] = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0\)</span></li>
 <li><span class="math inline">\(\text{Var}(S_n) = \mathbb{E} S_n^2 = n\)</span></li>
 </ul>
 <h4 id="boundary-value-problems">Boundary value problems</h4>
-<ul>
-<li><span class="math inline">\(T = \min \{n:S_n = 0 \ \text{or} \ N\}\)</span></li>
-<li><span class="math inline">\(\mathbb{P}\lbrace T &lt; \infty\rbrace=1\)</span></li>
-</ul>
+<p>Let <span class="math inline">\(T = \min \{n:S_n = 0 \ \text{or} \ N\}\)</span>, then we observe that <span class="math inline">\(\mathbb{P}\lbrace T &lt; \infty\rbrace=1\)</span>. It indicates that the random walk must come back in finite time. Hence, we can define the following function <span class="math inline">\(F\)</span>.</p>
 <p><strong>Definition</strong> Function <span class="math inline">\(F : \{0,\ldots,N\} \rightarrow [0,1]\)</span> <span class="math display">\[
-        F(x) =\mathbb{P}\{S_T = N\mid S_0 = x\}
+        F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace
 \]</span></p>
 
     </section>
