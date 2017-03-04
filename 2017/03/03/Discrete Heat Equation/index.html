@@ -58,10 +58,12 @@
 <li>$\mathbb{E} [X] = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0$</li>
 <li>$\text{Var}(S_n) = \mathbb{E} S_n^2 = n$</li>
 </ul>
-<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min {n:S_n = 0 \ \text{or} \ N}$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
-<p><strong>Definition</strong> Function $F : {0,\ldots,N} \rightarrow [0,1]$<br>$$<br>F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace<br>$$<br>then we can get boundary conditions $F(0) = 0, F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.</p>
+<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
+<p><strong>Definition</strong> Function $F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]$<br>$$<br>F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace<br>$$<br>then we can get boundary conditions $F(0) = 0,\ F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.</p>
 <p>$\Rightarrow$ The function $F$ that satisfies with the boundary conditions is the linear function $F(x) = x/N$.</p>
-<p><strong>Theorem</strong> Suppose $a,\ b$ are real numbers and $N$ is a positive integer. Then the only function $F : {0,\ldots,N} \rightarrow\mathbb{R}$ satisfying the equation above with $F(0) = a\ \text{and}\ F(N) = b$ is the linear function $F(x) = a + \frac{x(b - a)}{N}$.</p>
+<p><strong>Theorem</strong> Suppose $a,\ b$ are real numbers and $N$ is a positive integer. Then the only function $F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}$ satisfying the equation above with $F(0) = a\ \text{and}\ F(N) = b$ is the linear function $F(x) = a + \frac{x(b - a)}{N}$.</p>
+<h4 id="Higher-dimensional-case"><a href="#Higher-dimensional-case" class="headerlink" title="Higher dimensional case"></a>Higher dimensional case</h4><p>Replace $\lbrace1,\ldots,N\rbrace$ with finite connected subset $A \subset \mathbb{Z}^d$ and define $\partial A = \lbracez \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace$. And it is helpful to know the following definition.</p>
+<p><strong>Definition</strong> Linear operators $\mathcal{Q}, \mathcal{L}$ on functions</p>
 
     </section>
     <footer class="post-footer">
