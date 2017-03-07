@@ -1010,7 +1010,7 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 24px;
+  font-size: 48px;
   font-weight: normal;
   font-family: 'Agincourt Std', 'Open Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #7f240f;
+  background: #0d9f7a;
 }
 .links-of-blogroll {
   font-size: 13px;
