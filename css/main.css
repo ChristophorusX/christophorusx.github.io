@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #21e440;
+  background: #f4ffd0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2786,3 +2786,50 @@ hr {
     text-align: center;
   }
 }
+
+/* Import Bembo Standard font files */
+@font-face {
+    font-family: 'Bembo Standard';
+    src:url('../../fonts/BemboStd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bembo Standard';
+    src:url('../../fonts/BemboStd-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bembo Standard';
+    src:url('../../fonts/BemboStd-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Import CMU Serif font files */
+@font-face {
+    font-family: 'CMU Serif';
+    src:url('../../fonts/cmunrm.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CMU Serif';
+    src:url('../../fonts/cmunbx.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'CMU Serif';
+    src:url('../../fonts/cmunti.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'CMU Serif';
+    src:url('../../fonts/cmunbi.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
