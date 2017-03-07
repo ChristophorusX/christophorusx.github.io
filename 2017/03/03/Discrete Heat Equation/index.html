@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-  <title>Random Walk and Discrete Heat Equation | Imāginātiōnēs Christophorōrum</title>
+  <title>Random Walk, Brownian Motion and Heat Equation | Imāginātiōnēs Christophorōrum</title>
   <meta name="description" content="in which we fantasy" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
@@ -49,7 +49,7 @@
     
     
 </span>
-    <h1 class="post-title">Random Walk and Discrete Heat Equation</h1>
+    <h1 class="post-title">Random Walk, Brownian Motion and Heat Equation</h1>
     <section class="post-content">
       <hr>
 <h4 id="one-dimensional-random-walk">One dimensional random walk</h4>
@@ -123,14 +123,24 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 <li><span class="math inline">\(W_t\)</span> has a normal distribution with <span class="math inline">\(\mathbb{E}[W_j] = 0\)</span> and <span class="math inline">\(\text{Var}[W_j] = t\)</span>.</li>
 </ul>
 <p>Similarly, we can find if the function is harmonic by the following theorem.</p>
-<p><strong>theorem</strong> A function <span class="math inline">\(f\)</span> in a domain <span class="math inline">\(U\)</span> is harmonic if and only if <span class="math inline">\(f\)</span> is <span class="math inline">\(C^2\)</span> with <span class="math inline">\(\Delta f(x) = 0\)</span> for all <span class="math inline">\(x \in U\)</span>.</p>
-<h4 id="heat-equations">Heat equations</h4>
+<p><strong>Theorem</strong> A function <span class="math inline">\(f\)</span> in a domain <span class="math inline">\(U\)</span> is harmonic if and only if <span class="math inline">\(f\)</span> is <span class="math inline">\(C^2\)</span> with <span class="math inline">\(\Delta f(x) = 0\)</span> for all <span class="math inline">\(x \in U\)</span>.</p>
+<h4 id="heat-equations">Heat Equations</h4>
 <p><strong>Definition</strong> With <span class="math inline">\(f(x)\)</span> being the initial temperature at <span class="math inline">\(x\)</span>, <span class="math inline">\(u(t,x), t \geq 0, x \in \mathbb{R}^d\)</span> denotes the temperature at <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span>. <span class="math display">\[
 \begin{align*}
     u&amp;(t,x) = \mathbb{E}[f(W_t)\ |\ W_0 = x]\\
     \\
     \partial_t &amp;u(t,x) = \frac{1}{2} \mathcal{L}\, u(t,x)\\
     \partial_t &amp;u(t,x) = \frac{1}{2} \Delta_x u(t,x)
+\end{align*}
+\]</span></p>
+<h4 id="brownian-meander">Brownian Meander</h4>
+<p>Brownian motion: <span class="math display">\[
+    \psi_t (x) = \frac{1}{\sqrt{2\pi t}} \mathrm{e}^{-\frac{x^2}{2t}}
+\]</span> Brownian meander: - <span class="math inline">\(\mathcal{M}\,(t)\)</span> be a Brownian meander, <span class="math inline">\(\mathfrak{M}(t) = \max_{0&lt;s&lt;t} \mathcal{M}\,(s)\)</span> <span class="math display">\[
+\begin{align*}
+    \mathbb{P}(\mathcal{M}(1)&lt;x&amp;, \mathfrak{M}(1)&lt;y) = \sum_{k = -\infty}^\infty [\mathrm{e}^{-\frac{(2ky)^2}{2\sigma^2}}-\mathrm{e}^{-\frac{(2ky+x)^2}{2\sigma^2}}]\\
+    \phi(l,s) &amp;= \lim_{dx \rightarrow 0} \frac{1}{dx} \mathbb{P}\lbrace \mathcal{M}(1) \in [l,l+dx], \mathfrak{M}(1)&lt;s\rbrace\\
+    &amp;= \sum_{k = -\infty}^\infty \frac{2ks+l}{\sigma^2}\mathrm{e}^{-\frac{(2ks+l)^2}{2\sigma^2}}
 \end{align*}
 \]</span></p>
 
