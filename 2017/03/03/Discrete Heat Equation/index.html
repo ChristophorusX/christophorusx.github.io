@@ -214,7 +214,8 @@ We can see function <span class="math inline">\(h\)</span> as <span class="math 
     p_1(t,l_2) =&amp; \sum_{k_1=-\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\\
     \widetilde{p_2}(t,l_1) =&amp; \int_0^1 f(x)\, p_2(t,x,l_1)\,dx\\
     =&amp; \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx
-\end{align}\begin{align}
+\end{align}\]</span>
+<span class="math display">\[\begin{align}
     \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{2t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
     \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
     \Rightarrow \frac{\partial p_1}{\partial t}(t,&amp;l_2) = \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2), \quad p_1(t,l_2) = \int_0^t \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(s,l_2)\,ds
