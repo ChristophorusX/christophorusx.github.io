@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4d205b;
+  background: #528ccf;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2846,6 +2846,12 @@ hr {
     font-family: 'Trajan Pro';
     src:url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
     font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trajan Pro';
+    src:url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
+    font-weight: bold;
     font-style: normal;
 }
 
