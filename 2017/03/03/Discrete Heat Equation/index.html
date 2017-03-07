@@ -226,6 +226,14 @@ Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\
     \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial^2}{\partial {l_1}^2} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
     \Rightarrow \frac{\partial \widetilde{p_2}}{\partial t}(t,&amp;l_1) = \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1), \quad \widetilde{p_2}(t,l_1) = \int_0^t \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(s,l_1)\,ds
 \end{align}\]</span>
+<p><strong>Theorem</strong> If <span class="math inline">\(u(t,l_1,l_2) = \int_0^t \tilde{h}(s,l_1) \tilde{v}(s,l_2)\,ds\)</span>, then <span class="math inline">\(u_t = \frac{1}{2} \Delta u\)</span>.</p>
+<span class="math display">\[\begin{align}
+    \textit{Proof:}\qquad \qquad \because \frac{\partial u}{\partial t} &amp;= \tilde{h}(s,l_1) \tilde{v}(s,l_2).\\
+    \Rightarrow \frac{\partial^2 u}{\partial t^2} &amp;= \frac{\partial \tilde{h}}{\partial t}(t,l_1) \tilde{v}(t,l_2) + \tilde{h}(t,l_1) \frac{\partial \tilde{v}}{\partial t}(t,l_2)\\
+    &amp;= \frac{1}{2} \frac{\partial^2 \tilde{h}}{\partial {l_1}^2}(t,l_1) \tilde{v}(t,l_2) + \frac{1}{2} \tilde{h}(t,l_1) \frac{\partial^2 \tilde{v}}{\partial {l_2}^2}(t,l_2)\\
+    &amp;= \frac{1}{2} \Delta [\tilde{h}(t,l_1) \tilde{v}(t,l_2)]\\
+    &amp;= \frac{1}{2} \Delta \frac{\partial u}{\partial t}
+\end{align}\]</span>
 
     </section>
     <footer class="post-footer">
