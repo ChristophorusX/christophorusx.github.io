@@ -1010,9 +1010,9 @@ pre .javascript .function {
   display: inline-block;
   vertical-align: top;
   line-height: 36px;
-  font-size: 48px;
+  font-size: 20px;
   font-weight: normal;
-  font-family: 'Agincourt Std', 'Open Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Trajan Pro', 'Open Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .site-subtitle {
   margin-top: 10px;
@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0d9f7a;
+  background: #b3878e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2832,9 +2832,19 @@ hr {
     font-weight: bold;
     font-style: italic;
 }
+
+
+
+/* Import Header fonts */
 @font-face {
     font-family: 'Agincourt Std';
     src:url('../../fonts/AgincourtStd.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Trajan Pro';
+    src:url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
