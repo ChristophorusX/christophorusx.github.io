@@ -173,6 +173,11 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 <li>A Brownian meander <span class="math inline">\(\mathcal{M}(t)\)</span> on <span class="math inline">\(y\)</span> axis.</li>
 </ul></li>
 </ul>
+<p>Since probability density function <span class="math inline">\(\phi\)</span> of Brownian meander <span class="math inline">\(\mathcal{M}(t)\)</span> reaching <span class="math inline">\(l\)</span> in time 1 without touching 1 is, <span class="math display">\[
+    \phi (1,l) = \sum_{k=-\infty}^\infty \frac{2k+l}{\sigma^2} \mathrm{e}^{-\frac{(2k + l)^2}{2\sigma^2}}
+\]</span> We can have probability density <span class="math inline">\(p_1(t,l_2)\)</span> of injected particle with <span class="math inline">\(y\)</span> component at <span class="math inline">\(l_2\)</span> in time <span class="math inline">\(t\)</span>, <span class="math display">\[
+    p_1(t,l_2) = \frac{1}{t} \phi \left(\frac{1}{\sqrt{t}}, \frac{l_2}{\sqrt{t}}\right) = \sum_{k = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}
+\]</span></p>
 
     </section>
     <footer class="post-footer">
