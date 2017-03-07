@@ -143,6 +143,25 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
     &amp;= \sum_{k = -\infty}^\infty \frac{2ks+l}{\sigma^2}\mathrm{e}^{-\frac{(2ks+l)^2}{2\sigma^2}}
 \end{align*}
 \]</span></p>
+<h4 id="one-dimensional-injection-process">One Dimensional Injection Process</h4>
+<p>Constantly injecting from the right endpoint of line segment <span class="math inline">\([0,1]\)</span>.\ Then the density of particle at <span class="math inline">\(x\)</span> from time <span class="math inline">\(-b\)</span> to <span class="math inline">\(-a\)</span> is, <span class="math display">\[
+\begin{align*}
+    d(x,a,b) = \int_{a}^{b} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt
+\end{align*}
+\]</span> The equilibrium density function at <span class="math inline">\(x\)</span> is, <span class="math display">\[
+\begin{align*}
+    d(x) &amp;= \lim_{\substack{a = 0\\ b \rightarrow \infty}} \int_{a}^{b} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\\
+    &amp;= \int_{0}^{\infty} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt
+\end{align*}
+\]</span> <span class="math display">\[
+\begin{align*}
+    d(x) =&amp; \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \qquad \qquad \qquad \qquad \qquad \\
+    =&amp; \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \frac{x}{\sigma^2} \mathrm{e}^{- \frac{x^2t^2}{2\sigma^2}} dt + \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=1}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \\
+    &amp;+ \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=-1}^{-\infty} \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\\
+    =&amp; \ \cdots\\
+    =&amp; \frac{\sqrt{2\pi}}{\sigma} + \frac{2\sqrt{2\pi}}{\sigma} \left(-\frac{x}{2}\right) = \frac{\sqrt{2\pi}(1-x)}{\sigma}
+\end{align*}
+\]</span></p>
 
     </section>
     <footer class="post-footer">
