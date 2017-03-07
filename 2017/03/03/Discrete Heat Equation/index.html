@@ -209,11 +209,21 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 \]</span></p>
 <h4 id="verifying-heat-equation">Verifying Heat Equation</h4>
 We can see function <span class="math inline">\(h\)</span> as <span class="math inline">\(h(t_0,l_1,l_2) = \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt\)</span>,
-<span class="math display">\[\begin{align*}
+<span class="math display">\[\begin{align}
     p_1(t,l_2) =&amp; \sum_{k_1=-\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\\
     \widetilde{p_2}(t,l_1) =&amp; \int_0^1 f(x)\, p_2(t,x,l_1)\,dx\\
     =&amp; \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx
-\end{align*}\]</span>
+\end{align}\begin{align}
+    \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{2t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
+    \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
+    \Rightarrow \frac{\partial p_1}{\partial t}(t,&amp;l_2) = \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2), \quad p_1(t,l_2) = \int_0^t \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(s,l_2)\,ds
+\end{align}\]</span>
+Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right) \,dx\)</span>
+<span class="math display">\[\begin{align}
+    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial}{\partial t} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
+    \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial^2}{\partial {l_1}^2} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
+    \Rightarrow \frac{\partial \widetilde{p_2}}{\partial t}(t,&amp;l_1) = \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1), \quad \widetilde{p_2}(t,l_1) = \int_0^t \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(s,l_1)\,ds
+\end{align}\]</span>
 
     </section>
     <footer class="post-footer">
