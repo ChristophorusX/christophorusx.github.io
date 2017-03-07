@@ -136,7 +136,7 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 <h4 id="brownian-meander">Brownian Meander</h4>
 <p>Brownian motion: <span class="math display">\[
     \psi_t (x) = \frac{1}{\sqrt{2\pi t}} \mathrm{e}^{-\frac{x^2}{2t}}
-\]</span> Brownian meander: - <span class="math inline">\(\mathcal{M}\,(t)\)</span> be a Brownian meander, <span class="math inline">\(\mathfrak{M}(t) = \max_{0&lt;s&lt;t} \mathcal{M}\,(s)\)</span> <span class="math display">\[
+\]</span> Brownian meander: <span class="math inline">\(\mathcal{M}\,(t)\)</span> be a Brownian meander, <span class="math inline">\(\mathfrak{M}(t) = \max_{0&lt;s&lt;t} \mathcal{M}\,(s)\)</span> <span class="math display">\[
 \begin{align*}
     \mathbb{P}(\mathcal{M}(1)&lt;x&amp;, \mathfrak{M}(1)&lt;y) = \sum_{k = -\infty}^\infty [\mathrm{e}^{-\frac{(2ky)^2}{2\sigma^2}}-\mathrm{e}^{-\frac{(2ky+x)^2}{2\sigma^2}}]\\
     \phi(l,s) &amp;= \lim_{dx \rightarrow 0} \frac{1}{dx} \mathbb{P}\lbrace \mathcal{M}(1) \in [l,l+dx], \mathfrak{M}(1)&lt;s\rbrace\\
@@ -144,7 +144,7 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 \end{align*}
 \]</span></p>
 <h4 id="one-dimensional-injection-process">One Dimensional Injection Process</h4>
-<p>Constantly injecting from the right endpoint of line segment <span class="math inline">\([0,1]\)</span>.\ Then the density of particle at <span class="math inline">\(x\)</span> from time <span class="math inline">\(-b\)</span> to <span class="math inline">\(-a\)</span> is, <span class="math display">\[
+<p>Constantly injecting from the right endpoint of line segment <span class="math inline">\([0,1]\)</span>, then the density of particle at <span class="math inline">\(x\)</span> from time <span class="math inline">\(-b\)</span> to <span class="math inline">\(-a\)</span> is, <span class="math display">\[
 \begin{align*}
     d(x,a,b) = \int_{a}^{b} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt
 \end{align*}
@@ -165,7 +165,7 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 <h4 id="injection-to-planar-domains">Injection to Planar Domains</h4>
 <ul>
 <li>Set <span class="math inline">\(A = \lbrace(a,b)\, |\, a \in [0,1], b \in [0,1]\rbrace \subset \mathbb{R}^2\)</span> being the domain.</li>
-<li>For $  x (a,b) | b = 0$, <span class="math inline">\(x\)</span> can be an injection point, with intensity function <span class="math inline">\(f(x)\)</span>.</li>
+<li>For <span class="math inline">\(\forall \ \text{point}\ x \in \lbrace (a,b)\ |\ b = 0\rbrace\)</span>, <span class="math inline">\(x\)</span> can be an injection point, with intensity function <span class="math inline">\(f(x)\)</span>.</li>
 <li>For <span class="math inline">\(\forall \ \text{point}\ P = (l_1,l_2) \in \lbrace(a,b)\ |\ 0\leq a \leq 1, 0 &lt; b \leq 1\rbrace\)</span>, <span class="math inline">\(P\)</span> has initial density function <span class="math inline">\(d_0(P) = 0\)</span>.</li>
 <li>The motion of the particles can be separated into two independent parts:
 <ul>
