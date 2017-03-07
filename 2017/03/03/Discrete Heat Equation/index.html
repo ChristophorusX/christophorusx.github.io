@@ -234,6 +234,15 @@ Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\
     &amp;= \frac{1}{2} \Delta [\tilde{h}(t,l_1) \tilde{v}(t,l_2)]\\
     &amp;= \frac{1}{2} \Delta \frac{\partial u}{\partial t}
 \end{align}\]</span>
+<strong>Claim:</strong> <span class="math inline">\(h(t_0,l_1,l_2)\)</span> satisfies heat equation.
+<span class="math display">\[\begin{align}
+    \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2)\\
+    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1)\\
+    h(t_0,l_1,l_2) &amp;= \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt
+\end{align}\]</span>
+<span class="math display">\[\begin{align}
+    \Rightarrow \frac{\partial^2}{\partial t^2} h(t_0,l_1,l_2) = \frac{1}{2} \Delta \frac{\partial}{\partial t} h(t_0,l_1,l_2)
+\end{align}\]</span>
 
     </section>
     <footer class="post-footer">
