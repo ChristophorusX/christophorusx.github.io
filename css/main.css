@@ -216,7 +216,7 @@ h6 {
   padding: 0;
   font-weight: bold;
   line-height: 1.5;
-  font-family: 'Open Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'Julius Sans One', 'Open Sans', "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 h2,
 h3,
@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #da26c1;
+  background: #502bff;
 }
 .links-of-blogroll {
   font-size: 13px;
