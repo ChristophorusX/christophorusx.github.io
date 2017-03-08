@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T03:19:57.000Z">
+<meta property="og:updated_time" content="2017-03-08T03:39:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -377,7 +377,10 @@ h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}
 <p>The main result is that a group has a uniformly greater discount factor than another group (i.e., discounts less heavily at any future time) if and only if it is more diverse. Greater group diversity is captured by a more dispersed weighting distribution <span class="math inline">\(F\)</span> of the corresponding weighted discount function <span class="math inline">\(h^F\)</span>, and is defined using stochastic dominance.</p>
 <p><strong>Assumption:</strong> <em>All weighting distributions have their support contained in <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(0 \leq a \leq b &lt; \infty\)</span>.</em></p>
 <p>Let <span class="math inline">\(F^0(x)=F(x)\)</span> and <span class="math inline">\(F^i(x)=\int_a^x F^{i-1}(t)dt\)</span>, and we define stochastic dominance as the following.</p>
-<p><strong>Definition</strong> <em>The distribution <span class="math inline">\(F\)</span> dominates the distribution <span class="math inline">\(G\)</span> in the sense of Nth-order stochastic dominance, denoted by <span class="math inline">\(G \preceq_{\infty SD}F\)</span>, if i) <span class="math inline">\(F^{N-1}(x)\leq G^{N-1}(x)\)</span> for all <span class="math inline">\(a\leq x\leq b\)</span>, ii) <span class="math inline">\(F^i(b)\leq G^i(b)\)</span> for <span class="math inline">\(i=1,2,\ldots,N-2\)</span>.</em></p>
+<p><strong>Definition</strong> <em>The distribution <span class="math inline">\(F\)</span> dominates the distribution <span class="math inline">\(G\)</span> in the sense of Nth-order stochastic dominance, denoted by <span class="math inline">\(G \preceq_{NSD}F\)</span>, if i) <span class="math inline">\(F^{N-1}(x)\leq G^{N-1}(x)\)</span> for all <span class="math inline">\(a\leq x\leq b\)</span>, ii) <span class="math inline">\(F^i(b)\leq G^i(b)\)</span> for <span class="math inline">\(i=1,2,\ldots,N-2\)</span>.</em></p>
+<p><strong>Theorem</strong> <em><span class="math inline">\(G \preceq_{NSD}F\LeftRightarrow\)</span> <span class="math display">\[
+\int_a^b u(x)dF(x)\geq\int_a^b u(x)dG(x)
+\]</span> for all function <span class="math inline">\(u(x)\)</span>, s.t. sgn <span class="math inline">\(u^{(n)}(x)=(-1)^{n+1}\)</span> for <span class="math inline">\(n=1,2,\ldots,N\)</span> and <span class="math inline">\(x\in [a,b]\)</span>.</em></p>
 
       
     </div>
