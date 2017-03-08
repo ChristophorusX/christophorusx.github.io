@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T02:35:52.000Z">
+<meta property="og:updated_time" content="2017-03-08T02:37:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -338,30 +338,44 @@
 
       
         <p>The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash flows. If we assume that investment decisions are taken by a group of people, rather than by a single individual, the model must incorporate this evidence by allowing for group diversity which is reflected by differences in opinion about the appropriate method of discounting. In addition to group disagreement, we need to allow for the possibility that each individual group member has some uncertainty about what discount rate to use.</p>
-<h4 id="Weighted-Discount-functions"><a href="#Weighted-Discount-functions" class="headerlink" title="Weighted Discount functions"></a>Weighted Discount functions</h4><p>The group’s weighting distribution $F(r)$ assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member $i$ $(i = 1,…,n)$ favors discount rate $r_i$ and thus her discount function is given by $e^{−r_it}$. Letting $f$ denote the probability mass function of $F$, the group discount function (also weighted discount function) is given by</p>
-<p>$$<br>h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}<br>$$</p>
-<p><strong>Definition</strong>  *Let $h : [0,\infty) \to (0,1]$ be strictly decreasing with $h(0) = 1$. $h$ is a weighted discount function if there exists a (cumulative) distribution function $F(r)$ (or a density function $f(r)$) concentrated on $[0,\infty)$ such that</p>
-<p>$$<br>h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr<br>$$</p>
-<p>$F$ is called the weighting distribution of $h$.*</p>
+<h4 id="weighted-discount-functions">Weighted Discount functions</h4>
+<p>The group’s weighting distribution <span class="math inline">\(F(r)\)</span> assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member <span class="math inline">\(i\)</span> <span class="math inline">\((i = 1,...,n)\)</span> favors discount rate <span class="math inline">\(r_i\)</span> and thus her discount function is given by <span class="math inline">\(e^{−r_it}\)</span>. Letting <span class="math inline">\(f\)</span> denote the probability mass function of <span class="math inline">\(F\)</span>, the group discount function (also weighted discount function) is given by</p>
+<p><span class="math display">\[
+h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}
+\]</span></p>
+<p><strong>Definition</strong> *Let <span class="math inline">\(h : [0,\infty) \to (0,1]\)</span> be strictly decreasing with <span class="math inline">\(h(0) = 1\)</span>. <span class="math inline">\(h\)</span> is a weighted discount function if there exists a (cumulative) distribution function <span class="math inline">\(F(r)\)</span> (or a density function <span class="math inline">\(f(r)\)</span>) concentrated on <span class="math inline">\([0,\infty)\)</span> such that</p>
+<p><span class="math display">\[
+h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr
+\]</span></p>
+<p><span class="math inline">\(F\)</span> is called the weighting distribution of <span class="math inline">\(h\)</span>.*</p>
 <p><strong>Example (pseudo-exponential discount function)</strong></p>
-<p>$$<br>h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}<br>$$</p>
-<p>where $\lambda&gt;0$, $r&gt;0$, $0&lt;\delta&lt;1$. It gives the weighted average of just two opinions.</p>
+<p><span class="math display">\[
+h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}
+\]</span></p>
+<p>where <span class="math inline">\(\lambda&gt;0\)</span>, <span class="math inline">\(r&gt;0\)</span>, <span class="math inline">\(0&lt;\delta&lt;1\)</span>. It gives the weighted average of just two opinions.</p>
 <p>The following well-known theorem is attributed to Bernstein (1928), and provides a necessary and sufficient condition for a given discount function to be a weighted discount function.</p>
-<p><strong>Theorem (Bernstein’s Theorem)</strong>  <em>A discount function $h$ is a weighted discount function if and only if it is continuous on $[0,\infty)$, infinitely differentiable on $(0,\infty)$, and satisfies $(−1)^nh^{(n)}(t) \geq 0$, for all non-negative integers $n$ and for all $t &gt; 0$.</em></p>
-<p>Bernstein’s theorem can be used to verify that some commonly used discount functions are indeed weighted discount function. While every weighting distribution $F$ defines a discount function $h^F$, it may not be possible to recover the weighting distribution $F$ in closed form. Even though we may not be able to obtain $h^F$ as the group discount function of any nice distribution function $F$, but we can still study its implications for investment behavior and draw inference on the diversity of the group it represents.</p>
-<p>Yet there are also some weighting distributions that lead to nice weighted discount functions (and vice versa).  In particular, the generalized hyperbolic discount function with parameters $\alpha &gt; 0$, $\beta &gt; 0$ can be written as</p>
-<p>$$<br>h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}{\alpha},\alpha)dr<br>$$</p>
-<p>where $f(r;k,\theta)=\frac{r^{k-1}e^{-r/\theta}}{\theta^k\Gamma(k)}$ denotes the density function of the Gamma distribution with parameters $k$ and $\theta$ and where $\Gamma(k)$ denotes the Gamma function evaluated at $k$, i.e., $\Gamma(k)=\int_0^\infty x^{k-1}e^{-x}dx$.</p>
+<p><strong>Theorem (Bernstein’s Theorem)</strong> <em>A discount function <span class="math inline">\(h\)</span> is a weighted discount function if and only if it is continuous on <span class="math inline">\([0,\infty)\)</span>, infinitely differentiable on <span class="math inline">\((0,\infty)\)</span>, and satisfies <span class="math inline">\((−1)^nh^{(n)}(t) \geq 0\)</span>, for all non-negative integers <span class="math inline">\(n\)</span> and for all <span class="math inline">\(t &gt; 0\)</span>.</em></p>
+<p>Bernstein’s theorem can be used to verify that some commonly used discount functions are indeed weighted discount function. While every weighting distribution <span class="math inline">\(F\)</span> defines a discount function <span class="math inline">\(h^F\)</span>, it may not be possible to recover the weighting distribution <span class="math inline">\(F\)</span> in closed form. Even though we may not be able to obtain <span class="math inline">\(h^F\)</span> as the group discount function of any nice distribution function <span class="math inline">\(F\)</span>, but we can still study its implications for investment behavior and draw inference on the diversity of the group it represents.</p>
+<p>Yet there are also some weighting distributions that lead to nice weighted discount functions (and vice versa). In particular, the generalized hyperbolic discount function with parameters <span class="math inline">\(\alpha &gt; 0\)</span>, <span class="math inline">\(\beta &gt; 0\)</span> can be written as</p>
+<p><span class="math display">\[
+h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}{\alpha},\alpha)dr
+\]</span></p>
+<p>where <span class="math inline">\(f(r;k,\theta)=\frac{r^{k-1}e^{-r/\theta}}{\theta^k\Gamma(k)}\)</span> denotes the density function of the Gamma distribution with parameters <span class="math inline">\(k\)</span> and <span class="math inline">\(\theta\)</span> and where <span class="math inline">\(\Gamma(k)\)</span> denotes the Gamma function evaluated at <span class="math inline">\(k\)</span>, i.e., <span class="math inline">\(\Gamma(k)=\int_0^\infty x^{k-1}e^{-x}dx\)</span>.</p>
 <p><strong>Claim:</strong> <em>There is an economically important observation results from the mathematically simple fact that any weighted average of weighted discount functions is also a weighted discount function.</em></p>
-<p> This implies that the above results are not restricted to groups of exponential discounters, each of whom is certain about what discount rate to use. Instead, we may consider groups with some or all members being with the same weighted discounting, because the latter are also weighted discount functions. Likewise, we may consider groups of individual discounters, each of whom is uncertain about the discount rate to use. Then let us prove the claim.</p>
-<p> Consider an individual, $i$, with weighted discount function</p>
-<p> $$<br> h(t;i)=\int_0^\infty e^{-rt}dF(r;i)<br> $$</p>
-<p> where $F(r,i)$ denotes the weighting distribution used to build the discount function $h(t;i)$. Note that a non-degenerate $F(r;i)$ may reflect individual $i$’s bounded rationality. For example, if $F(r;i)$ is Gamma-distributed, we know that individual $i$ is a generalized hyperbolic discounter. We are interested in the discount function of a group of such individuals, which may consist of a finite number or a continuum of individuals. Let us denote the discount function of this group by $\overline h(t)$. The weights of the individual group members are given by the weighting distribution $G(i)$. In general case, we have $\overline h(t)=\int_0^\infty h(t;i)dG(i)$.</p>
-<p><strong>Proposition</strong> <em>The group discount functions of weighted discounters are weighted discount functions. In particular, there exists a distribution $\overline F$ over exponential discount rates $r$ such that</em></p>
-<p>$$<br>\overline h(t)=\int_0^\infty e^{-rt}d\overline F(r)<br>$$</p>
-<p><em>Moreover, $\overline F$ can be computed as $\overline F(r)=\int_0^\infty F(r;i)dG(i)$.</em></p>
-<h4 id="Group-diversity"><a href="#Group-diversity" class="headerlink" title="Group diversity"></a>Group diversity</h4><p> The main result is that a group has a uniformly greater discount factor than another group (i.e., discounts less heavily at any future time) if and only if it is more diverse.  Greater group diversity is captured by a more dispersed weighting distribution $F$ of the corresponding weighted discount function $h^F$, and is defined using stochastic dominance.</p>
-<p> <strong>Assumption:</strong> <em>All weighting distributions have their support contained in $[a,b]$, $0 \leq a \leq b &lt; \infty.</em></p>
+<p>This implies that the above results are not restricted to groups of exponential discounters, each of whom is certain about what discount rate to use. Instead, we may consider groups with some or all members being with the same weighted discounting, because the latter are also weighted discount functions. Likewise, we may consider groups of individual discounters, each of whom is uncertain about the discount rate to use. Then let us prove the claim.</p>
+<p>Consider an individual, <span class="math inline">\(i\)</span>, with weighted discount function</p>
+<p><span class="math display">\[
+ h(t;i)=\int_0^\infty e^{-rt}dF(r;i)
+ \]</span></p>
+<p>where <span class="math inline">\(F(r,i)\)</span> denotes the weighting distribution used to build the discount function <span class="math inline">\(h(t;i)\)</span>. Note that a non-degenerate <span class="math inline">\(F(r;i)\)</span> may reflect individual <span class="math inline">\(i\)</span>’s bounded rationality. For example, if <span class="math inline">\(F(r;i)\)</span> is Gamma-distributed, we know that individual <span class="math inline">\(i\)</span> is a generalized hyperbolic discounter. We are interested in the discount function of a group of such individuals, which may consist of a finite number or a continuum of individuals. Let us denote the discount function of this group by <span class="math inline">\(\overline h(t)\)</span>. The weights of the individual group members are given by the weighting distribution <span class="math inline">\(G(i)\)</span>. In general case, we have <span class="math inline">\(\overline h(t)=\int_0^\infty h(t;i)dG(i)\)</span>.</p>
+<p><strong>Proposition</strong> <em>The group discount functions of weighted discounters are weighted discount functions. In particular, there exists a distribution <span class="math inline">\(\overline F\)</span> over exponential discount rates <span class="math inline">\(r\)</span> such that</em></p>
+<p><span class="math display">\[
+\overline h(t)=\int_0^\infty e^{-rt}d\overline F(r)
+\]</span></p>
+<p><em>Moreover, <span class="math inline">\(\overline F\)</span> can be computed as <span class="math inline">\(\overline F(r)=\int_0^\infty F(r;i)dG(i)\)</span>.</em></p>
+<h4 id="group-diversity">Group diversity</h4>
+<p>The main result is that a group has a uniformly greater discount factor than another group (i.e., discounts less heavily at any future time) if and only if it is more diverse. Greater group diversity is captured by a more dispersed weighting distribution <span class="math inline">\(F\)</span> of the corresponding weighted discount function <span class="math inline">\(h^F\)</span>, and is defined using stochastic dominance.</p>
+<p><strong>Assumption:</strong> <em>All weighting distributions have their support contained in <span class="math inline">\([a,b]\)</span>, <span class="math inline">\(0 \leq a \leq b &lt; \infty\)</span>.</em></p>
 
       
     </div>
@@ -535,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Weighted-Discount-functions"><span class="nav-number">1.</span> <span class="nav-text">Weighted Discount functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Group-diversity"><span class="nav-number">2.</span> <span class="nav-text">Group diversity</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#weighted-discount-functions"><span class="nav-number">1.</span> <span class="nav-text">Weighted Discount functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#group-diversity"><span class="nav-number">2.</span> <span class="nav-text">Group diversity</span></a></li></ol></div>
             
 
           </div>
