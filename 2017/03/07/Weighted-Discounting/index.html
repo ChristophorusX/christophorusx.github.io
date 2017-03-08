@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T02:16:41.000Z">
+<meta property="og:updated_time" content="2017-03-08T02:22:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -338,6 +338,7 @@
 
       
         <p>The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash flows. If we assume that investment decisions are taken by a group of people, rather than by a single individual, the model must incorporate this evidence by allowing for group diversity which is reflected by differences in opinion about the appropriate method of discounting. In addition to group disagreement, we need to allow for the possibility that each individual group member has some uncertainty about what discount rate to use.</p>
+<h4 id="weighted-discount-functions">Weighted Discount functions</h4>
 <p>The group’s weighting distribution <span class="math inline">\(F(r)\)</span> assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member <span class="math inline">\(i\)</span> <span class="math inline">\((i = 1,...,n)\)</span> favors discount rate <span class="math inline">\(r_i\)</span> and thus her discount function is given by <span class="math inline">\(e^{−r_it}\)</span>. Letting <span class="math inline">\(f\)</span> denote the probability mass function of <span class="math inline">\(F\)</span>, the group discount function (also weighted discount function) is given by</p>
 <p><span class="math display">\[
 h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}
@@ -372,7 +373,7 @@ h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}
 \overline h(t)=\int_0^\infty e^{-rt}d\overline F(r)
 \]</span></p>
 <p><em>Moreover, <span class="math inline">\(\overline F\)</span> can be computed as <span class="math inline">\(\overline F(r)=\int_0^\infty F(r;i)dG(i)\)</span>.</em></p>
-<p><em>Proof:</em></p>
+<h4 id="group-diversity">Group diversity</h4>
 
       
     </div>
@@ -473,8 +474,17 @@ h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400"
@@ -527,6 +537,22 @@ h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#weighted-discount-functions"><span class="nav-number">1.</span> <span class="nav-text">Weighted Discount functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#group-diversity"><span class="nav-number">2.</span> <span class="nav-text">Group diversity</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
