@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T01:58:34.000Z">
+<meta property="og:updated_time" content="2017-03-08T02:00:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -338,25 +338,35 @@
 
       
         <p>The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash flows. If we assume that investment decisions are taken by a group of people, rather than by a single individual, the model must incorporate this evidence by allowing for group diversity which is reflected by differences in opinion about the appropriate method of discounting. In addition to group disagreement, we need to allow for the possibility that each individual group member has some uncertainty about what discount rate to use.</p>
-<p>The group’s weighting distribution $F(r)$ assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member $i$ $(i = 1,…,n)$ favors discount rate $r_i$ and thus her discount function is given by $e^{−r_it}$. Letting $f$ denote the probability mass function of $F$, the group discount function (also weighted discount function) is given by</p>
-<p>$$<br>h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}<br>$$</p>
-<p><strong>Definition</strong>  *Let $h : [0,\infty) \to (0,1]$ be strictly decreasing with $h(0) = 1$. $h$ is a weighted discount function if there exists a (cumulative) distribution function $F(r)$ (or a density function $f(r)$) concentrated on $[0,\infty)$ such that</p>
-<p>$$<br>h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr<br>$$</p>
-<p>$F$ is called the weighting distribution of $h$.*</p>
+<p>The group’s weighting distribution <span class="math inline">\(F(r)\)</span> assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member <span class="math inline">\(i\)</span> <span class="math inline">\((i = 1,...,n)\)</span> favors discount rate <span class="math inline">\(r_i\)</span> and thus her discount function is given by <span class="math inline">\(e^{−r_it}\)</span>. Letting <span class="math inline">\(f\)</span> denote the probability mass function of <span class="math inline">\(F\)</span>, the group discount function (also weighted discount function) is given by</p>
+<p><span class="math display">\[
+h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}
+\]</span></p>
+<p><strong>Definition</strong> *Let <span class="math inline">\(h : [0,\infty) \to (0,1]\)</span> be strictly decreasing with <span class="math inline">\(h(0) = 1\)</span>. <span class="math inline">\(h\)</span> is a weighted discount function if there exists a (cumulative) distribution function <span class="math inline">\(F(r)\)</span> (or a density function <span class="math inline">\(f(r)\)</span>) concentrated on <span class="math inline">\([0,\infty)\)</span> such that</p>
+<p><span class="math display">\[
+h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr
+\]</span></p>
+<p><span class="math inline">\(F\)</span> is called the weighting distribution of <span class="math inline">\(h\)</span>.*</p>
 <p><strong>Example (pseudo-exponential discount function)</strong></p>
-<p>$$<br>h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}<br>$$</p>
-<p>where $\lambda&gt;0$, $r&gt;0$, $0&lt;\delta&lt;1$. It gives the weighted average of just two opinions.</p>
+<p><span class="math display">\[
+h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}
+\]</span></p>
+<p>where <span class="math inline">\(\lambda&gt;0\)</span>, <span class="math inline">\(r&gt;0\)</span>, <span class="math inline">\(0&lt;\delta&lt;1\)</span>. It gives the weighted average of just two opinions.</p>
 <p>The following well-known theorem is attributed to Bernstein (1928), and provides a necessary and sufficient condition for a given discount function to be a weighted discount function.</p>
-<p><strong>Theorem (Bernstein’s Theorem)</strong>  <em>A discount function $h$ is a weighted discount function if and only if it is continuous on $[0,\infty)$, infinitely differentiable on $(0,\infty)$, and satisfies $(−1)^nh^{(n)}(t) \geq 0$, for all non-negative integers $n$ and for all $t &gt; 0$.</em></p>
-<p>Bernstein’s theorem can be used to verify that some commonly used discount functions are indeed weighted discount function. While every weighting distribution $F$ defines a discount function $h^F$, it may not be possible to recover the weighting distribution $F$ in closed form. Even though we may not be able to obtain $h^F$ as the group discount function of any nice distribution function $F$, but we can still study its implications for investment behavior and draw inference on the diversity of the group it represents.</p>
-<p>Yet there are also some weighting distributions that lead to nice weighted discount functions (and vice versa).  In particular, the generalized hyperbolic discount function with parameters $\alpha &gt; 0$, $\beta &gt; 0$ can be written as</p>
-<p>$$<br>h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}{\alpha},\alpha)dr<br>$$</p>
-<p>where $f(r;k,\theta)=\frac{r^{k-1}e^{-r/\theta}}{\theta^k\Gamma(k)}}$ denotes the density function of the Gamma distribution with parameters $k$ and $\theta$ and where $\Gamma(k)$ denotes the Gamma function evaluated at $k$, i.e., $\Gamma(k)=\int_0^\infty x^{k-1}e^{-x}dx$.</p>
+<p><strong>Theorem (Bernstein’s Theorem)</strong> <em>A discount function <span class="math inline">\(h\)</span> is a weighted discount function if and only if it is continuous on <span class="math inline">\([0,\infty)\)</span>, infinitely differentiable on <span class="math inline">\((0,\infty)\)</span>, and satisfies <span class="math inline">\((−1)^nh^{(n)}(t) \geq 0\)</span>, for all non-negative integers <span class="math inline">\(n\)</span> and for all <span class="math inline">\(t &gt; 0\)</span>.</em></p>
+<p>Bernstein’s theorem can be used to verify that some commonly used discount functions are indeed weighted discount function. While every weighting distribution <span class="math inline">\(F\)</span> defines a discount function <span class="math inline">\(h^F\)</span>, it may not be possible to recover the weighting distribution <span class="math inline">\(F\)</span> in closed form. Even though we may not be able to obtain <span class="math inline">\(h^F\)</span> as the group discount function of any nice distribution function <span class="math inline">\(F\)</span>, but we can still study its implications for investment behavior and draw inference on the diversity of the group it represents.</p>
+<p>Yet there are also some weighting distributions that lead to nice weighted discount functions (and vice versa). In particular, the generalized hyperbolic discount function with parameters <span class="math inline">\(\alpha &gt; 0\)</span>, <span class="math inline">\(\beta &gt; 0\)</span> can be written as</p>
+<p><span class="math display">\[
+h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}{\alpha},\alpha)dr
+\]</span></p>
+<p>where <span class="math inline">\(f(r;k,\theta)=\frac{r^{k-1}e^{-r/\theta}}{\theta^k\Gamma(k)}\)</span> denotes the density function of the Gamma distribution with parameters <span class="math inline">\(k\)</span> and <span class="math inline">\(\theta\)</span> and where <span class="math inline">\(\Gamma(k)\)</span> denotes the Gamma function evaluated at <span class="math inline">\(k\)</span>, i.e., <span class="math inline">\(\Gamma(k)=\int_0^\infty x^{k-1}e^{-x}dx\)</span>.</p>
 <p><strong>Claim:</strong> <em>There is an economically important observation results from the mathematically simple fact that any weighted average of weighted discount functions is also a weighted discount function.</em></p>
-<p> This implies that the above results are not restricted to groups of exponential discounters, each of whom is certain about what discount rate to use. Instead, we may consider groups with some or all members being with the same weighted discounting, because the latter are also weighted discount functions. Likewise, we may consider groups of individual discounters, each of whom is uncertain about the discount rate to use. Then let us prove the claim.</p>
-<p><strong>Proposition</strong> *The group discount functions of weighted discounters are weighted discount functions. In particular, there exists a distribution $\overbar F$ over exponential discount rates $r$ such that</p>
-<p>$$<br>\overbar h(t)=\int_0^\infty e^{-rt}d\overbar F(r)<br>$$</p>
-<p>Moreover, $\overbar F$ can be computed as $\overbar F(r)=\int_0^\infty F(r;i)dG(i)$.</p>
+<p>This implies that the above results are not restricted to groups of exponential discounters, each of whom is certain about what discount rate to use. Instead, we may consider groups with some or all members being with the same weighted discounting, because the latter are also weighted discount functions. Likewise, we may consider groups of individual discounters, each of whom is uncertain about the discount rate to use. Then let us prove the claim.</p>
+<p><strong>Proposition</strong> *The group discount functions of weighted discounters are weighted discount functions. In particular, there exists a distribution <span class="math inline">\(\overline F\)</span> over exponential discount rates <span class="math inline">\(r\)</span> such that</p>
+<p><span class="math display">\[
+\overline h(t)=\int_0^\infty e^{-rt}d\overline F(r)
+\]</span></p>
+<p>Moreover, <span class="math inline">\(\overline F\)</span> can be computed as <span class="math inline">\(\overline F(r)=\int_0^\infty F(r;i)dG(i)\)</span>.*</p>
 
       
     </div>
