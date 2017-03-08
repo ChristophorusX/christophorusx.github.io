@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T00:08:16.000Z">
+<meta property="og:updated_time" content="2017-03-08T00:10:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -340,7 +340,7 @@
         <p>The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash flows. If we assume that investment decisions are taken by a group of people, rather than by a single individual, the model must incorporate this evidence by allowing for group diversity which is reflected by differences in opinion about the appropriate method of discounting. In addition to group disagreement, we need to allow for the possibility that each individual group member has some uncertainty about what discount rate to use.</p>
 <p>The group’s weighting distribution $F(r)$ assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member $i$ $(i = 1,…,n)$ favors discount rate $r_i$ and thus her discount function is given by $e^{−r<em>it}$. Letting $f$ denote the probability mass function of $F$, the group discount function (also weighted discount function) is given by<br>$$<br>h^F(t)=\sum</em>{i=1}^n f(r_i)e^{-r_i t}<br>$$</p>
 <p><strong>Definition</strong>  Let $h : [0,\infty) \to (0,1]$ be strictly decreasing with $h(0) = 1$. $h$ is a weighted discount function if there exists a (cumulative) distribution function $F(r)$ (or a density function $f(r)$) concentrated on $[0,\infty)$ such that<br>$$<br>h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr<br>$$<br>$F$ is called the weighting distribution of $h$.</p>
-<p><strong>Example (pseudo-exponential discount function)</strong><br>$$<br>h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}<br>$$<br>where $\lambda&gt;0$, $r&gt;0$, $0&lt;\delta&lt;1$. It gives the weighted average of just two opinion.</p>
+<p><strong>Example (pseudo-exponential discount function)</strong><br>$$<br>h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}<br>$$<br>where $\lambda&gt;0$, $r&gt;0$, $0&lt;\delta&lt;1$. It gives the weighted average of just two opinions.</p>
 
       
     </div>
