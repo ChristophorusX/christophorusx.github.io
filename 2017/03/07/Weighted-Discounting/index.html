@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/07/Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
-<meta property="og:updated_time" content="2017-03-08T18:40:03.000Z">
+<meta property="og:updated_time" content="2017-03-08T18:49:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Weighted Discounting">
 <meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
@@ -393,8 +393,8 @@ h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}
 G \preceq_{\infty SD}F\ \iff h^G(t)\geq h^F(t),\quad \forall t&gt;0
 \]</span></p>
 <p>The fact that <span class="math inline">\(h^G(t)\geq h^F(t)\)</span> for any <span class="math inline">\(t&gt;0\)</span> is denoted as an uniformly larger discount factor. A larger discount factor implies less discounting, and uniform means that this is the case at any future time. Graphically, it means that the discount function of a more diverse group always lies above that of a less diverse group. We have already known the fact that the pseudo-exponential discount function <span class="math inline">\(h^G\)</span> lies above the exponential discount function <span class="math inline">\(h^F\)</span> at all times. The intuition behind the theorem for this special case is that exponential functions are convex so that, by Jensen’s inequality, averaging two discount factors whose discount rates average to <span class="math inline">\(r=5\%\)</span>, results in a discount factor larger than a single exponential discount factor with rate <span class="math inline">\(r=5\%\)</span>.</p>
-<p><em>Proof of Theorem:</em> <span class="math inline">\(\Longrightarrow\)</span> Suppose first that <span class="math inline">\(G \preceq_{\infty SD}F\)</span>. Let <span class="math inline">\(u(x)=-e^{-xt}\)</span>, which is increasing with derivatives that alternate in sign on <span class="math inline">\([0,\infty)\)</span> for each fixed <span class="math inline">\(t &gt; 0\)</span>. Therefore, Definition yields that <span class="math inline">\(h^F(t) ≤ h^G(t),\ \forall t ≥ 0\)</span>.</p>
-<p><span class="math inline">\(\Longleftarrow\)</span></p>
+<p><em>Proof of Theorem:</em> <span class="math inline">\(\Longrightarrow\)</span> Suppose first that <span class="math inline">\(G \preceq_{\infty SD}F\)</span>. Let <span class="math inline">\(u(x)=-e^{-xt}\)</span>, which is increasing with derivatives that alternate in sign on <span class="math inline">\([0,\infty)\)</span> for each fixed <span class="math inline">\(t &gt; 0\)</span>. Therefore, Definition yields that <span class="math inline">\(h^F(t) \leq h^G(t),\ \forall t \geq 0\)</span>.</p>
+<p><span class="math inline">\(\Longleftarrow\)</span> Now suppose that <span class="math inline">\(h^F(t) \leq h^G(t),\ \forall t \geq 0\)</span>. For any mixed risk averse utility function <span class="math inline">\(u\)</span>, the first derivative of <span class="math inline">\(u\)</span> satisfies the assumptions of Bernstein’s Theorem, which requires <span class="math inline">\((−1)^nu^{(n)}(t) \geq 0\)</span>, for all non-negative integers <span class="math inline">\(n\)</span> and for all <span class="math inline">\(t &gt; 0\)</span>. Thus, there exists a distribution function <span class="math inline">\(F_u\)</span> such that <span class="math inline">\(u&#39;(t)=\int_0^\infty e^{-ts}dF_u(s)\)</span>.</p>
 
       
     </div>
