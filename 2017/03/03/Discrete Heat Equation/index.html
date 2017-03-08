@@ -103,7 +103,7 @@ S_n = x_0 + X_1 + X_2 +">
 <meta property="og:description" content="One dimensional random walk
 Let \(X_n\) denotes the step of the walker at time n, \(S_n\) denotes the position of the walker at time n. We have the following relationship: \[
 S_n = x_0 + X_1 + X_2 +">
-<meta property="og:updated_time" content="2017-03-07T02:27:39.000Z">
+<meta property="og:updated_time" content="2017-03-08T02:27:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Walk, Brownian Motion and Heat Equation">
 <meta name="twitter:description" content="One dimensional random walk
@@ -356,46 +356,47 @@ S_n = x_0 + X_1 + X_2 + \cdots + X_n
 </ul>
 <h4 id="boundary-value-problems">Boundary value problems</h4>
 <p>Let <span class="math inline">\(T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace\)</span>, then we observe that <span class="math inline">\(\mathbb{P}\lbrace T &lt; \infty\rbrace=1\)</span>. It indicates that the random walk must come back in finite time. Hence, we can define the following function <span class="math inline">\(F\)</span>.</p>
-<p><strong>Definition</strong> Function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]\)</span> <span class="math display">\[
+<p><strong>Definition</strong> <em>Function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]\)</span> <span class="math display">\[
 F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace
-\]</span> then we can get boundary conditions <span class="math inline">\(F(0) = 0,\ F(N) = 1\)</span> and recurrence relation <span class="math inline">\(F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1\)</span>.</p>
+\]</span> then we can get boundary conditions <span class="math inline">\(F(0) = 0,\ F(N) = 1\)</span> and recurrence relation <span class="math inline">\(F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1\)</span>.</em></p>
 <p>By observation, the function <span class="math inline">\(F(x) = x/N\)</span> satisfies the boundary conditions. Actually, we can prove that it is the only such function.</p>
-<p><strong>Theorem</strong> Suppose <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(N\)</span> is a positive integer. Then the only function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}\)</span> satisfying the equation above with <span class="math inline">\(F(0) = a\ \text{and}\ F(N) = b\)</span> is the linear function <span class="math inline">\(F(x) = a + \frac{x(b - a)}{N}\)</span>.</p>
+<p><strong>Theorem</strong> <em>Suppose <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(N\)</span> is a positive integer. Then the only function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}\)</span> satisfying the equation above with <span class="math inline">\(F(0) = a\ \text{and}\ F(N) = b\)</span> is the linear function <span class="math inline">\(F(x) = a + \frac{x(b - a)}{N}\)</span>.</em></p>
 <h4 id="higher-dimensional-case">Higher dimensional case</h4>
 <p>In higher dimensional space, we can do pretty much the same thing. Replace <span class="math inline">\(\lbrace1,\ldots,N\rbrace\)</span> with finite connected subset <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and define <span class="math inline">\(\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace\)</span> to be all the boundary points. Plus, it is helpful to know the following definition.</p>
-<p><strong>Definition</strong> <span class="math inline">\(\mathcal{Q},\ \mathcal{L}\)</span> are linear operatos on function <span class="math inline">\(F\)</span>, s.t. <span class="math display">\[
+<p><strong>Definition</strong> <em><span class="math inline">\(\mathcal{Q},\ \mathcal{L}\)</span> are linear operatos on function <span class="math inline">\(F\)</span>, s.t. <span class="math display">\[
 \begin{align}
     \mathcal{Q}F(x) = \frac{1}{2 d} \sum_{y \in \mathbb{Z}^d,\ |x-y| = 1} F(y), \qquad \qquad \qquad \\
     \mathcal{L}F(x) = (\mathcal{Q} - \mathbb{I})F(x) = \frac{1}{2d} \sum_{y \in \mathbb{Z}^d,\ |x-y| = 1} [F(y) - F(x)]
 \end{align}
-\]</span></p>
+\]</span></em></p>
 <h4 id="dirichlet-problem-for-discrete-harmonic-functions">Dirichlet problem for discrete harmonic functions</h4>
 <p>Now we define a harmonic function as the following.</p>
-<p><strong>Definition</strong> Given a set <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and a function <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span> in an extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span>, <span class="math inline">\(F\)</span> is harmonic in <span class="math inline">\(A\)</span> if <span class="math display">\[
+<p><strong>Definition</strong> <em>Given a set <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and a function <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span> in an extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span>, <span class="math inline">\(F\)</span> is harmonic in <span class="math inline">\(A\)</span> if <span class="math display">\[
 \mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\mid S_0 = x] = 0\ \text{for all}\ x \in A
-\]</span> Similar to one dimensional case, we have</p>
+\]</span></em></p>
+<p>Similar to one dimensional case, we have</p>
 <ul>
 <li><span class="math inline">\(T_A = \min \lbrace n \geq 0 : S_n \notin A \rbrace\)</span></li>
 <li><span class="math inline">\(\mathbb{P} \lbrace T_A &lt; \infty\rbrace = 1\)</span></li>
 </ul>
 <p>An important theorem therefore follows</p>
-<p><strong>Theorem</strong> If <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> is finite, then for every <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span>, there is an unique extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span> that satisfies <span class="math inline">\(\mathcal{L}F(x) = 0\)</span>. <span class="math display">\[
+<p><strong>Theorem</strong> <em>If <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> is finite, then for every <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span>, there is an unique extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span> that satisfies <span class="math inline">\(\mathcal{L}F(x) = 0\)</span>. <span class="math display">\[
 \begin{align}
     F(x) = \mathbb{E}[F(S_{T_A})\mid S_0 = x] = \sum_{y \in \partial A} \mathbb{P}\lbrace S_{T_A} = y\mid S_0 = x\rbrace F(y)
 \end{align}
-\]</span></p>
+\]</span></em></p>
 <h4 id="heat-equation">Heat equation</h4>
 <p>Set the temperature at the boundary to be zero at all times and as an initial condition set the temperature at <span class="math inline">\(x \in A\)</span> to be <span class="math inline">\(f_0(x)\)</span>. For <span class="math inline">\(x \in A\)</span>, <span class="math display">\[
 p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 \]</span></p>
-<p><strong>Definition</strong> Let <span class="math inline">\(\partial_n p_n(x) = p_{n+1}(x) - p_n (x)\)</span>, we have heat equation <span class="math display">\[
+<p><strong>Definition</strong> <em>Let <span class="math inline">\(\partial_n p_n(x) = p_{n+1}(x) - p_n (x)\)</span>, we have heat equation <span class="math display">\[
 \begin{align}
     \partial_n p_n(x) &amp;= \mathcal{L} p_n(x), \quad x \in A\\
     &amp;\\
     p_0(x) &amp;= f_0(x), \quad x \in A\\
     p_n(x) &amp;= 0, \quad x \in \partial A.
 \end{align}
-\]</span></p>
+\]</span></em></p>
 <h4 id="brownian-motion">Brownian motion</h4>
 <p>Basic properties of Brownian motion:</p>
 <ul>
@@ -415,16 +416,16 @@ p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
 <li><span class="math inline">\(W_t\)</span> has a normal distribution with <span class="math inline">\(\mathbb{E}[W_j] = 0\)</span> and <span class="math inline">\(\text{Var}[W_j] = t\)</span>.</li>
 </ul>
 <p>Similarly, we can find if the function is harmonic by the following theorem.</p>
-<p><strong>Theorem</strong> A function <span class="math inline">\(f\)</span> in a domain <span class="math inline">\(U\)</span> is harmonic if and only if <span class="math inline">\(f\)</span> is <span class="math inline">\(C^2\)</span> with <span class="math inline">\(\Delta f(x) = 0\)</span> for all <span class="math inline">\(x \in U\)</span>.</p>
+<p><strong>Theorem</strong> <em>A function <span class="math inline">\(f\)</span> in a domain <span class="math inline">\(U\)</span> is harmonic if and only if <span class="math inline">\(f\)</span> is <span class="math inline">\(C^2\)</span> with <span class="math inline">\(\Delta f(x) = 0\)</span> for all <span class="math inline">\(x \in U\)</span>.</em></p>
 <h4 id="heat-equations">Heat Equations</h4>
-<p><strong>Definition</strong> With <span class="math inline">\(f(x)\)</span> being the initial temperature at <span class="math inline">\(x\)</span>, <span class="math inline">\(u(t,x), t \geq 0, x \in \mathbb{R}^d\)</span> denotes the temperature at <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span>. <span class="math display">\[
+<p><strong>Definition</strong> <em>With <span class="math inline">\(f(x)\)</span> being the initial temperature at <span class="math inline">\(x\)</span>, <span class="math inline">\(u(t,x), t \geq 0, x \in \mathbb{R}^d\)</span> denotes the temperature at <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span>. <span class="math display">\[
 \begin{align}
     u&amp;(t,x) = \mathbb{E}[f(W_t)\ |\ W_0 = x]\\
     \\
     \partial_t &amp;u(t,x) = \frac{1}{2} \mathcal{L}\, u(t,x)\\
     \partial_t &amp;u(t,x) = \frac{1}{2} \Delta_x u(t,x)
 \end{align}
-\]</span></p>
+\]</span></em></p>
 <h4 id="brownian-meander">Brownian Meander</h4>
 <p>Brownian motion: <span class="math display">\[
     \psi_t (x) = \frac{1}{\sqrt{2\pi t}} \mathrm{e}^{-\frac{x^2}{2t}}
@@ -518,7 +519,7 @@ Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\
     \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial^2}{\partial {l_1}^2} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
     \Rightarrow \frac{\partial \widetilde{p_2}}{\partial t}(t,&amp;l_1) = \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1), \quad \widetilde{p_2}(t,l_1) = \int_0^t \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(s,l_1)\,ds
 \end{align}\]</span>
-<p><strong>Theorem</strong> If <span class="math inline">\(u(t,l_1,l_2) = \int_0^t \tilde{h}(s,l_1) \tilde{v}(s,l_2)\,ds\)</span>, then <span class="math inline">\(u_t = \frac{1}{2} \Delta u\)</span>.</p>
+<p><strong>Theorem</strong> <em>If <span class="math inline">\(u(t,l_1,l_2) = \int_0^t \tilde{h}(s,l_1) \tilde{v}(s,l_2)\,ds\)</span>, then <span class="math inline">\(u_t = \frac{1}{2} \Delta u\)</span>.</em></p>
 <span class="math display">\[\begin{align}
     \textit{Proof:}\qquad \qquad \because \frac{\partial u}{\partial t} &amp;= \tilde{h}(s,l_1) \tilde{v}(s,l_2).\\
     \Rightarrow \frac{\partial^2 u}{\partial t^2} &amp;= \frac{\partial \tilde{h}}{\partial t}(t,l_1) \tilde{v}(t,l_2) + \tilde{h}(t,l_1) \frac{\partial \tilde{v}}{\partial t}(t,l_2)\\
@@ -526,7 +527,7 @@ Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\
     &amp;= \frac{1}{2} \Delta [\tilde{h}(t,l_1) \tilde{v}(t,l_2)]\\
     &amp;= \frac{1}{2} \Delta \frac{\partial u}{\partial t}
 \end{align}\]</span>
-<strong>Claim:</strong> <span class="math inline">\(h(t_0,l_1,l_2)\)</span> satisfies heat equation.
+<strong>Claim:</strong> <em><span class="math inline">\(h(t_0,l_1,l_2)\)</span> satisfies heat equation.</em>
 <span class="math display">\[\begin{align}
     \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2)\\
     \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1)\\

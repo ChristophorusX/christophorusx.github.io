@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://christophorusx.github.io/2017/03/03/Discrete%20Heat%20Equation/</loc>
+    
+    <lastmod>2017-03-08T02:27:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://christophorusx.github.io/2017/03/07/Weighted-Discounting/</loc>
     
     <lastmod>2017-03-08T02:22:44.000Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://christophorusx.github.io/tags/index.html</loc>
     
     <lastmod>2017-03-07T21:57:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://christophorusx.github.io/2017/03/03/Discrete%20Heat%20Equation/</loc>
-    
-    <lastmod>2017-03-07T02:27:39.000Z</lastmod>
     
   </url>
   
