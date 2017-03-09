@@ -101,7 +101,7 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Dynamics
 Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
-<meta property="og:updated_time" content="2017-03-09T20:45:10.000Z">
+<meta property="og:updated_time" content="2017-03-09T20:54:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Consistent Optimal Stopping">
 <meta name="twitter:description" content="Dynamics
@@ -351,6 +351,13 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 J(t,x;u)=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x]
 \]</span> Since <span class="math inline">\(h\)</span> exhibits decreasing impatience, the preferences of the selves change over time. In particular, self <span class="math inline">\(0\)</span> is more patient at time <span class="math inline">\(t\)</span> than self <span class="math inline">\(t\)</span> is at time <span class="math inline">\(t\)</span>. This may lead the selves to prefer a different choice of <span class="math inline">\(u\)</span>. In general, each self <span class="math inline">\(t\)</span> can only choose current (time-<span class="math inline">\(t\)</span>) behavior.</p>
 <p><strong>Note:</strong> <em><span class="math inline">\(J\)</span> is determined by choice of <span class="math inline">\(u\)</span> when <span class="math inline">\(t\)</span> and <span class="math inline">\(x\)</span> are fixed, i.e. decision makers choose the best strategy to maximize the expected profit.</em></p>
+<p>Given a stopping rule <span class="math inline">\(u\)</span> and a self <span class="math inline">\(t \geq 0\)</span>, we can define the following stopping rule to be used from <span class="math inline">\(t\)</span> on: <span class="math display">\[
+u^{\varepsilon,a}(s,x)=
+\begin{cases}
+u(s,x),\quad \text{if}\ s\in [t+\varepsilon,\infty) \\
+a\quad \text{if}\ s\in [t,t+\varepsilon)
+\end{cases}
+\]</span> where <span class="math inline">\(\varepsilon&gt;0\)</span> and <span class="math inline">\(a\in \lbrace 0,1\rbrace\)</span> are fixed.</p>
 
       
     </div>
