@@ -101,7 +101,7 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Dynamics
 Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
-<meta property="og:updated_time" content="2017-03-09T20:37:40.000Z">
+<meta property="og:updated_time" content="2017-03-09T20:45:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Consistent Optimal Stopping">
 <meta name="twitter:description" content="Dynamics
@@ -349,7 +349,8 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 \tau_u^t=\inf\lbrace s\geq t, u(s,X_s)=1\rbrace
 \]</span> Let <span class="math inline">\(h\)</span> denote a given weighted discount function with corresponding weighting distribution F, i.e. <span class="math inline">\(h^F\)</span>. Consider some time <span class="math inline">\(t \geq 0\)</span> and refer to it as “self <span class="math inline">\(t\)</span>” of the group. Define the discount function of self <span class="math inline">\(t\)</span> by <span class="math inline">\(h_t(s) := h(s − t), s \geq t\)</span>. This means that self <span class="math inline">\(t\)</span> treats calendar date <span class="math inline">\(t\)</span> as the present, which is also reflected by the fact that <span class="math inline">\(h_t(t) = 1\)</span>. If <span class="math inline">\(X_t = x\)</span>, self <span class="math inline">\(t\)</span> seeks to maximize the weighted discounted payoff from its investment decision according to the stopping rule <span class="math inline">\(u\)</span> : <span class="math display">\[
 J(t,x;u)=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x]
-\]</span></p>
+\]</span> Since <span class="math inline">\(h\)</span> exhibits decreasing impatience, the preferences of the selves change over time. In particular, self <span class="math inline">\(0\)</span> is more patient at time <span class="math inline">\(t\)</span> than self <span class="math inline">\(t\)</span> is at time <span class="math inline">\(t\)</span>. This may lead the selves to prefer a different choice of <span class="math inline">\(u\)</span>. In general, each self <span class="math inline">\(t\)</span> can only choose current (time-<span class="math inline">\(t\)</span>) behavior.</p>
+<p><strong>Note:</strong> <em><span class="math inline">\(J\)</span> is determined by choice of <span class="math inline">\(u\)</span> when <span class="math inline">\(t\)</span> and <span class="math inline">\(x\)</span> are fixed, i.e. decision makers choose the best strategy to maximize the expected profit.</em></p>
 
       
     </div>
