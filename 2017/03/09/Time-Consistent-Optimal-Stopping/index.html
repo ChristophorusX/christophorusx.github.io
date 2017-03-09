@@ -101,7 +101,7 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Dynamics
 Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
-<meta property="og:updated_time" content="2017-03-09T23:43:48.000Z">
+<meta property="og:updated_time" content="2017-03-09T23:54:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Consistent Optimal Stopping">
 <meta name="twitter:description" content="Dynamics
@@ -367,9 +367,10 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
 \]</span> Hence, each self <span class="math inline">\(t\)</span> faces the same decision problem, which only depends on the current state <span class="math inline">\(X_t= x\)</span>, but not on time <span class="math inline">\(t\)</span> directly. We can thus identify group self <span class="math inline">\(t\)</span> by the current state <span class="math inline">\(X_t= x\)</span> of the process, and drop the time index from its objective functional.</p>
 <h4 id="stopping-equilibrium">Stopping Equilibrium</h4>
 <p>The sophisticated group anticipates the disagreement between its current and future selves. Therefore, it searches for a stopping rule <span class="math inline">\(\hat u\)</span> that all possible future selves <span class="math inline">\(x\)</span> are willing to go through with, i.e., no future self <span class="math inline">\(x\)</span> wishes to deviate from <span class="math inline">\(\hat u\)</span>. In other words, the group plays a game with its future selves, and behavior is described by the equilibrium of that game.</p>
-<p><strong>Definition(Equilibrium stopping rule)</strong> <em>The stopping rule <span class="math inline">\(\hat u\)</span> is an equilibrium stopping rule if</em> <span class="math display">\[
+<p><strong>Definition (Equilibrium stopping rule)</strong> <em>The stopping rule <span class="math inline">\(\hat u\)</span> is an equilibrium stopping rule if</em> <span class="math display">\[
 \liminf_{\varepsilon\to0}{J(x;u)-J(x;u^{\varepsilon,a})\over \varepsilon}\geq 0
 \]</span> <em>where <span class="math inline">\(u^{\varepsilon,a}\)</span> is the <span class="math inline">\((\varepsilon,a)\)</span>-deviation from <span class="math inline">\(\hat u\)</span>.</em></p>
+<p>In particular, either <span class="math inline">\(u^{\varepsilon,1}\)</span> or <span class="math inline">\(u^{\varepsilon,0}\)</span> are different from the equilibrium strategy, i.e., the <span class="math inline">\(u^{\varepsilon,a}\)</span> constitutes possible deviation strategies. If <span class="math inline">\(\varepsilon = 1\)</span>, the non-negativity of the ratio in says that every future self (characterized by wealth <span class="math inline">\(x\)</span>) prefers <span class="math inline">\(\hat u\)</span> over deviating according to <span class="math inline">\(u^{\varepsilon,1}\)</span> or <span class="math inline">\(u^{\varepsilon,0}\)</span>. For an arbitrary short interval <span class="math inline">\(\varepsilon\)</span> it follows that deviation is unattractive at the current value of <span class="math inline">\(x\)</span>.</p>
 
       
     </div>
