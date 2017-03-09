@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/08/Decreasing-Impatience/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Few economic hypotheses have advanced so rapidly from the fringe to the mainstream as hyperbolic discounting, which now functions almost as a default option for analyzing the misbehavior of economic a">
-<meta property="og:updated_time" content="2017-03-09T02:01:56.000Z">
+<meta property="og:updated_time" content="2017-03-09T02:14:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Decreasing Impatience">
 <meta name="twitter:description" content="Few economic hypotheses have advanced so rapidly from the fringe to the mainstream as hyperbolic discounting, which now functions almost as a default option for analyzing the misbehavior of economic a">
@@ -350,7 +350,14 @@ f_E(D)=e^{-kD}
 P(t)=-{(\log h(t))&#39;&#39;\over (\log h(t))&#39;}
 \]</span> <em>is non-negative.</em></p>
 <p><strong>Proposition</strong> <em>All weighted discount functions imply decreasing impatience.</em></p>
-<p><em>Proof:</em> We need to show that <span class="math inline">\(P(t)=-{(\log h(t))&#39;&#39;\over (\log h(t))&#39;}\leq 0\)</span>. Since for every weighted discount function <span class="math inline">\((h^F)(t)\)</span> we have <span class="math inline">\((h^F)&#39;(t)=-\int_0^\infty re^{-rt}dF(r)\)</span>, s.t. <span class="math inline">\((\log h(t))&#39;=h&#39;(t)/h(t)&lt;0\)</span>.</p>
+<p><em>Proof:</em> We need to show that <span class="math inline">\(P(t)=-{(\log h(t))&#39;&#39;\over (\log h(t))&#39;}\geq 0\)</span>. Since for every weighted discount function <span class="math inline">\((h^F)(t)\)</span> we have <span class="math inline">\((h^F)&#39;(t)=-\int_0^\infty re^{-rt}dF(r)\)</span>, s.t. <span class="math inline">\((\log h(t))&#39;=h&#39;(t)/h(t)&lt;0\)</span>. We need to show that <span class="math inline">\(-(\log h(t))&#39;&#39;\leq 0\)</span>. Let <span class="math inline">\(\xi\)</span> denote a random variable with distribution function <span class="math inline">\(F_\xi(x)=\int_0^x e^{-rt}dF(r)/\int_0^\infty e^{-rt}dF(r)\)</span>. Then, <span class="math display">\[
+\begin{align}
+-(\log h(t))&#39;&#39;&amp;=({\int_0^\infty re^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)})&#39; \\
+&amp;=-\mathbb{E}\xi^2+\mathbb{E}^2\xi=-\mathrm{Var}(\xi)\leq 0
+\end{align}
+\]</span> <span class="math display">\[
+\tag*{$\Box$}
+\]</span></p>
 <p>When studying the investment decisions of groups, due to decreasing impatience, the group is in general time-inconsistent.</p>
 <p><strong>Proposition (Comparative DI and larger discount factors)</strong> <em>Consider weighted discount functions <span class="math inline">\(h^F\)</span> and <span class="math inline">\(h^G\)</span> with weighting distributions <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> and measures of decreasing impatience <span class="math inline">\(P_F\)</span> and <span class="math inline">\(P_G\)</span>, respectively. Let the expectation of <span class="math inline">\(F\)</span> be no less than that of <span class="math inline">\(G\)</span>. Then,</em> <span class="math display">\[
 P_G(t)\geq P_F(t)\ \mathit{for\ all}\ t\geq 0\Longrightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0
