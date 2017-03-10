@@ -93,19 +93,16 @@
 
 
 
-<meta name="description" content="Dynamics
-Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
+<meta name="description" content="DynamicsLet $(\Omega,\mathcal{F},\mathbb{P})$ denote a complete probability space which supports a standard Brownian motion $(Wt){t\geq 0}$ with its natural filtration $\lbrace Ft\rbrace{t\geq 0}$. Le">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Time Consistent Optimal Stopping">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/09/Time-Consistent-Optimal-Stopping/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Dynamics
-Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
+<meta property="og:description" content="DynamicsLet $(\Omega,\mathcal{F},\mathbb{P})$ denote a complete probability space which supports a standard Brownian motion $(Wt){t\geq 0}$ with its natural filtration $\lbrace Ft\rbrace{t\geq 0}$. Le">
 <meta property="og:updated_time" content="2017-03-10T15:40:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Consistent Optimal Stopping">
-<meta name="twitter:description" content="Dynamics
-Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
+<meta name="twitter:description" content="DynamicsLet $(\Omega,\mathcal{F},\mathbb{P})$ denote a complete probability space which supports a standard Brownian motion $(Wt){t\geq 0}$ with its natural filtration $\lbrace Ft\rbrace{t\geq 0}$. Le">
 
 
 
@@ -340,50 +337,18 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
       
 
       
-        <h4 id="dynamics">Dynamics</h4>
-<p>Let <span class="math inline">\((\Omega,\mathcal{F},\mathbb{P})\)</span> denote a complete probability space which supports a standard Brownian motion <span class="math inline">\((W_t)_{t\geq 0}\)</span> with its natural filtration <span class="math inline">\(\lbrace F_t\rbrace_{t\geq 0}\)</span>. Let <span class="math inline">\(X = \lbrace X_t\rbrace_{t\geq 0}\)</span> denote the payoff value process and suppose that its dynamics are given by <span class="math display">\[
-{dX_t\over X_t}=b(X_t)dt+\sigma(X_t)dW_t,\ X_0=X_0
-\]</span> where the bounded function <span class="math inline">\(b\)</span> describes the instantaneous conditional expected percentage change in <span class="math inline">\(X\)</span> per unit of time and the bounded function <span class="math inline">\(\sigma\)</span> is the instantaneous conditional standard deviation per unit time. The payoff of investment at time <span class="math inline">\(t\)</span> is given by some payoff function <span class="math inline">\(G : [0,\infty) \to \mathbb{R}\)</span>.</p>
-<h4 id="stopping-rules">Stopping Rules</h4>
-<p><strong>Definition</strong> <em>A stopping rule is a function of time and the process value, <span class="math inline">\(u : [0,\infty)\times [0,\infty) \to \lbrace 0,1\rbrace\)</span>, where <span class="math inline">\(0\)</span> indicates “continue” and <span class="math inline">\(1\)</span> indicates “stop”. For any time <span class="math inline">\(t \geq 0\)</span>, each stopping rule <span class="math inline">\(u\)</span> defines a stopping time <span class="math inline">\(\tau_u^t\)</span> after <span class="math inline">\(t\)</span>, via</em> <span class="math display">\[
-\tau_u^t=\inf\lbrace s\geq t, u(s,X_s)=1\rbrace
-\]</span> Let <span class="math inline">\(h\)</span> denote a given weighted discount function with corresponding weighting distribution F, i.e. <span class="math inline">\(h^F\)</span>. Consider some time <span class="math inline">\(t \geq 0\)</span> and refer to it as “self <span class="math inline">\(t\)</span>” of the group. Define the discount function of self <span class="math inline">\(t\)</span> by <span class="math inline">\(h_t(s) := h(s − t), s \geq t\)</span>. This means that self <span class="math inline">\(t\)</span> treats calendar date <span class="math inline">\(t\)</span> as the present, which is also reflected by the fact that <span class="math inline">\(h_t(t) = 1\)</span>. If <span class="math inline">\(X_t = x\)</span>, self <span class="math inline">\(t\)</span> seeks to maximize the weighted discounted payoff from its investment decision according to the stopping rule <span class="math inline">\(u\)</span> : <span class="math display">\[
-J(t,x;u)=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x]
-\]</span> Since <span class="math inline">\(h\)</span> exhibits decreasing impatience, the preferences of the selves change over time. In particular, self <span class="math inline">\(0\)</span> is more patient at time <span class="math inline">\(t\)</span> than self <span class="math inline">\(t\)</span> is at time <span class="math inline">\(t\)</span>. This may lead the selves to prefer a different choice of <span class="math inline">\(u\)</span>. In general, each self <span class="math inline">\(t\)</span> can only choose current (time-<span class="math inline">\(t\)</span>) behavior.</p>
-<p><strong>Note:</strong> <em><span class="math inline">\(J\)</span> is determined by choice of <span class="math inline">\(u\)</span> when <span class="math inline">\(t\)</span> and <span class="math inline">\(x\)</span> are fixed, i.e. decision makers choose the best strategy to maximize the expected profit.</em></p>
-<p>Given a stopping rule <span class="math inline">\(u\)</span> and a self <span class="math inline">\(t \geq 0\)</span>, we can define the following stopping rule to be used from <span class="math inline">\(t\)</span> on: <span class="math display">\[
-u^{\varepsilon,a}(s,x)=
-\begin{cases}
-u(s,x),\quad \text{if}\ s\in [t+\varepsilon,\infty) \\
-a\quad \text{if}\ s\in [t,t+\varepsilon)
-\end{cases}
-\]</span> where <span class="math inline">\(\varepsilon&gt;0\)</span> and <span class="math inline">\(a\in \lbrace 0,1\rbrace\)</span> are fixed. We call <span class="math inline">\(u^{\varepsilon,a}\)</span> the <span class="math inline">\((\varepsilon,a)\)</span>-deviation from <span class="math inline">\(u\)</span>.</p>
-<p>Given the infinite horizon and the stationarity of the process <span class="math inline">\(X\)</span>, we need to consider only stationary stopping rules <span class="math inline">\(u\)</span>, which are functions of the state variable <span class="math inline">\(x\)</span> only. As <span class="math display">\[
-\begin{align}
-J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
-&amp;=\mathbb{E}[h(\tau_u^0)G(X_{\tau_u^0})\mid X_0=x] \\
-&amp;=J(0,x;u)
-\end{align}
-\]</span> Hence, each self <span class="math inline">\(t\)</span> faces the same decision problem, which only depends on the current state <span class="math inline">\(X_t= x\)</span>, but not on time <span class="math inline">\(t\)</span> directly. We can thus identify group self <span class="math inline">\(t\)</span> by the current state <span class="math inline">\(X_t= x\)</span> of the process, and drop the time index from its objective functional.</p>
-<h4 id="stopping-equilibrium">Stopping Equilibrium</h4>
-<p>The sophisticated group anticipates the disagreement between its current and future selves. Therefore, it searches for a stopping rule <span class="math inline">\(\hat u\)</span> that all possible future selves <span class="math inline">\(x\)</span> are willing to go through with, i.e., no future self <span class="math inline">\(x\)</span> wishes to deviate from <span class="math inline">\(\hat u\)</span>. In other words, the group plays a game with its future selves, and behavior is described by the equilibrium of that game.</p>
-<p><strong>Definition (Equilibrium stopping rule)</strong> <em>The stopping rule <span class="math inline">\(\hat u\)</span> is an equilibrium stopping rule if</em> <span class="math display">\[
-\liminf_{\varepsilon\to0}{J(x;u)-J(x;u^{\varepsilon,a})\over \varepsilon}\geq 0
-\]</span> <em>where <span class="math inline">\(u^{\varepsilon,a}\)</span> is the <span class="math inline">\((\varepsilon,a)\)</span>-deviation from <span class="math inline">\(\hat u\)</span>.</em></p>
-<p>In particular, either <span class="math inline">\(u^{\varepsilon,1}\)</span> or <span class="math inline">\(u^{\varepsilon,0}\)</span> are different from the equilibrium strategy, i.e., the <span class="math inline">\(u^{\varepsilon,a}\)</span> constitutes possible deviation strategies. If <span class="math inline">\(\varepsilon = 1\)</span>, the non-negativity of the ratio in says that every future self (characterized by wealth <span class="math inline">\(x\)</span>) prefers <span class="math inline">\(\hat u\)</span> over deviating according to <span class="math inline">\(u^{\varepsilon,1}\)</span> or <span class="math inline">\(u^{\varepsilon,0}\)</span>. For an arbitrary short interval <span class="math inline">\(\varepsilon\)</span> it follows that deviation is unattractive at the current value of <span class="math inline">\(x\)</span>.</p>
-<p><strong>Theorem (Equilibrium Characterization)</strong> <em>Consider the performance functional <span class="math inline">\(J(x;u)=\mathbb{E}[h(\tau_u)G(X_{\tau_u})]\)</span> with weighted discount function <span class="math inline">\(h(t)=\int_0^\infty e^{-rt}dF(r)\)</span>, a stopping rule <span class="math inline">\(\hat u\)</span>, and functions <span class="math inline">\(w(x;r)=\mathbb{E}[e^{-r\tau_{\hat u}}G(X_{\tau_{\hat u}})]\)</span> and <span class="math inline">\(V(x)=\int_0^\infty w(x;r)dF(r)\)</span>. Let <span class="math inline">\(\mathcal{A}={1\over 2}\sigma(x)^2x^2{\partial^2\over \partial x^2}+b(x)x{\partial\over\partial x}\)</span> and suppose that <span class="math inline">\((V,w,\hat u)\)</span> solves</em> <span class="math display">\[
-\begin{align}
-&amp;\max\lbrace\mathcal{A}V(x)-\int_0^\infty rw(x;r)dF(r),G(x)-V(x)\rbrace=0 \\
-&amp;\hat u(x)=
-\begin{cases}
-1\quad \text{if}\ V(x)=G(x) \\
-0\quad \text{o.w.}
-\end{cases}
-\end{align}
-\]</span> <em>subject to <span class="math inline">\(V(0)=\max\lbrace G(0),0\rbrace\)</span>. Then, <span class="math inline">\(\hat u\)</span> is an equilibrium stopping rule and the value function of the problem is given by <span class="math inline">\(V(x)\)</span>, i.e., <span class="math inline">\(V(x)=\mathbb{E}[h(\tau_{\hat u})G(X_{\tau_{\hat u}})]\)</span>.</em></p>
-<p><strong>Interpretation:</strong> Let us call <span class="math inline">\(\mathcal{S}=\lbrace x\in [0,\infty):V(x)=G(x)\rbrace\)</span> and <span class="math inline">\(\mathcal{C}=\lbrace x\in [0,\infty):V(x)&gt;G(x)\rbrace\)</span> the stopping region and continuation region of the stopping problem, respectively. Than, the equilibrium stopping rule <span class="math inline">\(\hat u\)</span> can be determined by whether <span class="math inline">\(x\)</span> is in <span class="math inline">\(\mathcal{S}\)</span> or <span class="math inline">\(\mathcal{C}\)</span>. The corresponding stopping time is given by <span class="math inline">\(\tau_{\hat u}=\inf\lbrace s\geq 0:X_s\in \mathcal{S}\rbrace\)</span>. Equations constitute the so-called Bellman system, a system of coupled equations. Note that the second equation involving <span class="math inline">\(\hat u\)</span> is an equation (rather than a definition of <span class="math inline">\(\hat u\)</span>) since its right hand side involves <span class="math inline">\(V\)</span> that in turn depends on <span class="math inline">\(\hat u\)</span> through <span class="math inline">\(w(x;r)\)</span>. Therefore, the equilibrium stopping rule <span class="math inline">\(\hat u\)</span> is part of the solution of the Bellman system. Essentially, this theorem tells us how we can obtain an equilibrium stopping rule <span class="math inline">\(\hat u\)</span> or, equivalently, the values of <span class="math inline">\(x\in \mathcal{S}\)</span> where the agent will stop and the values <span class="math inline">\(x\in\mathcal{C}\)</span> where she will continue.</p>
-<p>The function <span class="math inline">\(w(x;r)=\mathbb{E}[e^{-r\tau_{\hat u}}G(X_{\tau_{\hat u}})]\)</span> depends on the equilibrium stopping rule and describes group member <span class="math inline">\(r\)</span>’s expected discounted payoff in equilibrium when the current value of the process is <span class="math inline">\(x\)</span>. If the group consists of just one member with discount rate <span class="math inline">\(r\)</span>, then <span class="math inline">\(V (x) = w(x;r)\)</span>, i.e., the value function <span class="math inline">\(V\)</span> is given by that member’s expected discounted payoff and equation becomes the well-known Bellman equation <span class="math inline">\(\max\lbrace\mathcal{A}V(x)-rV(x),G(x)-V(x)\rbrace=0\)</span>, which is independent of <span class="math inline">\(\hat u\)</span> and can be solved once the model primitives are given. Then, <span class="math inline">\(\hat u\)</span> is obtained immediately from the second equation using <span class="math inline">\(V(x)\)</span> and <span class="math inline">\(G(x)\)</span>.</p>
-<p>Now consider the case of several group members. After swapping integration and expectation, <span class="math inline">\(V(x)\)</span> can be written as <span class="math inline">\(\int_0^\infty w(x;r)dF(r)\)</span>. This calculation shows that the weighted form of the discount function carries over tho the value function.</p>
+        <h4 id="Dynamics"><a href="#Dynamics" class="headerlink" title="Dynamics"></a>Dynamics</h4><p>Let $(\Omega,\mathcal{F},\mathbb{P})$ denote a complete probability space which supports a standard Brownian motion $(W<em>t)</em>{t\geq 0}$ with its natural filtration $\lbrace F<em>t\rbrace</em>{t\geq 0}$. Let $X = \lbrace X<em>t\rbrace</em>{t\geq 0}$ denote the payoff value process and suppose that its dynamics are given by<br>$$<br>{dX_t\over X_t}=b(X_t)dt+\sigma(X_t)dW_t,\ X_0=X_0<br>$$<br>where the bounded function $b$ describes the instantaneous conditional expected percentage change in $X$ per unit of time and the bounded function $\sigma$ is the instantaneous conditional standard deviation per unit time. The payoff of investment at time $t$ is given by some payoff function $G : [0,\infty) \to \mathbb{R}$.</p>
+<h4 id="Stopping-Rules"><a href="#Stopping-Rules" class="headerlink" title="Stopping Rules"></a>Stopping Rules</h4><p><strong>Definition</strong> <em>A stopping rule is a function of time and the process value, $u : [0,\infty)\times [0,\infty) \to \lbrace 0,1\rbrace$, where $0$ indicates “continue” and $1$ indicates “stop”. For any time $t \geq 0$, each stopping rule $u$ defines a stopping time $\tau_u^t$ after $t$, via</em><br>$$<br>\tau_u^t=\inf\lbrace s\geq t, u(s,X_s)=1\rbrace<br>$$<br>Let $h$ denote a given weighted discount function with corresponding weighting distribution F, i.e. $h^F$. Consider some time $t \geq 0$ and refer to it as “self $t$” of the group. Define the discount function of self $t$ by $h_t(s) := h(s − t), s \geq t$. This means that self $t$ treats calendar date $t$ as the present, which is also reflected by the fact that $h_t(t) = 1$. If $X_t = x$, self $t$ seeks to maximize the weighted discounted payoff from its investment decision according to the stopping rule $u$ :<br>$$<br>J(t,x;u)=\mathbb{E}[h(\tau<em>u^t-t)G(X</em>{\tau_u^t})\mid X_t=x]<br>$$<br>Since $h$ exhibits decreasing impatience, the preferences of the selves change over time. In particular, self $0$ is more patient at time $t$ than self $t$ is at time $t$. This may lead the selves to prefer a different choice of $u$. In general, each self $t$ can only choose current (time-$t$) behavior.</p>
+<p><strong>Note:</strong> <em>$J$ is determined by choice of $u$ when $t$ and $x$ are fixed, i.e. decision makers choose the best strategy to maximize the expected profit.</em></p>
+<p>Given a stopping rule $u$ and a self $t \geq 0$, we can define the following stopping rule to be used from $t$ on:<br>$$<br>u^{\varepsilon,a}(s,x)=<br>\begin{cases}<br>u(s,x),\quad \text{if}\ s\in [t+\varepsilon,\infty) \<br>a\quad \text{if}\ s\in [t,t+\varepsilon)<br>\end{cases}<br>$$<br>where $\varepsilon&gt;0$ and $a\in \lbrace 0,1\rbrace$ are fixed. We call $u^{\varepsilon,a}$ the $(\varepsilon,a)$-deviation from $u$.</p>
+<p>Given the infinite horizon and the stationarity of the process $X$, we need to consider only stationary stopping rules $u$, which are functions of the state variable $x$ only. As<br>$$<br>\begin{align}<br>J(t,x;u)&amp;=\mathbb{E}[h(\tau<em>u^t-t)G(X</em>{\tau_u^t})\mid X_t=x] \<br>&amp;=\mathbb{E}[h(\tau<em>u^0)G(X</em>{\tau_u^0})\mid X_0=x] \<br>&amp;=J(0,x;u)<br>\end{align}<br>$$<br>Hence, each self $t$ faces the same decision problem, which only depends on the current state $X_t= x$, but not on time $t$ directly. We can thus identify group self $t$ by the current state $X_t= x$ of the process, and drop the time index from its objective functional.</p>
+<h4 id="Stopping-Equilibrium"><a href="#Stopping-Equilibrium" class="headerlink" title="Stopping Equilibrium"></a>Stopping Equilibrium</h4><p>The sophisticated group anticipates the disagreement between its current and future selves. Therefore, it searches for a stopping rule $\hat u$ that all possible future selves $x$ are willing to go through with, i.e., no future self $x$ wishes to deviate from $\hat u$. In other words, the group plays a game with its future selves, and behavior is described by the equilibrium of that game.</p>
+<p><strong>Definition (Equilibrium stopping rule)</strong> <em>The stopping rule $\hat u$ is an equilibrium stopping rule if</em><br>$$<br>\liminf_{\varepsilon\to0}{J(x;u)-J(x;u^{\varepsilon,a})\over \varepsilon}\geq 0<br>$$<br><em>where $u^{\varepsilon,a}$ is the $(\varepsilon,a)$-deviation from $\hat u$.</em></p>
+<p>In particular, either $u^{\varepsilon,1}$ or $u^{\varepsilon,0}$ are different from the equilibrium strategy, i.e., the $u^{\varepsilon,a}$ constitutes possible deviation strategies. If $\varepsilon = 1$, the non-negativity of the ratio in says that every future self (characterized by wealth $x$) prefers $\hat u$ over deviating according to $u^{\varepsilon,1}$ or $u^{\varepsilon,0}$. For an arbitrary short interval $\varepsilon$ it follows that deviation is unattractive at the current value of $x$.</p>
+<p><strong>Theorem (Equilibrium Characterization)</strong> <em>Consider the performance functional $J(x;u)=\mathbb{E}[h(\tau<em>u)G(X</em>{\tau_u})]$ with weighted discount function $h(t)=\int<em>0^\infty e^{-rt}dF(r)$, a stopping rule $\hat u$, and functions $w(x;r)=\mathbb{E}[e^{-r\tau</em>{\hat u}}G(X<em>{\tau</em>{\hat u}})]$ and $V(x)=\int_0^\infty w(x;r)dF(r)$. Let $\mathcal{A}={1\over 2}\sigma(x)^2x^2{\partial^2\over \partial x^2}+b(x)x{\partial\over\partial x}$ and suppose that $(V,w,\hat u)$ solves</em><br>$$<br>\begin{align}<br>&amp;\max\lbrace\mathcal{A}V(x)-\int<em>0^\infty rw(x;r)dF(r),G(x)-V(x)\rbrace=0 \<br>&amp;\hat u(x)=<br>\begin{cases}<br>1\quad \text{if}\ V(x)=G(x) \<br>0\quad \text{o.w.}<br>\end{cases}<br>\end{align}<br>$$<br>*subject to $V(0)=\max\lbrace G(0),0\rbrace$. Then, $\hat u$ is an equilibrium stopping rule and the value function of the problem is given by $V(x)$, i.e., $V(x)=\mathbb{E}[h(\tau</em>{\hat u})G(X<em>{\tau</em>{\hat u}})]$.*</p>
+<p><strong>Interpretation:</strong> Let us call $\mathcal{S}=\lbrace x\in [0,\infty):V(x)=G(x)\rbrace$ and $\mathcal{C}=\lbrace x\in [0,\infty):V(x)&gt;G(x)\rbrace$ the stopping region and continuation region of the stopping problem, respectively. Than, the equilibrium stopping rule $\hat u$ can be determined by whether $x$ is in $\mathcal{S}$ or $\mathcal{C}$. The corresponding stopping time is given by $\tau_{\hat u}=\inf\lbrace s\geq 0:X_s\in \mathcal{S}\rbrace$. Equations constitute the so-called Bellman system, a system of coupled equations. Note that the second equation involving $\hat u$ is an equation (rather than a definition of $\hat u$) since its right hand side involves $V$ that in turn depends on $\hat u$ through $w(x;r)$. Therefore, the equilibrium stopping rule $\hat u$ is part of the solution of the Bellman system. Essentially, this theorem tells us how we can obtain an equilibrium stopping rule $\hat u$ or, equivalently, the values of $x\in \mathcal{S}$ where the agent will stop and the values $x\in\mathcal{C}$ where she will continue.</p>
+<p>The function $w(x;r)=\mathbb{E}[e^{-r\tau<em>{\hat u}}G(X</em>{\tau_{\hat u}})]$ depends on the equilibrium stopping rule and describes group member $r$’s expected discounted payoff in equilibrium when the current value of the process is $x$. If the group consists of just one member with discount rate $r$, then $V (x) = w(x;r)$, i.e., the value function $V$ is given by that member’s expected discounted payoff and equation becomes the well-known Bellman equation $\max\lbrace\mathcal{A}V(x)-rV(x),G(x)-V(x)\rbrace=0$, which is independent of $\hat u$ and can be solved once the model primitives are given. Then, $\hat u$ is obtained immediately from the second equation using $V(x)$ and $G(x)$.</p>
+<p>Now consider the case of several group members. After swapping integration and expectation, $V(x)$ can be written as $\int_0^\infty w(x;r)dF(r)$. This calculation shows that the weighted form of the discount function carries over tho the value function.</p>
 
       
     </div>
@@ -433,6 +398,10 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/10/Pronunciation-of-Classical-Latin/" rel="prev" title="Pronunciation of Classical Latin">
+                Pronunciation of Classical Latin <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -511,7 +480,7 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -524,7 +493,7 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -559,7 +528,7 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#dynamics"><span class="nav-number">1.</span> <span class="nav-text">Dynamics</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-rules"><span class="nav-number">2.</span> <span class="nav-text">Stopping Rules</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-equilibrium"><span class="nav-number">3.</span> <span class="nav-text">Stopping Equilibrium</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Dynamics"><span class="nav-number">1.</span> <span class="nav-text">Dynamics</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stopping-Rules"><span class="nav-number">2.</span> <span class="nav-text">Stopping Rules</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Stopping-Equilibrium"><span class="nav-number">3.</span> <span class="nav-text">Stopping Equilibrium</span></a></li></ol></div>
             
 
           </div>
