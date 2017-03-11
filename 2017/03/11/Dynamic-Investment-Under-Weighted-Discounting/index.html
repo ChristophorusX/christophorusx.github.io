@@ -95,23 +95,26 @@
 
 <meta name="description" content="Setup
 Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX)t\over X_t}=bdt+\sigma dW_t
-\]">
+{dX_t\over X_t}=bdt+\sigma dW_t
+\]
+Investment in \(X\)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dynamic Investment Under Weighted Discounting">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/11/Dynamic-Investment-Under-Weighted-Discounting/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Setup
 Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX)t\over X_t}=bdt+\sigma dW_t
-\]">
-<meta property="og:updated_time" content="2017-03-11T16:57:27.000Z">
+{dX_t\over X_t}=bdt+\sigma dW_t
+\]
+Investment in \(X\)">
+<meta property="og:updated_time" content="2017-03-11T17:45:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment Under Weighted Discounting">
 <meta name="twitter:description" content="Setup
 Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX)t\over X_t}=bdt+\sigma dW_t
-\]">
+{dX_t\over X_t}=bdt+\sigma dW_t
+\]
+Investment in \(X\)">
 
 
 
@@ -357,7 +360,10 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
       
         <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
-{dX)t\over X_t}=bdt+\sigma dW_t
+{dX_t\over X_t}=bdt+\sigma dW_t
+\]</span></p>
+<p>Investment in <span class="math inline">\(X\)</span> can be made at any time <span class="math inline">\(t\)</span> at cost <span class="math inline">\(I\)</span>. The performance functional of the agent, whose time preferences are described by a weighted discount function <span class="math inline">\(h\)</span>, which is obtained from some weighting distribution <span class="math inline">\(F\)</span>, is given by <span class="math display">\[
+J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
 \]</span></p>
 
       
