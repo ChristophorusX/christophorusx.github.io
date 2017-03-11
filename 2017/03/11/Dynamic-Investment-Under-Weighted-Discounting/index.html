@@ -107,7 +107,7 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]
 Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-11T17:45:29.000Z">
+<meta property="og:updated_time" content="2017-03-11T22:20:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment Under Weighted Discounting">
 <meta name="twitter:description" content="Setup
@@ -365,6 +365,16 @@ Investment in \(X\)">
 <p>Investment in <span class="math inline">\(X\)</span> can be made at any time <span class="math inline">\(t\)</span> at cost <span class="math inline">\(I\)</span>. The performance functional of the agent, whose time preferences are described by a weighted discount function <span class="math inline">\(h\)</span>, which is obtained from some weighting distribution <span class="math inline">\(F\)</span>, is given by <span class="math display">\[
 J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
 \]</span></p>
+<h4 id="bellman-equations">Bellman Equations</h4>
+<p>The Hamilton–Jacobi–Bellman (HJB) equation is a partial differential equation which is central to optimal control theory. The solution of the HJB equation is the value function which gives the minimum cost for a given dynamical system with an associated cost function. The equation is a result of the theory of dynamic programming which was pioneered in the 1950s by Richard Bellman and coworkers. The corresponding discrete-time equation is usually referred to as the Bellman equation.</p>
+<p>To understand the Bellman equation, several underlying concepts must be understood. First, any optimization problem has some objective: minimizing travel time, minimizing cost, maximizing profits, maximizing utility, et cetera. The mathematical function that describes this objective is called the objective function.</p>
+<p>Dynamic programming breaks a multi-period planning problem into simpler steps at different points in time. Therefore, it requires keeping track of how the decision situation is evolving over time. The information about the current situation which is needed to make a correct decision is called the “state”. For example, to decide how much to consume and spend at each point in time, people would need to know (among other things) their initial wealth. Therefore, wealth <span class="math inline">\(W\)</span> would be one of their state variables, but there would probably be others.</p>
+<p>The variables chosen at any given point in time are often called the control variables. For example, given their current wealth, people might decide how much to consume now. Choosing the control variables now may be equivalent to choosing the next state; more generally, the next state is affected by other factors in addition to the current control. For example, in the simplest case, today’s wealth (the state) and consumption (the control) might exactly determine tomorrow’s wealth (the new state), though typically other factors will affect tomorrow’s wealth too.</p>
+<p>The dynamic programming approach describes the optimal plan by finding a rule that tells what the controls should be, given any possible value of the state. For example, if consumption <span class="math inline">\(c\)</span> depends only on wealth <span class="math inline">\(W\)</span>, we would seek a rule <span class="math inline">\(c(W)\)</span> that gives consumption as a function of wealth. Such a rule, determining the controls as a function of the states, is called a policy function.</p>
+<p>Finally, by definition, the optimal decision rule is the one that achieves the best possible value of the objective. For example, if someone chooses consumption, given wealth, in order to maximize happiness (assuming happiness <span class="math inline">\(H\)</span> can be represented by a mathematical function, such as a utility function), then each level of wealth will be associated with some highest possible level of happiness, <span class="math inline">\(H(W)\)</span>. The best possible value of the objective, written as a function of the state, is called the value function.</p>
+<p>Richard Bellman showed that a dynamic optimization problem in discrete time can be stated in a recursive, step-by-step form known as backward induction by writing down the relationship between the value function in one period and the value function in the next period. The relationship between these two value functions is called the “Bellman equation”. In this approach, the optimal policy in the last time period is specified in advance as a function of the state variable’s value at that time, and the resulting optimal value of the objective function is thus expressed in terms of that value of the state variable. Next, the next-to-last period’s optimization involves maximizing the sum of that period’s period-specific objective function and the optimal value of the future objective function, giving that period’s optimal policy contingent upon the value of the state variable as of the next-to-last period decision. This logic continues recursively back in time, until the first period decision rule is derived, as a function of the initial state variable value, by optimizing the sum of the first-period-specific objective function and the value of the second period’s value function, which gives the value for all the future periods. Thus, each period’s decision is made by explicitly acknowledging that all future decisions will be optimally made.</p>
+<h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
+<p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
 
       
     </div>
@@ -538,7 +548,7 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">1.</span> <span class="nav-text">Setup</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">1.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bellman-equations"><span class="nav-number">2.</span> <span class="nav-text">Bellman Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">3.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
             
 
           </div>
