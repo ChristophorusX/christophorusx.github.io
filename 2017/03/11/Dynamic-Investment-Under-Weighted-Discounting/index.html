@@ -107,7 +107,7 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]
 Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-11T22:57:50.000Z">
+<meta property="og:updated_time" content="2017-03-11T22:59:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment Under Weighted Discounting">
 <meta name="twitter:description" content="Setup
@@ -381,7 +381,7 @@ V(x_0)=\max_{a_t}\sum_{t=0}^\infty\beta^t F(x_t,a_t)
 <p><strong>Principle of Optimality:</strong> An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.</p>
 </blockquote>
 <p>Therefore, we have the Bellman equation as follows <span class="math display">\[
-V(x)=\max_{a=in=Gamma(x)}\lbrace F(x,a)+\beta V(T(x,a))\rbrace
+V(x)=\max_{a\in\Gamma(x)}\lbrace F(x,a)+\beta V(T(x,a))\rbrace
 \]</span></p>
 <h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
 <p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
