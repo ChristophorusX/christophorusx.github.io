@@ -101,7 +101,7 @@ Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space whic
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Dynamics
 Let \((\Omega,\mathcal{F},\mathbb{P})\) denote a complete probability space which supports a standard Brownian motion \((W_t)_{t\geq 0}\) with its natural filtration \(\lbrace F_t\rbrace_{t\g">
-<meta property="og:updated_time" content="2017-03-11T16:26:13.000Z">
+<meta property="og:updated_time" content="2017-03-11T16:40:23.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Consistent Optimal Stopping">
 <meta name="twitter:description" content="Dynamics
@@ -395,7 +395,13 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
 <p>Now consider the case of several group members. After swapping integration and expectation, <span class="math inline">\(V(x)\)</span> can be written as <span class="math inline">\(\int_0^\infty w(x;r)dF(r)\)</span>. This calculation shows that the weighted form of the discount function carries over tho the value function.</p>
 <p>More specifically, because <span class="math inline">\(w\)</span> features standard exponential discounting it satisfies <span class="math display">\[
 \mathcal{A}w(x;r)-rw(x;r)=0,\quad x\in\mathcal{C}
-\]</span> with boundary conditions <span class="math inline">\(w(0;r)=0\)</span> and <span class="math inline">\(w(x;r)\vert_\mathcal{S}=G(x)\vert_\mathcal{S}\)</span>.</p>
+\]</span> with boundary conditions <span class="math inline">\(w(0;r)=0\)</span> and <span class="math inline">\(w(x;r)\vert_\mathcal{S}=G(x)\vert_\mathcal{S}\)</span> as <span class="math inline">\(V(x)=G(x)\)</span> when <span class="math inline">\(x\in\mathcal{S}\)</span>. Since <span class="math inline">\(V\)</span> is the weighted average of the <span class="math inline">\(w\)</span>, by integrating the differential equation of <span class="math inline">\(w\)</span> against <span class="math inline">\(F\)</span>, <span class="math inline">\(V\)</span> must satisfy <span class="math display">\[
+\mathcal{A}V(x)-\int_0^\infty rw(x;r)dF(r)=0,\quead x\in\mathcal{C}
+\]</span> The final equation given above is then obtained by comparing the value of continuation and stopping.</p>
+<h4 id="example">Example</h4>
+<p>We can consider the example of the pseudo-exponential discount function. In that case, the group consists of two group members with discount rates <span class="math inline">\(r\)</span> and <span class="math inline">\(r+\lambda&gt;r\)</span> whose weights in the decision process are <span class="math inline">\(\delta\)</span> and <span class="math inline">\(1-\delta\)</span>, respectively. We can recover the equilibrium stopping rule from the following four equations by plugging in <span class="math display">\[
+\int_0^\infty rw(x;r)dF(r)=\delta rw(x;r)+(1-\delta)(r+\lambda)w(x;r+\lambda)
+\]</span></p>
 
       
     </div>
@@ -575,7 +581,7 @@ J(t,x;u)&amp;=\mathbb{E}[h(\tau_u^t-t)G(X_{\tau_u^t})\mid X_t=x] \\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#dynamics"><span class="nav-number">1.</span> <span class="nav-text">Dynamics</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-rules"><span class="nav-number">2.</span> <span class="nav-text">Stopping Rules</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-equilibrium"><span class="nav-number">3.</span> <span class="nav-text">Stopping Equilibrium</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#dynamics"><span class="nav-number">1.</span> <span class="nav-text">Dynamics</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-rules"><span class="nav-number">2.</span> <span class="nav-text">Stopping Rules</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#stopping-equilibrium"><span class="nav-number">3.</span> <span class="nav-text">Stopping Equilibrium</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#example"><span class="nav-number">4.</span> <span class="nav-text">Example</span></a></li></ol></div>
             
 
           </div>
