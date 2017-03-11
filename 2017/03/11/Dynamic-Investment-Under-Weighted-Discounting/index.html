@@ -107,7 +107,7 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]
 Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-11T22:51:39.000Z">
+<meta property="og:updated_time" content="2017-03-11T22:52:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment Under Weighted Discounting">
 <meta name="twitter:description" content="Setup
@@ -376,7 +376,7 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
 <h4 id="deriving-the-bellman-equation">Deriving the Bellman Equation</h4>
 <p>Let the state at time <span class="math inline">\(t\)</span> be <span class="math inline">\(x_t\)</span>. For a decision that begins at time <span class="math inline">\(0\)</span>, we take as given the initial state <span class="math inline">\(x_0\)</span>. Then let <span class="math inline">\(a_t\int \Gamma(x_t)\)</span> be one or more control variables depends on the current state <span class="math inline">\(x_t\)</span>. We also assume that the state chages from <span class="math inline">\(x\)</span> to a new state <span class="math inline">\(T(x,a)\)</span> when action <span class="math inline">\(a\)</span> is taken, and that the current payoff from taking action <span class="math inline">\(a\)</span> in state <span class="math inline">\(x\)</span> is <span class="math inline">\(F(x,a)\)</span>. Finally, we have a discount factor <span class="math inline">\(0&lt;\beta&lt;1\)</span>. Under this assumption, we have <span class="math display">\[
 V(x_0)=\max_{a_t}\sum_{t=0}^\infty\beta^t F(x_t,a_t)
-\]</span> subject to constraints <span class="math inline">\(a_t\in\Gamma(x_t)\)</span>, <span class="math inline">\(x_{t+1}=T(x_t,a_t)\)</span>.</p>
+\]</span> subject to constraints <span class="math inline">\(a_t\in\Gamma(x_t)\)</span>, <span class="math inline">\(x_{t+1}=T(x_t,a_t)\)</span>. Then the value function <span class="math inline">\(V(x)\)</span> is the optimal value that can be obtained by maximizing this objective function subject to the assumed constraints.</p>
 <h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
 <p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
 
