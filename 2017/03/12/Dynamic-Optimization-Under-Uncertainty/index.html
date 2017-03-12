@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Economics,Finance," />
+  <meta name="keywords" content="Mathematics,Finance,Economics," />
 
 
 
@@ -93,28 +93,16 @@
 
 
 
-<meta name="description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
+<meta name="description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dynamic Optimization Under Uncertainty">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/12/Dynamic-Optimization-Under-Uncertainty/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-12T19:22:02.000Z">
+<meta property="og:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
+<meta property="og:updated_time" content="2017-03-12T22:47:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
-<meta name="twitter:description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
+<meta name="twitter:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
 
 
 
@@ -358,18 +346,12 @@ Investment in \(X\)">
       
 
       
-        <h4 id="setup">Setup</h4>
-<p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]</span></p>
-<p>Investment in <span class="math inline">\(X\)</span> can be made at any time <span class="math inline">\(t\)</span> at cost <span class="math inline">\(I\)</span>, which is known and fixed. The performance functional of the agent, whose time preferences are described by a weighted discount function <span class="math inline">\(h\)</span>, which is obtained from some weighting distribution <span class="math inline">\(F\)</span>, is given by</p>
-<p><span class="math display">\[
-J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
-\]</span></p>
-<p>The simple net present value rule is to invest as long as <span class="math inline">\(V&gt;I\)</span>, but as McDonald and Siegel demonstrated, this is incorrect. Because future values of <span class="math inline">\(X\)</span> are unknown, there is an opportunity cost to investing today.</p>
-<p>To ensure this to be a well-posed problem, let <span class="math inline">\(b&lt;\inf\lbrace r\in[0,\infty):F(r)&gt;0\rbrace\)</span>, otherwise <span class="math inline">\(w\)</span> can grow to infinity as <span class="math inline">\(t\)</span> goes to infinity.</p>
-<h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
-<p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
+        <p>Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of choices.</p>
+<h4 id="two-period-example">Two Period Example</h4>
+<p>Let <span class="math inline">\(I\)</span> denote the sunk cost of investment that then produce a product per period forever, and let <span class="math inline">\(r\)</span> be the interest rate. Suppose the price of the product in period <span class="math inline">\(0\)</span> is <span class="math inline">\(P_0\)</span>. From period <span class="math inline">\(1\)</span> onward, it will be <span class="math inline">\((1+u)P_0\)</span> with probability <span class="math inline">\(q\)</span> and <span class="math inline">\((1-d)P_0\)</span> with probability <span class="math inline">\(1-q\)</span>.</p>
+<p>If the investment opportunity is available only in period <span class="math inline">\(0\)</span>, the expected present value of the revenue is denoted by <span class="math inline">\(V_0\)</span>. <span class="math display">\[
+V_0=P_0+[q(1-u)P_0+(1-q)(1-d)P_0]\left[{1\over 1+r}+{1\over (1+r)^2}+\cdots\right]
+\]</span> and the net payoff of the project <span class="math inline">\(\Omega_0=\max[V_0-I,0]\)</span>.</p>
 
       
     </div>
@@ -395,9 +377,9 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Economics/" rel="tag"># Economics</a>
-          
             <a href="/tags/Finance/" rel="tag"># Finance</a>
+          
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
           
         </div>
       
@@ -545,7 +527,7 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">1.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">2.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li></ol></div>
             
 
           </div>
