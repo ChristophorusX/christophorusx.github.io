@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/12/Dynamic-Optimization-Under-Uncertainty/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
-<meta property="og:updated_time" content="2017-03-12T23:08:48.000Z">
+<meta property="og:updated_time" content="2017-03-12T23:11:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
@@ -357,7 +357,9 @@ V_0=P_0+[q(1-u)P_0+(1-q)(1-d)P_0]\left[{1\over 1+r}+{1\over (1+r)^2}+\cdots\righ
 \]</span> Therefore, the net present value of the whole investment opportunity optimally deployed, which we denote by <span class="math inline">\(F_0\)</span>, is <span class="math display">\[
 F_0=\max\lbrace V_0-I,{1\over 1+r}\mathbb{E}_0[F_1]\rbrace
 \]</span></p>
-<p>For those that have many periods, let <span class="math inline">\(u_t\)</span> be the possible control variables at time <span class="math inline">\(t\)</span>, <span class="math inline">\(\pi_t(x_t,u_t)\)</span> be the profit flow at time <span class="math inline">\(t\)</span> after taking control <span class="math inline">\(u_t\)</span> at position <span class="math inline">\(x_t\)</span>, <span class="math inline">\(\rho\)</span> be the discount rate, and <span class="math inline">\(F_t(x_t)\)</span> be the expected net present value when the firm makes all decisions optimally from this point onwards. Since for any time <span class="math inline">\(t\)</span>, <span class="math inline">\(F_{t+1}(x_{t+1})\)</span> is random as <span class="math inline">\(x_{t+1}\)</span> is randomly assigned in a Markov chain. Thus,</p>
+<p>For those that have many periods, let <span class="math inline">\(u_t\)</span> be the possible control variables at time <span class="math inline">\(t\)</span>, <span class="math inline">\(\pi_t(x_t,u_t)\)</span> be the profit flow at time <span class="math inline">\(t\)</span> after taking control <span class="math inline">\(u_t\)</span> at position <span class="math inline">\(x_t\)</span>, <span class="math inline">\(\rho\)</span> be the discount rate, and <span class="math inline">\(F_t(x_t)\)</span> be the expected net present value when the firm makes all decisions optimally from this point onwards. Since for any time <span class="math inline">\(t\)</span>, <span class="math inline">\(F_{t+1}(x_{t+1})\)</span> is random as <span class="math inline">\(x_{t+1}\)</span> is randomly assigned in a Markov chain. Thus, <span class="math display">\[
+F_t(x_t)=\max_{u_t}\left\lbrace \pi_t(x_t,u_t)+{1\over 1+\rho}\mathbb{E}_t\left[F_{t+1}(x_{t+1})\right]\right\rbrace
+\]</span></p>
 
       
     </div>
