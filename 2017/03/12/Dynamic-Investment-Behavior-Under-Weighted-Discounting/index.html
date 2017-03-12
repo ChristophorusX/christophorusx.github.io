@@ -107,7 +107,7 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]
 Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-12T18:39:52.000Z">
+<meta property="og:updated_time" content="2017-03-12T18:51:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment Behavior Under Weighted Discounting">
 <meta name="twitter:description" content="Setup
@@ -362,11 +362,12 @@ Investment in \(X\)">
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]</span></p>
-<p>Investment in <span class="math inline">\(X\)</span> can be made at any time <span class="math inline">\(t\)</span> at cost <span class="math inline">\(I\)</span>, which is know and fixed. The performance functional of the agent, whose time preferences are described by a weighted discount function <span class="math inline">\(h\)</span>, which is obtained from some weighting distribution <span class="math inline">\(F\)</span>, is given by</p>
+<p>Investment in <span class="math inline">\(X\)</span> can be made at any time <span class="math inline">\(t\)</span> at cost <span class="math inline">\(I\)</span>, which is known and fixed. The performance functional of the agent, whose time preferences are described by a weighted discount function <span class="math inline">\(h\)</span>, which is obtained from some weighting distribution <span class="math inline">\(F\)</span>, is given by</p>
 <p><span class="math display">\[
 J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
 \]</span></p>
 <p>The simple net present value rule is to invest as long as <span class="math inline">\(V&gt;I\)</span>, but as McDonald and Siegel demonstrated, this is incorrect. Because future values of <span class="math inline">\(X\)</span> are unknown, there is an opportunity cost to investing today.</p>
+<p>To ensure this to be a well-posed problem, let <span class="math inline">\(b&lt;\inf\lbrace r\in[0,\infty):F(r)&gt;0\rbrace\)</span>, otherwise <span class="math inline">\(w\)</span> can grow to infinity as <span class="math inline">\(t\)</span> goes to infinity.</p>
 <h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
 <p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
 
