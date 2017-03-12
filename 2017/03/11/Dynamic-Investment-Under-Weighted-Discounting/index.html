@@ -107,7 +107,7 @@ Consider the opportunity to invest in a project. The payoff process \(X\) of the
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]
 Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-12T02:51:32.000Z">
+<meta property="og:updated_time" content="2017-03-12T02:57:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Investment">
 <meta name="twitter:description" content="Setup
@@ -405,6 +405,8 @@ F(V)=\max_T\mathbb{E}[(V_T-I)e^{-\rho T}]
 dF=F&#39;(V)dV+{1\over 2}F&#39;&#39;(V)(dV)^2
 \]</span> Substituting equation <span class="math inline">\(\eqref{eq:geometric}\)</span> for <span class="math inline">\(dV\)</span> into the expression <span class="math display">\[
 \mathbb{E}[dF]=\alpha VF&#39;(V)dt+{1\over 2}\sigma^2V^2F&#39;&#39;(V)dt
+\]</span> Hence the Bellman equation becomes <span class="math display">\[
+{1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+\alpha VF&#39;(V)-\rho F=0
 \]</span></p>
 <h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
 <p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
