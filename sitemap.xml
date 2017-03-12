@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://christophorusx.github.io/2017/03/11/Dynamic-Investment-Under-Weighted-Discounting/</loc>
+    <loc>http://christophorusx.github.io/2017/03/11/Dynamic-Investment/</loc>
     
-    <lastmod>2017-03-12T17:51:19.000Z</lastmod>
+    <lastmod>2017-03-12T18:40:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://christophorusx.github.io/2017/03/12/Dynamic-Investment-Behavior-Under-Weighted-Discounting/</loc>
+    
+    <lastmod>2017-03-12T18:39:52.000Z</lastmod>
     
   </url>
   
