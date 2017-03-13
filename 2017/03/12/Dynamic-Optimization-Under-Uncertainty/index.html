@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T01:39:36.000Z">
+<meta property="og:updated_time" content="2017-03-13T01:48:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -376,6 +376,10 @@ F(x_t)=\max_{u_t}\left\lbrace\pi(x_t,u_t)+{1\over 1+\rho}\bbE_t[f(x_{t+1})]\righ
 <p>Let <span class="math inline">\(\pi(x)\)</span> denote the flow profit, and <span class="math inline">\(\Omega(x)\)</span> the termination payoff. Then the Bellman equation becomes <span class="math display">\[
 F(x)=\max\left\lbrace\Omega(x), \pi(x_t,u_t)+{1\over 1+\rho}\bbE[f(x&#39;)\mid x]\right\rbrace
 \]</span> For some range of values of <span class="math inline">\(x\)</span>, the maximum on the right-hand side of this will be achieved by termination, and for other values of <span class="math inline">\(x\)</span> it will be achieved through continuation. In general this division could be arbitrary; intervals where termination is optimal could alternate with ones where continuation is optimal. However, most economic applications will have more structure. There will be a single cutoff <span class="math inline">\(x&#39;\)</span>, with termination optimal on one side and continuation on the other.</p>
+<h3 id="continuous-time">Continuous Time</h3>
+<p>Suppose each time period is of length <span class="math inline">\(\Delta t\)</span>. We write <span class="math inline">\(\pi(x,u,t)\)</span> for the rate of the profit flow, so that the actual profit over the time period of length <span class="math inline">\(\Delta t\)</span> is <span class="math inline">\(\pi(x,u,t)\Delta t\)</span>. SImilarly, let <span class="math inline">\(\rho\)</span> be the discount rate per unit time, so the total discounting over an interval of length <span class="math inline">\(\Delta t\)</span> is by the factor <span class="math inline">\(1/(1+\rho\Delta t)\)</span>. The Bellman equation now becomes <span class="math display">\[
+F(x)=\max\left\lbrace\pi(x,u,t)\Delta t+{1\over 1+\rho\Delta t}\bbE[f(x&#39;,t+\Delta t)\mid x, u]\right\rbrace
+\]</span></p>
 
       
     </div>
@@ -551,7 +555,7 @@ F(x)=\max\left\lbrace\Omega(x), \pi(x_t,u_t)+{1\over 1+\rho}\bbE[f(x&#39;)\mid x
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#many-period-problem-on-markov-chain"><span class="nav-number">2.</span> <span class="nav-text">Many Period Problem on Markov chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping"><span class="nav-number">3.</span> <span class="nav-text">Optimal Stopping</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#many-period-problem-on-markov-chain"><span class="nav-number">2.</span> <span class="nav-text">Many Period Problem on Markov chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping"><span class="nav-number">3.</span> <span class="nav-text">Optimal Stopping</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#continuous-time"><span class="nav-number"></span> <span class="nav-text">Continuous Time</span></a></div>
             
 
           </div>
