@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T01:48:37.000Z">
+<meta property="og:updated_time" content="2017-03-13T01:53:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -379,6 +379,10 @@ F(x)=\max\left\lbrace\Omega(x), \pi(x_t,u_t)+{1\over 1+\rho}\bbE[f(x&#39;)\mid x
 <h3 id="continuous-time">Continuous Time</h3>
 <p>Suppose each time period is of length <span class="math inline">\(\Delta t\)</span>. We write <span class="math inline">\(\pi(x,u,t)\)</span> for the rate of the profit flow, so that the actual profit over the time period of length <span class="math inline">\(\Delta t\)</span> is <span class="math inline">\(\pi(x,u,t)\Delta t\)</span>. SImilarly, let <span class="math inline">\(\rho\)</span> be the discount rate per unit time, so the total discounting over an interval of length <span class="math inline">\(\Delta t\)</span> is by the factor <span class="math inline">\(1/(1+\rho\Delta t)\)</span>. The Bellman equation now becomes <span class="math display">\[
 F(x)=\max\left\lbrace\pi(x,u,t)\Delta t+{1\over 1+\rho\Delta t}\bbE[f(x&#39;,t+\Delta t)\mid x, u]\right\rbrace
+\]</span> Rearrange the above equation and get <span class="math display">\[
+\rho\Delta t F(x,t)=\max_u\left\lbrace\pi(x,u,t)\Delta t(1+\rho\Delta t)+\bbE[\Delta F]\right\rbrace
+\]</span> Divide by <span class="math inline">\(\Delta t\)</span> and let it go to zero. We get <span class="math display">\[
+\rho\Delta t F(x,t)=\max_u\left\lbrace\pi(x,u,t)+{1\over dt}\bbE[\Delta F]\right\rbrace
 \]</span></p>
 
       
