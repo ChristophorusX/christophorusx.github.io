@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Economics,Finance," />
+  <meta name="keywords" content="Mathematics,Finance,Economics," />
 
 
 
@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T02:56:12.000Z">
+<meta property="og:updated_time" content="2017-03-13T03:11:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -399,6 +399,10 @@ dx=a(x,u,t)dt+b(x,u,t)dW_t
 <span class="math display">\[\begin{align}
 \rho F(x)=\max_u\left\lbrace\pi(x,u)+a(x,u)F&#39;(x)+{1\over 2}b^2(x,u)F&#39;&#39;(x)\right\rbrace
 \end{align}\]</span>
+<h4 id="optimal-stopping-and-smooth-pasting">Optimal Stopping and Smooth Pasting</h4>
+<p>Here we consider a binary decision problem. At every instant, the firm can either continue its current situation to get a profit flow, or stop and get a termination payoff. Both the profit flow <span class="math inline">\(\pi(x, t)\)</span> and the termination payoff <span class="math inline">\(\Omega(x, t)\)</span> can depend on a state variable <span class="math inline">\(x\)</span> and on time <span class="math inline">\(t\)</span>, where <span class="math inline">\(x\)</span> follows an Ito process <span class="math display">\[
+dx=a(x,t)dt+b(x,t)dW_t
+\]</span> The most obvious example is of a firm deciding whether to cease operation and sell its equipment for its scrap value. Investment decisions can also be put in this form: continuation means waiting, and the flow payoff is zero; stopping means investing, and the termination payoff is just the expected present value of future profits from the project minus the cost of investment.</p>
 
       
     </div>
@@ -424,9 +428,9 @@ dx=a(x,u,t)dt+b(x,u,t)dW_t
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Economics/" rel="tag"># Economics</a>
-          
             <a href="/tags/Finance/" rel="tag"># Finance</a>
+          
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
           
         </div>
       
@@ -574,7 +578,7 @@ dx=a(x,u,t)dt+b(x,u,t)dW_t
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#many-period-problem-on-markov-chain"><span class="nav-number">2.</span> <span class="nav-text">Many Period Problem on Markov chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping"><span class="nav-number">3.</span> <span class="nav-text">Optimal Stopping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continuous-time"><span class="nav-number">4.</span> <span class="nav-text">Continuous Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ito-processes"><span class="nav-number">5.</span> <span class="nav-text">Ito Processes</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#many-period-problem-on-markov-chain"><span class="nav-number">2.</span> <span class="nav-text">Many Period Problem on Markov chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping"><span class="nav-number">3.</span> <span class="nav-text">Optimal Stopping</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#continuous-time"><span class="nav-number">4.</span> <span class="nav-text">Continuous Time</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ito-processes"><span class="nav-number">5.</span> <span class="nav-text">Ito Processes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping-and-smooth-pasting"><span class="nav-number">6.</span> <span class="nav-text">Optimal Stopping and Smooth Pasting</span></a></li></ol></div>
             
 
           </div>
