@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T01:06:29.000Z">
+<meta property="og:updated_time" content="2017-03-13T01:27:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -361,6 +361,7 @@ V_0=P_0+[q(1-u)P_0+(1-q)(1-d)P_0]\left[{1\over 1+r}+{1\over (1+r)^2}+\cdots\righ
 \]</span> Therefore, the net present value of the whole investment opportunity optimally deployed, which we denote by <span class="math inline">\(F_0\)</span>, is <span class="math display">\[
 F_0=\max\lbrace V_0-I,{1\over 1+r}\mathbb{E}_0[F_1]\rbrace
 \]</span></p>
+<h4 id="many-period-problem-on-markov-chain">Many Period Problem on Markov chain</h4>
 <p>For those that have many periods, let <span class="math inline">\(u_t\)</span> be the possible control variables at time <span class="math inline">\(t\)</span>, <span class="math inline">\(\pi_t(x_t,u_t)\)</span> be the profit flow at time <span class="math inline">\(t\)</span> after taking control <span class="math inline">\(u_t\)</span> at position <span class="math inline">\(x_t\)</span>, <span class="math inline">\(\rho\)</span> be the discount rate, and <span class="math inline">\(F_t(x_t)\)</span> be the expected net present value when the firm makes all decisions optimally from this point onwards. Since for any time <span class="math inline">\(t\)</span>, <span class="math inline">\(F_{t+1}(x_{t+1})\)</span> is random as <span class="math inline">\(x_{t+1}\)</span> is randomly assigned in a Markov chain. Thus, <span class="math display">\[
 F_t(x_t)=\max_{u_t}\left\lbrace \pi_t(x_t,u_t)+{1\over 1+\rho}\mathbb{E}_t\left[F_{t+1}(x_{t+1})\right]\right\rbrace
 \]</span></p>
@@ -368,6 +369,9 @@ F_t(x_t)=\max_{u_t}\left\lbrace \pi_t(x_t,u_t)+{1\over 1+\rho}\mathbb{E}_t\left[
 <p>The crucial simplification that an infinite horizon brings to the above equation is independence from time <span class="math inline">\(t\)</span> as such, i.e. <span class="math inline">\(t\)</span> by itself has no effect. This works provided the flow profit function <span class="math inline">\(\pi\)</span>, the transition probability distribution function <span class="math inline">\(\Phi\)</span>, and the discount rate <span class="math inline">\(\rho\)</span> are themselves all independent of the actual label of <span class="math inline">\(t\)</span>. In this setting, the problem one period hence looks exactly like the problem , except for a new starting state. Therefore the value function is common to all periods, although it will be evaluated at different points <span class="math inline">\(x_t\)</span>. Thus, the Bellman equation for any <span class="math inline">\(t\)</span> becomes <span class="math display">\[
 F(x_t)=\max_{u_t}\left\lbrace\pi(x_t,u_t)+{1\over 1+\rho}\bbE_t[f(x_{t+1})]\right\rbrace
 \]</span></p>
+<p>The recursive Bellman equation can be thought of as a whole list of equations, one for each possible value of <span class="math inline">\(x\)</span>, with a whole list of unknowns, namely all the values <span class="math inline">\(F(x)\)</span>. If <span class="math inline">\(x\)</span> took on only a finite number of discrete values <span class="math inline">\(x_i\)</span>, this would be a system of equations with exactly as many equations as the number of unknowns <span class="math inline">\(F(x_i)\)</span>. However, the equation is not linear as the optimal choice of <span class="math inline">\(u\)</span> depends on all the values <span class="math inline">\(F(x_{t+1})\)</span> that appear in the expectation. In general, we do not know whether nonlinear functional equations have solutions, let alone unique ones. Fortunately, the recursive Bellman equation has a special structure that allows existence and uniqueness of a solution function <span class="math inline">\(F(x)\)</span>.</p>
+<p>It is essentially a practical solution method. We start with any guess for the true value function, say <span class="math inline">\(F^{(1)}(x)\)</span>. Use it on the right-hand side of the Bellman equation and find the corresponding optimal choice rule <span class="math inline">\(u^{(1)}\)</span>, which can be expressed as a function of <span class="math inline">\(x\)</span> alone. Then substituting it back, the RHS becomes a new function of <span class="math inline">\(x\)</span>; call it <span class="math inline">\(F^{(2)}\)</span>. Then the successive guesses will converge to the true function regardless of the initial guess. The key lies in the factor <span class="math inline">\(1/(1+\rho)\)</span>, which is strictly less than <span class="math inline">\(1\)</span> and scales down any errors in the guess.</p>
+<h4 id="optimal-stopping">Optimal Stopping</h4>
 
       
     </div>
@@ -543,7 +547,7 @@ F(x_t)=\max_{u_t}\left\lbrace\pi(x_t,u_t)+{1\over 1+\rho}\bbE_t[f(x_{t+1})]\righ
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#two-period-example"><span class="nav-number">1.</span> <span class="nav-text">Two Period Example</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#many-period-problem-on-markov-chain"><span class="nav-number">2.</span> <span class="nav-text">Many Period Problem on Markov chain</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#optimal-stopping"><span class="nav-number">3.</span> <span class="nav-text">Optimal Stopping</span></a></li></ol></div>
             
 
           </div>
