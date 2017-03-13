@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T01:04:56.000Z">
+<meta property="og:updated_time" content="2017-03-13T01:06:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -366,7 +366,7 @@ F_t(x_t)=\max_{u_t}\left\lbrace \pi_t(x_t,u_t)+{1\over 1+\rho}\mathbb{E}_t\left[
 \]</span></p>
 <p>The idea behind this decomposition is Bellman’s Principle of Optimality. To reiterate, the first term on the right-hand side is the immediate profit, the second term constitutes the continuation value, and the optimum action this period is the one that maximize the sum of these two components. If the many-period problem has a fixed finite time horizon <span class="math inline">\(T\)</span>, we can start at the end and work backward. If there’s no fixed finite time horizon for the decision problem, there is no known final value function from which we can work backward.</p>
 <p>The crucial simplification that an infinite horizon brings to the above equation is independence from time <span class="math inline">\(t\)</span> as such, i.e. <span class="math inline">\(t\)</span> by itself has no effect. This works provided the flow profit function <span class="math inline">\(\pi\)</span>, the transition probability distribution function <span class="math inline">\(\Phi\)</span>, and the discount rate <span class="math inline">\(\rho\)</span> are themselves all independent of the actual label of <span class="math inline">\(t\)</span>. In this setting, the problem one period hence looks exactly like the problem , except for a new starting state. Therefore the value function is common to all periods, although it will be evaluated at different points <span class="math inline">\(x_t\)</span>. Thus, the Bellman equation for any <span class="math inline">\(t\)</span> becomes <span class="math display">\[
-F(x_t)==\max_{u_t}\left\lbrace\pi(x_t,u_t)+{1\over 1+\rho}\bbE_t[f(x_{t+1})]
+F(x_t)=\max_{u_t}\left\lbrace\pi(x_t,u_t)+{1\over 1+\rho}\bbE_t[f(x_{t+1})]\right\rbrace
 \]</span></p>
 
       
