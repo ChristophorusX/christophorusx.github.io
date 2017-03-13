@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T02:49:11.000Z">
+<meta property="og:updated_time" content="2017-03-13T02:55:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -395,6 +395,10 @@ dx=a(x,u,t)dt+b(x,u,t)dW_t
 \rho F(x,t)=\max_u\left\lbrace\pi(x,u,t)+F_t(x,t)+a(x,u,t)F_x(x,t)+{1\over 2}b^2(x,u,t)F_{xx}(x,t)\right\rbrace
 \end{align}\]</span>
 <p>Substituting this expression for the optimal <span class="math inline">\(u\)</span> back into the RHS equation <span class="math inline">\(\eqref{eq:ito}\)</span>. we get a partial differential equation of the second order. with <span class="math inline">\(F\)</span> as the dependent variable and <span class="math inline">\(x\)</span> and <span class="math inline">\(t\)</span> as the independent variables. In general this equation is very complicated.</p>
+<p>If the time horizon is infinite and the functions <span class="math inline">\(\pi\)</span>, <span class="math inline">\(a\)</span>, and <span class="math inline">\(b\)</span> do not depend explicitly on time, then neither does the value function depend on time, and equation <span class="math inline">\(\eqref{eq:ito}\)</span> becomes an ODE with <span class="math inline">\(x\)</span> as its only independent variable:</p>
+<span class="math display">\[\begin{align}
+\rho F(x)=\max_u\left\lbrace\pi(x,u)+a(x,u)F&#39;(x)+{1\over 2}b^2(x,u)F&#39;&#39;(x)\right\brace
+\end{align}\]</span>
 
       
     </div>
