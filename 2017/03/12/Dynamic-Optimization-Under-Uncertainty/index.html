@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Finance,Economics," />
+  <meta name="keywords" content="Mathematics,Economics,Finance," />
 
 
 
@@ -101,7 +101,7 @@ Time plays an important role for investment decisions. One aspect of it is the o
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="\(\newcommand\bbE{\mathbb{E}}\)
 Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should">
-<meta property="og:updated_time" content="2017-03-13T02:17:52.000Z">
+<meta property="og:updated_time" content="2017-03-13T02:28:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="\(\newcommand\bbE{\mathbb{E}}\)
@@ -385,6 +385,7 @@ F(x)=\max\left\lbrace\pi(x,u,t)\Delta t+{1\over 1+\rho\Delta t}\bbE[F(x&#39;,t+\
 \rho\Delta t F(x,t)=\max_u\left\lbrace\pi(x,u,t)+{1\over dt}\bbE[dF]\right\rbrace
 \]</span> On the LHS we have the normal return per unit time that a decision maker using <span class="math inline">\(\rho\)</span> as the discount rate, would require for holding this asset. On the RHS, the first term is the immediate payout or dividend from the asset, while the second term is its expected rate of capital gain (loss if negative). Thus the RHS is the expected total return per unit time from holding the asset. The equality becomes a no-arbitrage or equilibrium condition, expressing the investor’s willingness to hold the asset. The maximization with respect to <span class="math inline">\(u\)</span> means that the current operation of the asset is being managed optimally, bearing in mind not only the immediate payout but also the consequences for future values.</p>
 <p>The limit on the RHS depends on the expectation corresponding to the random <span class="math inline">\(x&#39;\)</span> a time <span class="math inline">\(\Delta t\)</span> later. There are two classes of stochastic processes in continuous time that allow such limits in a form conducive to further analysis and solution of the function <span class="math inline">\(F(x,t)\)</span> in the continuation region, which are the Ito and Poisson processes.</p>
+<p>In discrete time, we stipulated that the action <span class="math inline">\(u\)</span>, taken in the current period <span class="math inline">\(t\)</span> could depend on the knowledge of the current state <span class="math inline">\(x_t\)</span>, but not on the random future state <span class="math inline">\(x_{t+1}\)</span>· In continuous time the two coalesce. We have to be careful not to allow choices to depend on information about the future, even about “the next instant.” Otherwise we would he acting with the benefit of hindsight, and could make infinite profits. Technically this can be avoided by requiring the uncertainty to be “continuous from the right” in time while the strategies are “continuous from the left.” Then any jumps in the stochastic processes occur at an instant, while the actions cannot change until just after the instant.</p>
 
       
     </div>
@@ -410,9 +411,9 @@ F(x)=\max\left\lbrace\pi(x,u,t)\Delta t+{1\over 1+\rho\Delta t}\bbE[F(x&#39;,t+\
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Finance/" rel="tag"># Finance</a>
-          
             <a href="/tags/Economics/" rel="tag"># Economics</a>
+          
+            <a href="/tags/Finance/" rel="tag"># Finance</a>
           
         </div>
       
