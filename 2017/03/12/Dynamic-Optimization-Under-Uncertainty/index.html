@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/12/Dynamic-Optimization-Under-Uncertainty/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
-<meta property="og:updated_time" content="2017-03-14T00:54:52.000Z">
+<meta property="og:updated_time" content="2017-03-14T01:02:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
@@ -403,8 +403,10 @@ dx=a(x,t)dt+b(x,t)dW_t
 <p>Since we have the Bellman equation as <span class="math display">\[
 F(x,t)=\max\left\lbrace\Omega(x,t),\pi(x,t)+{1\over 1+\rho dt}\bbE[F(x+dx,t+dt)\mid x]\right\rbrace
 \]</span> In the continuation region, the second term on the RHS is the larger of the two. Expanding it by Ito Lemma, we get a PDE satisfied by the value function. <span class="math display">\[
-{1\over 2}b^2(x,t)F_{xx}(x,t)+a(x,t)F_x(x,t_+F_t(x,t)-\rho F(x,t)+\pi(x,t)=0
-\]</span></p>
+{1\over 2}b^2(x,t)F_{xx}(x,t)+a(x,t)F_x(x,t)+F_t(x,t)-\rho F(x,t)+\pi(x,t)=0
+\]</span> This holds for <span class="math inline">\(x&gt;x^\ast(t)\)</span>, and we need to look for boundary conditions that hold along <span class="math inline">\(x=x^\ast(t)\)</span>. From the Bellman equation, we know that in the stopping region we have <span class="math inline">\(F(x,t)=\Omega(x,t)\)</span>, so by continuity we can impose the condition <span class="math display">\[
+F(x^\ast(t),t)=\Omega(x^\ast(t),t)
+\]</span> for all <span class="math inline">\(t\)</span>. This is often called “value-matching condition” because it matches the values of the unknown function <span class="math inline">\(F(x,t)\)</span> to those of the known termination payoff function <span class="math inline">\(\Omega(x,t)\)</span>.</p>
 
       
     </div>
