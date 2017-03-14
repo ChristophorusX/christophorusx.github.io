@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Economics,Finance," />
+  <meta name="keywords" content="Mathematics,Finance,Economics," />
 
 
 
@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/12/Dynamic-Optimization-Under-Uncertainty/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
-<meta property="og:updated_time" content="2017-03-13T04:13:06.000Z">
+<meta property="og:updated_time" content="2017-03-14T00:54:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
@@ -399,6 +399,12 @@ dx=a(x,u,t)dt+b(x,u,t)dW_t
 <p>Here we consider a binary decision problem. At every instant, the firm can either continue its current situation to get a profit flow, or stop and get a termination payoff. Both the profit flow <span class="math inline">\(\pi(x, t)\)</span> and the termination payoff <span class="math inline">\(\Omega(x, t)\)</span> can depend on a state variable <span class="math inline">\(x\)</span> and on time <span class="math inline">\(t\)</span>, where <span class="math inline">\(x\)</span> follows an Ito process <span class="math display">\[
 dx=a(x,t)dt+b(x,t)dW_t
 \]</span> The most obvious example is of a firm deciding whether to cease operation and sell its equipment for its scrap value. Investment decisions can also be put in this form: continuation means waiting, and the flow payoff is zero; stopping means investing, and the termination payoff is just the expected present value of future profits from the project minus the cost of investment.</p>
+<p>Intuition suggests that for each <span class="math inline">\(t\)</span> there will be a critical value <span class="math inline">\(x^\ast(t)\)</span>, with continuation optimal if <span class="math inline">\(x_t\)</span> lies on one side of <span class="math inline">\(x^\ast(t)\)</span>, and stopping optimal on the other side. We can regard the critical values <span class="math inline">\(x^\ast(t)\)</span> for various <span class="math inline">\(t\)</span> as forming a curve that divides the <span class="math inline">\((x,t)\)</span> space into two regions, with continuation optimal above the curve and termination optimal below it.</p>
+<p>Since we have the Bellman equation as <span class="math display">\[
+F(x,t)=\max\left\lbrace\Omega(x,t),\pi(x,t)+{1\over 1+\rho dt}\bbE[F(x+dx,t+dt)\mid x]\right\rbrace
+\]</span> In the continuation region, the second term on the RHS is the larger of the two. Expanding it by Ito Lemma, we get a PDE satisfied by the value function. <span class="math display">\[
+{1\over 2}b^2(x,t)F_{xx}(x,t)+a(x,t)F_x(x,t_+F_t(x,t)-\rho F(x,t)+\pi(x,t)=0
+\]</span></p>
 
       
     </div>
@@ -424,9 +430,9 @@ dx=a(x,t)dt+b(x,t)dW_t
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Economics/" rel="tag"># Economics</a>
-          
             <a href="/tags/Finance/" rel="tag"># Finance</a>
+          
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
           
         </div>
       
