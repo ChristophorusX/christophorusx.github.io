@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/12/Dynamic-Optimization-Under-Uncertainty/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
-<meta property="og:updated_time" content="2017-03-14T01:05:55.000Z">
+<meta property="og:updated_time" content="2017-03-14T01:12:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic Optimization Under Uncertainty">
 <meta name="twitter:description" content="Time plays an important role for investment decisions. One aspect of it is the opportunity to make the same decision later; therefore the option of postponement should be included in today’s menu of c">
@@ -408,6 +408,9 @@ F(x,t)=\max\left\lbrace\Omega(x,t),\pi(x,t)+{1\over 1+\rho dt}\bbE[F(x+dx,t+dt)\
 F(x^\ast(t),t)=\Omega(x^\ast(t),t)
 \]</span> for all <span class="math inline">\(t\)</span>. This is often called “value-matching condition” because it matches the values of the unknown function <span class="math inline">\(F(x,t)\)</span> to those of the known termination payoff function <span class="math inline">\(\Omega(x,t)\)</span>.</p>
 <p>However, the boundary itself, i.e. the region in <span class="math inline">\((x,t)\)</span> space over which the PDE is valid, is an unknown. The boundary of the region, namely the curve <span class="math inline">\(x^\ast(t)\)</span>, is called a “free boundary,” and the whole problem of solving the equation and determining its region is called a free-boundary problem.</p>
+<p>We need a second condition if we are to find <span class="math inline">\(x^\ast(t)\)</span> jointly with the function <span class="math inline">\(F(x,t)\)</span>. The extra condition comes from economic considerations. We must have <span class="math display">\[
+F_x(x^\ast(t),t)=\Omega_x(x^\ast(t),t)
+\]</span> for all <span class="math inline">\(t\)</span>. This is called “smooth-pasting condition” because it requires not just the values but also the derivatives or slopes of the two functions to match at the boundary.</p>
 
       
     </div>
