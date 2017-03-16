@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T19:25:08.000Z">
+<meta property="og:updated_time" content="2017-03-16T19:26:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -383,12 +383,10 @@ dF=F&#39;(V)dV+{1\over 2}F&#39;&#39;(V)(dV)^2
 \]</span> i.e.</p>
 <span class="math display">\[\begin{equation}\label{eq:differential}
 {1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+(\rho-\delta) VF&#39;(V)-\rho F(V)=0
-\end{equaiton}
-
-**Note:** For this problem to make sense, we must also assume that $\alpha&lt;\rho$; otherwise the integral in $\eqref{eq:geometric}$ could be made indefinitely larger by choosing a larger $T$. Thus waiting longer would always be a better policy, and the optimum would not exist. Let $\delta$ denote the difference $\rho-\alpha$, which is greater than $0$.
-
-In addition, $F(V)$ must satisfy the following boundary conditions:
-\begin{equation}\label{eq:condition1}
+\end{equation}\]</span>
+<p><strong>Note:</strong> For this problem to make sense, we must also assume that <span class="math inline">\(\alpha&lt;\rho\)</span>; otherwise the integral in <span class="math inline">\(\eqref{eq:geometric}\)</span> could be made indefinitely larger by choosing a larger <span class="math inline">\(T\)</span>. Thus waiting longer would always be a better policy, and the optimum would not exist. Let <span class="math inline">\(\delta\)</span> denote the difference <span class="math inline">\(\rho-\alpha\)</span>, which is greater than <span class="math inline">\(0\)</span>.</p>
+In addition, <span class="math inline">\(F(V)\)</span> must satisfy the following boundary conditions:
+<span class="math display">\[\begin{equation}\label{eq:condition1}
 F(0)=0 \\  
 \end{equation}\]</span>
 <span class="math display">\[\begin{equation}\label{eq:condition2}
