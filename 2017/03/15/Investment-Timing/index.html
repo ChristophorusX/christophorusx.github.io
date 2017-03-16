@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Finance,Economics," />
+  <meta name="keywords" content="Mathematics,Economics,Finance," />
 
 
 
@@ -94,18 +94,30 @@
 
 
 <meta name="description" content="Solving Bellman Equation by Dynamic Programming
-Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
+Given geometric Brownian motion in
+\[\begin{equation}\label{eq:geometric}
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
+\end{equation}\]
+we have the followin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Investment Timing">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/15/Investment-Timing/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Solving Bellman Equation by Dynamic Programming
-Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
-<meta property="og:updated_time" content="2017-03-16T02:20:46.000Z">
+Given geometric Brownian motion in
+\[\begin{equation}\label{eq:geometric}
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
+\end{equation}\]
+we have the followin">
+<meta property="og:updated_time" content="2017-03-16T02:25:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
-Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
+Given geometric Brownian motion in
+\[\begin{equation}\label{eq:geometric}
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
+\end{equation}\]
+we have the followin">
 
 
 
@@ -350,6 +362,11 @@ Because the investment opportunity, \(F(V)\), yields no cash flows up to the tim
 
       
         <h4 id="solving-bellman-equation-by-dynamic-programming">Solving Bellman Equation by Dynamic Programming</h4>
+Given geometric Brownian motion in
+<span class="math display">\[\begin{equation}\label{eq:geometric}
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
+\end{equation}\]</span>
+<p>we have the following theory.</p>
 <p>Because the investment opportunity, <span class="math inline">\(F(V)\)</span>, yields no cash flows up to the time <span class="math inline">\(T\)</span> that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the Bellman equation is <span class="math display">\[
 \rho Fdt=\mathbb{E}[dF]
 \]</span> It means that over a time interval <span class="math inline">\(dt\)</span>, the total expected return on the investment opportunity, <span class="math inline">\(\rho Fdt\)</span>, is equal to its expected rate of capital appreciation.</p>
@@ -410,9 +427,9 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Finance/" rel="tag"># Finance</a>
-          
             <a href="/tags/Economics/" rel="tag"># Economics</a>
+          
+            <a href="/tags/Finance/" rel="tag"># Finance</a>
           
         </div>
       
