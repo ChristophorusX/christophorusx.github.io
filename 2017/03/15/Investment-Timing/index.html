@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T19:28:44.000Z">
+<meta property="og:updated_time" content="2017-03-16T19:41:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -424,7 +424,7 @@ A=(V^\ast-I)/(V^\ast)^{\beta_1}
 F(V)=A_1V^{\beta_1}+A_2V^{\beta_2}
 \]</span> where <span class="math inline">\(A_1\)</span> and <span class="math inline">\(A_2\)</span> are to be determined.</p>
 <p>In this problem, boundary condition <span class="math inline">\(\eqref{eq:condition1}\)</span> implies <span class="math inline">\(A_2=0\)</span>, leaving the solution <span class="math inline">\(\eqref{eq:fv}\)</span>.</p>
-<h4 id="setup">Setup</h4>
+<h4 id="problem-setup">Problem Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]</span></p>
@@ -436,6 +436,12 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
 <p>To ensure this to be a well-posed problem, let <span class="math inline">\(b&lt;\inf\lbrace r\in[0,\infty):F(r)&gt;0\rbrace\)</span>, otherwise <span class="math inline">\(w\)</span> can grow to infinity as <span class="math inline">\(t\)</span> goes to infinity.</p>
 <h4 id="investment-behavior-under-weighted-discounting">Investment Behavior Under Weighted Discounting</h4>
 <p>We solve the Bellman system explicitly when <span class="math inline">\(X\)</span> follows a geometric Brownian Motion and when <span class="math inline">\(G(X)=x-I\)</span> for arbitrary weighted discount functions.</p>
+In this case, the Bellman equation is in the following form <span class="math display">\[
+V(x)=\max_u\left\lbrace G(x),\mathcal{A}V(x)-rV(x)\right\rbrace
+\]</span> which can be interpreted as
+<span class="math display">\[\begin{equation}\label{eq:equi}
+\max\left\lbrace\mathcal{A}V(x)-\int_0^\infty rw(x;r)dF(r),G(x)-V(x)\right\rbrace=0
+\end{equation}\]</span>
 
       
     </div>
@@ -611,7 +617,7 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#solving-bellman-equation-by-dynamic-programming"><span class="nav-number">1.</span> <span class="nav-text">Solving Bellman Equation by Dynamic Programming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">2.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">3.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#solving-bellman-equation-by-dynamic-programming"><span class="nav-number">1.</span> <span class="nav-text">Solving Bellman Equation by Dynamic Programming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#problem-setup"><span class="nav-number">2.</span> <span class="nav-text">Problem Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">3.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
             
 
           </div>
