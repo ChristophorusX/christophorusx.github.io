@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T19:23:50.000Z">
+<meta property="og:updated_time" content="2017-03-16T19:25:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -378,12 +378,13 @@ dF=F&#39;(V)dV+{1\over 2}F&#39;&#39;(V)(dV)^2
 <span class="math display">\[\begin{equation*}
 \mathbb{E}[dF]=\alpha VF&#39;(V)dt+{1\over 2}\sigma^2V^2F&#39;&#39;(V)dt \tag{$\ddagger$}
 \end{equation*}\]</span>
-Hence the Bellman equation becomes <span class="math display">\[
+<p>Hence the Bellman equation becomes <span class="math display">\[
 {1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+\alpha VF&#39;(V)-\rho F(V)=0
-\]</span> i.e.
+\]</span> i.e.</p>
 <span class="math display">\[\begin{equation}\label{eq:differential}
 {1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+(\rho-\delta) VF&#39;(V)-\rho F(V)=0
 \end{equaiton}
+
 **Note:** For this problem to make sense, we must also assume that $\alpha&lt;\rho$; otherwise the integral in $\eqref{eq:geometric}$ could be made indefinitely larger by choosing a larger $T$. Thus waiting longer would always be a better policy, and the optimum would not exist. Let $\delta$ denote the difference $\rho-\alpha$, which is greater than $0$.
 
 In addition, $F(V)$ must satisfy the following boundary conditions:
