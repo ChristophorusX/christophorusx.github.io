@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Economics,Finance," />
+  <meta name="keywords" content="Mathematics,Finance,Economics," />
 
 
 
@@ -93,28 +93,19 @@
 
 
 
-<meta name="description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
+<meta name="description" content="Solving Bellman Equation by Dynamic Programming
+Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Investment Timing">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/15/Investment-Timing/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
-<meta property="og:updated_time" content="2017-03-16T01:58:02.000Z">
+<meta property="og:description" content="Solving Bellman Equation by Dynamic Programming
+Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
+<meta property="og:updated_time" content="2017-03-16T02:20:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
-<meta name="twitter:description" content="Setup
-Consider the opportunity to invest in a project. The payoff process \(X\) of the underlying project follows a geometric Brownian motion, \[
-{dX_t\over X_t}=bdt+\sigma dW_t
-\]
-Investment in \(X\)">
+<meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
+Because the investment opportunity, \(F(V)\), yields no cash flows up to the time \(T\) that the investment is undertaken, the only return from holding">
 
 
 
@@ -358,7 +349,31 @@ Investment in \(X\)">
       
 
       
-        <h4 id="setup">Setup</h4>
+        <h4 id="solving-bellman-equation-by-dynamic-programming">Solving Bellman Equation by Dynamic Programming</h4>
+<p>Because the investment opportunity, <span class="math inline">\(F(V)\)</span>, yields no cash flows up to the time <span class="math inline">\(T\)</span> that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the Bellman equation is <span class="math display">\[
+\rho Fdt=\mathbb{E}[dF]
+\]</span> It means that over a time interval <span class="math inline">\(dt\)</span>, the total expected return on the investment opportunity, <span class="math inline">\(\rho Fdt\)</span>, is equal to its expected rate of capital appreciation.</p>
+<p>We expand <span class="math inline">\(dF\)</span> using Ito’s Lemma, <span class="math display">\[
+dF=F&#39;(V)dV+{1\over 2}F&#39;&#39;(V)(dV)^2
+\]</span> Substituting equation <span class="math inline">\(\eqref{eq:geometric}\)</span> for <span class="math inline">\(dV\)</span> into the expression</p>
+<span class="math display">\[\begin{equation}\label{eq:differential}
+\mathbb{E}[dF]=\alpha VF&#39;(V)dt+{1\over 2}\sigma^2V^2F&#39;&#39;(V)dt
+\end{equation}\]</span>
+<p>Hence the Bellman equation becomes <span class="math display">\[
+{1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+\alpha VF&#39;(V)-\rho F=0
+\]</span></p>
+In addition, <span class="math inline">\(F(V)\)</span> must satisfy the following boundary conditions:
+<span class="math display">\[\begin{equation}\label{eq:condition1}
+F(0)=0 \\  
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}\label{eq:condition2}
+F(V^\ast)=V^\ast-I \\
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}\label{eq:condition3}
+F&#39;(V^\ast)=1  
+\end{equation}\]</span>
+<p>The first condition arises from the observation that if <span class="math inline">\(V\)</span> goes to zero, it will stay at zero. Therefore the option to invest will be of no value when <span class="math inline">\(V=0\)</span>. Since <span class="math inline">\(V^\ast\)</span> is the critical value for optimal investment, the second condition is a value-matching condition, which says that upon investing, the firm receives a net payoff <span class="math inline">\(V^\ast-I\)</span>. Finally, the last condition is the “smooth-pasting” condition. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
+<h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
 \]</span></p>
@@ -395,9 +410,9 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Economics/" rel="tag"># Economics</a>
-          
             <a href="/tags/Finance/" rel="tag"># Finance</a>
+          
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
           
         </div>
       
@@ -545,7 +560,7 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">1.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">2.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#solving-bellman-equation-by-dynamic-programming"><span class="nav-number">1.</span> <span class="nav-text">Solving Bellman Equation by Dynamic Programming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#setup"><span class="nav-number">2.</span> <span class="nav-text">Setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#investment-behavior-under-weighted-discounting"><span class="nav-number">3.</span> <span class="nav-text">Investment Behavior Under Weighted Discounting</span></a></li></ol></div>
             
 
           </div>
