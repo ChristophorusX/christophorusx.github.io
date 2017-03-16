@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T19:03:57.000Z">
+<meta property="og:updated_time" content="2017-03-16T19:09:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -405,7 +405,7 @@ To satisfy the boundary condition <span class="math inline">\(\eqref{eq:conditio
 <span class="math display">\[\begin{equation}\label{eq:fv}
 F(V)=AV^{\beta_1}
 \end{equation}\]</span>
-<p>where <span class="math inline">\(A\)</span> is to be determined and <span class="math inline">\(\beta1\)</span> is a known constant depends on <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(\rho\)</span>, and <span class="math inline">\(\delta\)</span>.</p>
+<p>where <span class="math inline">\(A\)</span> is to be determined and <span class="math inline">\(\beta_1\)</span> is a known constant depends on <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(\rho\)</span>, and <span class="math inline">\(\delta\)</span>.</p>
 Then utilizing the remaining conditions, we have
 <span class="math display">\[\begin{equation}\label{eq:Vstar}
 V^\ast={\beta_1\over \beta_1-1}I
@@ -414,6 +414,9 @@ and
 <span class="math display">\[\begin{equation}\label{eq:A}
 A=(V^\ast-I)/(V^\ast)^{\beta_1}
 \end{equation}\]</span>
+<p>Since the second-order homogeneous differential equation <span class="math inline">\(\eqref{eq:differential}\)</span> is linear in the dependent variable <span class="math inline">\(F\)</span> and its derivatives, its general solution can be expressed as a linear combination of any two independent solutions. Substitute <span class="math inline">\(AV^\beta\)</span> in to <span class="math inline">\(\eqref{eq:differential}\)</span>, and it provides <span class="math inline">\(\beta\)</span> as a root of the quadratic equation <span class="math display">\[
+{1\over 2}\sigma^2\beta(\beta-1)+(\rho-\delta)\beta-\rho=0
+\]</span> which gives two roots <span class="math inline">\(\beta_1\)</span> and <span class="math inline">\(\beta_2\)</span>.</p>
 <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
