@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Finance,Economics," />
+  <meta name="keywords" content="Mathematics,Economics,Finance," />
 
 
 
@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T18:57:59.000Z">
+<meta property="og:updated_time" content="2017-03-16T19:01:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -403,9 +403,17 @@ F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\r
 <p>Now we start solving <span class="math inline">\(\eqref{eq:differential}\)</span> using <span class="math inline">\(\eqref{eq:condition1}\)</span>-<span class="math inline">\(\eqref{condition2}\)</span>.</p>
 To satisfy the boundary condition <span class="math inline">\(\eqref{eq:condition1}\)</span>, the solution must take the form
 <span class="math display">\[\begin{equation}\label{eq:fv}
-F(V)=AV^{\beta 1}
+F(V)=AV^{\beta_1}
 \end{equation}\]</span>
 <p>where <span class="math inline">\(A\)</span> is to be determined and <span class="math inline">\(\beta1\)</span> is a known constant depends on <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(\rho\)</span>, and <span class="math inline">\(\delta\)</span>.</p>
+Then utilizing the remaining conditions, we have
+<span class="math display">\[\begin{equation}\label{eq:Vstar}
+V^\ast={\beta_1\over \beta_1-1}I
+\end{equation}\]</span>
+and
+<span class="math display">\[\begin{equation}\label{eq:A}
+(V^\ast-I)/(V^\ast)^{\beta_1}
+\end{equation}\]</span>
 <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
@@ -443,9 +451,9 @@ J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-            <a href="/tags/Finance/" rel="tag"># Finance</a>
-          
             <a href="/tags/Economics/" rel="tag"># Economics</a>
+          
+            <a href="/tags/Finance/" rel="tag"># Finance</a>
           
         </div>
       
