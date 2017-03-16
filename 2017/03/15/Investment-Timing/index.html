@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T18:23:22.000Z">
+<meta property="og:updated_time" content="2017-03-16T18:25:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -397,7 +397,7 @@ Since <span class="math inline">\(V^\ast\)</span> is the critical value for opti
 F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace
 &amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace
 \end{align*}\]</span>
-<p>Finally, the last condition is the “smooth-pasting” condition. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
+<p>Finally, condition <span class="math inline">\(\eqref{eq:condition3}\)</span> is the “smooth-pasting” condition that <span class="math inline">\(F&#39;(V^\ast)=\Omega&#39;(V^\ast)\)</span>. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
 <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
