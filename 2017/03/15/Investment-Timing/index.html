@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T18:43:00.000Z">
+<meta property="og:updated_time" content="2017-03-16T18:44:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -398,7 +398,7 @@ F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\r
 &amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace
 \end{align*}\]</span>
 <p>Finally, condition <span class="math inline">\(\eqref{eq:condition3}\)</span> is the “smooth-pasting” condition that <span class="math inline">\(F&#39;(V^\ast)=\Omega&#39;(V^\ast)\)</span>. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
-<p>Note that equation <span class="math inline">\(\eqref{differential}\)</span> is a second-order differential equation, but there are three boundary conditions that must be satisfied. The reason is that although the position of the first boundary (<span class="math inline">\(V=0\)</span>) is known, the position of the second boundary is not. The “free boundary” <span class="math inline">\(V^\ast\)</span> must be determined as part of the solution, which needs the third condition.</p>
+<p>Note that equation <span class="math inline">\(\eqref{eq:differential}\)</span> is a second-order differential equation, but there are three boundary conditions that must be satisfied. The reason is that although the position of the first boundary (<span class="math inline">\(V=0\)</span>) is known, the position of the second boundary is not. The “free boundary” <span class="math inline">\(V^\ast\)</span> must be determined as part of the solution, which needs the third condition.</p>
 <p>Equation <span class="math inline">\(\eqref{eq:condition2}\)</span> has some intuitively interpretations. <span class="math inline">\(V-F(V)\)</span> means that the firm gets the project valued <span class="math inline">\(V\)</span> and yet gives up the opportunity or option to invest <span class="math inline">\(F(V)\)</span>. Thus the gain net of the opportunity cost is <span class="math inline">\(V-F(V)\)</span>. The critical value <span class="math inline">\(V^\ast\)</span> is where this net gain equals the direct or tangible cost of investment <span class="math inline">\(I\)</span>. Equivalently, we could write the equation as <span class="math inline">\(V^\ast=I+F(V^\ast)\)</span>, setting the value of the project equal to the full cost of making the investment.</p>
 <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
