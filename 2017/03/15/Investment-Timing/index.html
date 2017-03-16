@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T20:34:12.000Z">
+<meta property="og:updated_time" content="2017-03-16T20:41:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -398,7 +398,7 @@ F&#39;(V^\ast)=1
 <p>Condition <span class="math inline">\(\eqref{eq:condition1}\)</span> arises from the observation that if <span class="math inline">\(V\)</span> goes to zero, it will stay at zero. Therefore the option to invest <span class="math inline">\(F(V)\)</span> will be of no value when <span class="math inline">\(V=0\)</span>.</p>
 Since <span class="math inline">\(V^\ast\)</span> is the critical value for optimal investment, condition <span class="math inline">\(\eqref{eq:condition2}\)</span> is a value-matching condition, which says that upon investing, the firm receives a net payoff <span class="math inline">\(\Omega(V^\ast)=V^\ast-I\)</span>. As we have
 <span class="math display">\[\begin{align*}
-F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \\
+F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \\[1em]
 &amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace
 \end{align*}\]</span>
 <p>Finally, condition <span class="math inline">\(\eqref{eq:condition3}\)</span> is the “smooth-pasting” condition that <span class="math inline">\(F&#39;(V^\ast)=\Omega&#39;(V^\ast)\)</span>. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
