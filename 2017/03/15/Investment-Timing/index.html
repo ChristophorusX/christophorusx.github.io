@@ -94,30 +94,24 @@
 
 
 <meta name="description" content="Solving Bellman Equation by Dynamic Programming
-Given geometric Brownian motion in
+\(\newcommand\bbE{\mathbb{E}}\) Given geometric Brownian motion \(V\) in
 \[\begin{equation}\label{eq:geometric}
-dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
-\end{equation}\]
-we have the followin">
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Investment Timing">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/15/Investment-Timing/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Solving Bellman Equation by Dynamic Programming
-Given geometric Brownian motion in
+\(\newcommand\bbE{\mathbb{E}}\) Given geometric Brownian motion \(V\) in
 \[\begin{equation}\label{eq:geometric}
-dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
-\end{equation}\]
-we have the followin">
-<meta property="og:updated_time" content="2017-03-16T02:25:08.000Z">
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}">
+<meta property="og:updated_time" content="2017-03-16T17:16:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
-Given geometric Brownian motion in
+\(\newcommand\bbE{\mathbb{E}}\) Given geometric Brownian motion \(V\) in
 \[\begin{equation}\label{eq:geometric}
-dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
-\end{equation}\]
-we have the followin">
+dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}">
 
 
 
@@ -362,12 +356,14 @@ we have the followin">
 
       
         <h4 id="solving-bellman-equation-by-dynamic-programming">Solving Bellman Equation by Dynamic Programming</h4>
-Given geometric Brownian motion in
+<span class="math inline">\(\newcommand\bbE{\mathbb{E}}\)</span> Given geometric Brownian motion <span class="math inline">\(V\)</span> in
 <span class="math display">\[\begin{equation}\label{eq:geometric}
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]</span>
 <p>we have the following theory.</p>
-<p>Because the investment opportunity, <span class="math inline">\(F(V)\)</span>, yields no cash flows up to the time <span class="math inline">\(T\)</span> that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the Bellman equation is <span class="math display">\[
+<p>Because the investment opportunity, <span class="math inline">\(F(V)\)</span>, yields no cash flows up to the time <span class="math inline">\(T\)</span> that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the original Bellman equation <span class="math display">\[
+\rho\Delta tF(x,t)=\max_u\left\lbrace\pi(x,u,t)+{1\over dt}\bbE[dF]
+\]</span> turns into the following equation <span class="math display">\[
 \rho Fdt=\mathbb{E}[dF]
 \]</span> It means that over a time interval <span class="math inline">\(dt\)</span>, the total expected return on the investment opportunity, <span class="math inline">\(\rho Fdt\)</span>, is equal to its expected rate of capital appreciation.</p>
 <p>We expand <span class="math inline">\(dF\)</span> using Ito’s Lemma, <span class="math display">\[
