@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T17:28:17.000Z">
+<meta property="og:updated_time" content="2017-03-16T18:18:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -374,12 +374,12 @@ dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \]</span> It means that over a time interval <span class="math inline">\(dt\)</span>, the total expected return on the investment opportunity, <span class="math inline">\(\rho Fdt\)</span>, is equal to its expected rate of capital appreciation.</p>
 <p>We expand <span class="math inline">\(dF\)</span> using Ito’s Lemma, with the element <span class="math inline">\(F_t(V)dt=0\)</span> as <span class="math inline">\(F\)</span> is indifferent regarding to <span class="math inline">\(t\)</span> <span class="math display">\[
 dF=F&#39;(V)dV+{1\over 2}F&#39;&#39;(V)(dV)^2
-\]</span> Substituting equation <span class="math inline">\(\eqref{eq:geometric}\)</span> for <span class="math inline">\(dV\)</span> into the expression</p>
+\]</span> Substituting equation <span class="math inline">\(\eqref{eq:geometric}\)</span> for <span class="math inline">\(dV\)</span> into the expression, we get</p>
 <span class="math display">\[\begin{equation}\label{eq:differential}
 \mathbb{E}[dF]=\alpha VF&#39;(V)dt+{1\over 2}\sigma^2V^2F&#39;&#39;(V)dt
 \end{equation}\]</span>
 <p>Hence the Bellman equation becomes <span class="math display">\[
-{1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+\alpha VF&#39;(V)-\rho F=0
+{1\over 2}\sigma^2 V^2 F&#39;&#39;(V)+\alpha VF&#39;(V)-\rho F(V)=0
 \]</span></p>
 In addition, <span class="math inline">\(F(V)\)</span> must satisfy the following boundary conditions:
 <span class="math display">\[\begin{equation}\label{eq:condition1}
@@ -391,7 +391,9 @@ F(V^\ast)=V^\ast-I \\
 <span class="math display">\[\begin{equation}\label{eq:condition3}
 F&#39;(V^\ast)=1  
 \end{equation}\]</span>
-<p>The first condition arises from the observation that if <span class="math inline">\(V\)</span> goes to zero, it will stay at zero. Therefore the option to invest will be of no value when <span class="math inline">\(V=0\)</span>. Since <span class="math inline">\(V^\ast\)</span> is the critical value for optimal investment, the second condition is a value-matching condition, which says that upon investing, the firm receives a net payoff <span class="math inline">\(V^\ast-I\)</span>. Finally, the last condition is the “smooth-pasting” condition. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
+<p>Condition <span class="math inline">\(\eqref{eq:condition1}\)</span> arises from the observation that if <span class="math inline">\(V\)</span> goes to zero, it will stay at zero. Therefore the option to invest <span class="math inline">\(F(V)\)</span> will be of no value when <span class="math inline">\(V=0\)</span>.</p>
+<p>Since <span class="math inline">\(V^\ast\)</span> is the critical value for optimal investment, condition <span class="math inline">\(\eqref{eq:condition2}\)</span> is a value-matching condition, which says that upon investing, the firm receives a net payoff <span class="math inline">\(\Omega(V^\ast)=V^\ast-I\)</span>.</p>
+<p>Finally, the last condition is the “smooth-pasting” condition. If <span class="math inline">\(F(V)\)</span> were not continuous and smooth at the critical exercise point <span class="math inline">\(V^\ast\)</span>, on could do better by exercising at a different point.</p>
 <h4 id="setup">Setup</h4>
 <p>Consider the opportunity to invest in a project. The payoff process <span class="math inline">\(X\)</span> of the underlying project follows a geometric Brownian motion, <span class="math display">\[
 {dX_t\over X_t}=bdt+\sigma dW_t
