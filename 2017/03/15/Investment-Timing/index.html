@@ -109,7 +109,7 @@ Given geometric Brownian motion \(V\) in
 dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}
 \end{equation}\]
 we have the fo">
-<meta property="og:updated_time" content="2017-03-16T20:33:04.000Z">
+<meta property="og:updated_time" content="2017-03-16T20:34:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic Programming
@@ -456,7 +456,7 @@ w(x;r)=\left({x\over x_\ast}\right)^{\mu(r)}(x_\ast-I),\quad x&lt;x_\ast
 <p>Second, the equilibrium stopping rule maximizes the weighted average of the <span class="math inline">\(w(x;r)\)</span>, i.e., <span class="math display">\[
 V(x)=\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)}dF(r)(x_\ast-I)
 \]</span> Therefore, the smooth-pasting condition is given by <span class="math inline">\(\int_0^\infty w_x(x_\ast;r)dF(r)=1\)</span> and can be used to identify the triggering threshold <span class="math inline">\(x_\ast\)</span>, i.e., <span class="math display">\[
-\left.\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)-1}{\mu(r)\over x_\ast}dF(r)(x_\ast-I)\right\mid_{x=x_\ast}=1
+\left.\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)-1}{\mu(r)\over x_\ast}dF(r)(x_\ast-I)\,\right|_{x=x_\ast}=1
 \]</span> It follows that <span class="math display">\[
 x_\ast={A\over A-1}I
 \]</span> where <span class="math display">\[
