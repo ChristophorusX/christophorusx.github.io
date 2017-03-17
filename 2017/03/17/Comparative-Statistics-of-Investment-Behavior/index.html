@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Mathematics,Finance," />
+  <meta name="keywords" content="Mathematics,Economics,Finance," />
 
 
 
@@ -93,16 +93,16 @@
 
 
 
-<meta name="description" content="Bellman EquationsThe Hamilton–Jacobi–Bellman (HJB) equation is a partial differential equation which is central to optimal control theory. The solution of the HJB equation is the value function which">
+<meta name="description" content="The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Dynamic Investment">
-<meta property="og:url" content="http://christophorusx.github.io/2017/03/11/Dynamic-Investment/index.html">
+<meta property="og:title" content="Comparative Statistics of Investment Behavior">
+<meta property="og:url" content="http://christophorusx.github.io/2017/03/17/Comparative-Statistics-of-Investment-Behavior/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Bellman EquationsThe Hamilton–Jacobi–Bellman (HJB) equation is a partial differential equation which is central to optimal control theory. The solution of the HJB equation is the value function which">
-<meta property="og:updated_time" content="2017-03-16T01:57:51.000Z">
+<meta property="og:description" content="The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from o">
+<meta property="og:updated_time" content="2017-03-17T17:04:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Dynamic Investment">
-<meta name="twitter:description" content="Bellman EquationsThe Hamilton–Jacobi–Bellman (HJB) equation is a partial differential equation which is central to optimal control theory. The solution of the HJB equation is the value function which">
+<meta name="twitter:title" content="Comparative Statistics of Investment Behavior">
+<meta name="twitter:description" content="The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from o">
 
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://christophorusx.github.io/2017/03/11/Dynamic-Investment/"/>
+  <link rel="canonical" href="http://christophorusx.github.io/2017/03/17/Comparative-Statistics-of-Investment-Behavior/"/>
 
 
 
 
 
-  <title> Dynamic Investment | Imāginātiōnēs Christophorōrum </title>
+  <title> Comparative Statistics of Investment Behavior | Imāginātiōnēs Christophorōrum </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -322,7 +322,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/11/Dynamic-Investment/">
+    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/17/Comparative-Statistics-of-Investment-Behavior/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChristophorusX">
@@ -343,7 +343,7 @@
             
             
               
-                Dynamic Investment
+                Comparative Statistics of Investment Behavior
               
             
           </h1>
@@ -358,8 +358,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T11:44:18-05:00">
-                2017-03-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-17T10:28:12-04:00">
+                2017-03-17
               </time>
             
 
@@ -377,8 +377,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/11/Dynamic-Investment/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/11/Dynamic-Investment/" itemprop="commentCount"></span>
+                <a href="/2017/03/17/Comparative-Statistics-of-Investment-Behavior/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/17/Comparative-Statistics-of-Investment-Behavior/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -404,34 +404,7 @@
       
 
       
-        <h4 id="Bellman-Equations"><a href="#Bellman-Equations" class="headerlink" title="Bellman Equations"></a>Bellman Equations</h4><p>The Hamilton–Jacobi–Bellman (HJB) equation is a partial differential equation which is central to optimal control theory. The solution of the HJB equation is the value function which gives the minimum cost for a given dynamical system with an associated cost function. The equation is a result of the theory of dynamic programming which was pioneered in the 1950s by Richard Bellman and coworkers. The corresponding discrete-time equation is usually referred to as the Bellman equation.</p>
-<p>To understand the Bellman equation, several underlying concepts must be understood. First, any optimization problem has some objective: minimizing travel time, minimizing cost, maximizing profits, maximizing utility, et cetera. The mathematical function that describes this objective is called the objective function.</p>
-<p>Dynamic programming breaks a multi-period planning problem into simpler steps at different points in time. Therefore, it requires keeping track of how the decision situation is evolving over time. The information about the current situation which is needed to make a correct decision is called the “state”. For example, to decide how much to consume and spend at each point in time, people would need to know (among other things) their initial wealth. Therefore, wealth $W$ would be one of their state variables, but there would probably be others.</p>
-<p>The variables chosen at any given point in time are often called the control variables. For example, given their current wealth, people might decide how much to consume now. Choosing the control variables now may be equivalent to choosing the next state; more generally, the next state is affected by other factors in addition to the current control. For example, in the simplest case, today’s wealth (the state) and consumption (the control) might exactly determine tomorrow’s wealth (the new state), though typically other factors will affect tomorrow’s wealth too.</p>
-<p>The dynamic programming approach describes the optimal plan by finding a rule that tells what the controls should be, given any possible value of the state. For example, if consumption $c$ depends only on wealth $W$, we would seek a rule $c(W)$ that gives consumption as a function of wealth. Such a rule, determining the controls as a function of the states, is called a policy function.</p>
-<p>Finally, by definition, the optimal decision rule is the one that achieves the best possible value of the objective. For example, if someone chooses consumption, given wealth, in order to maximize happiness (assuming happiness $H$ can be represented by a mathematical function, such as a utility function), then each level of wealth will be associated with some highest possible level of happiness, $H(W)$. The best possible value of the objective, written as a function of the state, is called the value function.</p>
-<p>Richard Bellman showed that a dynamic optimization problem in discrete time can be stated in a recursive, step-by-step form known as backward induction by writing down the relationship between the value function in one period and the value function in the next period. The relationship between these two value functions is called the “Bellman equation”. In this approach, the optimal policy in the last time period is specified in advance as a function of the state variable’s value at that time, and the resulting optimal value of the objective function is thus expressed in terms of that value of the state variable. Next, the next-to-last period’s optimization involves maximizing the sum of that period’s period-specific objective function and the optimal value of the future objective function, giving that period’s optimal policy contingent upon the value of the state variable as of the next-to-last period decision. This logic continues recursively back in time, until the first period decision rule is derived, as a function of the initial state variable value, by optimizing the sum of the first-period-specific objective function and the value of the second period’s value function, which gives the value for all the future periods. Thus, each period’s decision is made by explicitly acknowledging that all future decisions will be optimally made.</p>
-<h4 id="Deriving-the-Bellman-Equation-in-discrete-setup"><a href="#Deriving-the-Bellman-Equation-in-discrete-setup" class="headerlink" title="Deriving the Bellman Equation in discrete setup"></a>Deriving the Bellman Equation in discrete setup</h4><p>Let the state at time $t$ be $x_t$. For a decision that begins at time $0$, we take as given the initial state $x_0$. Then let $a_t\in \Gamma(x_t)$ be one or more control variables depends on the current state $x_t$. We also assume that the state chages from $x$ to a new state $T(x,a)$ when action $a$ is taken, and that the current payoff from taking action $a$ in state $x$ is $F(x,a)$. Finally, we have a discount factor $0&lt;\beta&lt;1$. Under this assumption, we have</p>
-<p>$$<br>V(x<em>0)=\max</em>{a<em>t}\sum</em>{t=0}^\infty\beta^t F(x_t,a_t)<br>$$</p>
-<p>subject to constraints $a_t\in\Gamma(x<em>t)$, $x</em>{t+1}=T(x_t,a_t)$. Then the value function $V(x)$ is the optimal value that can be obtained by maximizing this objective function subject to the assumed constraints.</p>
-<blockquote>
-<p><strong>Principle of Optimality:</strong> An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.</p>
-</blockquote>
-<p>Therefore, we have the Bellman equation as follows<br>$$<br>V(x)=\max_{a\in\Gamma(x)}\lbrace F(x,a)+\beta V(T(x,a))\rbrace<br>$$</p>
-<h4 id="Basic-Model"><a href="#Basic-Model" class="headerlink" title="Basic Model"></a>Basic Model</h4><p>The starting point is a model first developed by McDonald and Siegel (1986). They considered the following problem: At what point is it optimal to pay a sunk cost $I$ in return for a project whose value is $V$, given that $V$ evolves according to the following geometric Brownian motion:</p>
-<p>\begin{equation}\label{eq:geometric}<br>dV=\alpha Vdt+\sigma Vdz \tag{$\star$}<br>\end{equation}</p>
-<p>where $dz$ is the increment of a Wiener process.</p>
-<p>Note that the firm’s investment opportunity is equivalent to a perpetual call option–the right but not the obligation to buy a share of stock at a pre-specified price. Therefore the decision to invest is equivalent to decide when to exercise such an option. Thus, the investment decision can be viewed as a problem of option valuation. Also, it can be viewed as a problem in dynamic programming.</p>
-<p>In this model, we will denote the value of the investment opportunity by $F(V)$. We want a rule that maximizes this value. Since the payoff from investing at time $t$ is $V_t-I$, we want to maximize its expected present value:<br>$$<br>F(V)=\max_T\mathbb{E}[(V_T-I)e^{-\rho T}]<br>$$<br>where $T$ is the unknown future time that the investment is made, $\rho$ is a discount rate.</p>
-<p><strong>Note:</strong> For this problem to make sense, we must also assume that $\alpha&lt;\rho$; otherwise the integral in $\eqref{eq:geometric}$ could be made indefinitely larger by choosing a larger $T$. Thus waiting longer would always be a better policy, and the optimum would not exist. Let $\delta$ denote the difference $\rho-\alpha$, which is greater than $0$.</p>
-<p>Because the investment opportunity, $F(V)$, yields no cash flows up to the time $T$ that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the Bellman equation is<br>$$<br>\rho Fdt=\mathbb{E}[dF]<br>$$<br>It means that over a time interval $dt$, the total expected return on the investment opportunity, $\rho Fdt$, is equal to its expected rate of capital appreciation.</p>
-<p>We expand $dF$ using Ito’s Lemma,<br>$$<br>dF=F’(V)dV+{1\over 2}F’’(V)(dV)^2<br>$$<br>Substituting equation $\eqref{eq:geometric}$ for $dV$ into the expression</p>
-<p>\begin{equation}\label{eq:differential}<br>\mathbb{E}[dF]=\alpha VF’(V)dt+{1\over 2}\sigma^2V^2F’’(V)dt<br>\end{equation}</p>
-<p>Hence the Bellman equation becomes<br>$$<br>{1\over 2}\sigma^2 V^2 F’’(V)+\alpha VF’(V)-\rho F=0<br>$$</p>
-<p>In addition, $F(V)$ must satisfy the following boundary conditions:<br>\begin{equation}\label{eq:condition1}<br>F(0)=0 \<br>\end{equation}</p>
-<p>\begin{equation}\label{eq:condition2}<br>F(V^\ast)=V^\ast-I \<br>\end{equation}</p>
-<p>\begin{equation}\label{eq:condition3}<br>F’(V^\ast)=1<br>\end{equation}</p>
-<p>The first condition arises from the observation that if $V$ goes to zero, it will stay at zero. Therefore the option to invest will be of no value when $V=0$. Since $V^\ast$ is the critical value for optimal investment, the second condition is a value-matching condition, which says that upon investing, the firm receives a net payoff $V^\ast-I$. Finally, the last condition is the “smooth-pasting” condition. If $F(V)$ were not continuous and smooth at the critical exercise point $V^\ast$, on could do better by exercising at a different point.</p>
+        <p>The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from one another and determined by the function $\mu(r)$, the constant $I$, and the weighting distribution $F$, respectively. This observation allows the study of the impact of these factors on the investment decision separately. The following proposition lists several properties of the triggering boundary x∗with respect to the entry costs and payoff process.</p>
 
       
     </div>
@@ -457,6 +430,8 @@
           
             <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
+          
             <a href="/tags/Finance/" rel="tag"># Finance</a>
           
         </div>
@@ -470,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/10/Pronunciation-of-Classical-Latin/" rel="next" title="Pronunciation of Classical Latin">
-                <i class="fa fa-chevron-left"></i> Pronunciation of Classical Latin
+              <a href="/2017/03/15/Investment-Timing/" rel="next" title="Investment Timing">
+                <i class="fa fa-chevron-left"></i> Investment Timing
               </a>
             
           </div>
@@ -479,10 +454,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/12/Dynamic-Optimization-Under-Uncertainty/" rel="prev" title="Dynamic Optimization Under Uncertainty">
-                Dynamic Optimization Under Uncertainty <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -536,17 +507,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400"
@@ -610,22 +572,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Bellman-Equations"><span class="nav-number">1.</span> <span class="nav-text">Bellman Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Deriving-the-Bellman-Equation-in-discrete-setup"><span class="nav-number">2.</span> <span class="nav-text">Deriving the Bellman Equation in discrete setup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Basic-Model"><span class="nav-number">3.</span> <span class="nav-text">Basic Model</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -756,9 +702,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'imaginationes-christophororum';
-      var disqus_identifier = '2017/03/11/Dynamic-Investment/';
+      var disqus_identifier = '2017/03/17/Comparative-Statistics-of-Investment-Behavior/';
 
-      var disqus_title = "Dynamic Investment";
+      var disqus_title = "Comparative Statistics of Investment Behavior";
 
 
       function run_disqus_script(disqus_script) {
