@@ -93,22 +93,16 @@
 
 
 
-<meta name="description" content="One dimensional random walk
-Let \(X_n\) denotes the step of the walker at time n, \(S_n\) denotes the position of the walker at time n. We have the following relationship: \[
-S_n = x_0 + X_1 + X_2 +">
+<meta name="description" content="One dimensional random walkLet $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:$$S_n = x_0 + X_1 + X_2 + \cdots">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Random Walk, Brownian Motion and Heat Equation">
 <meta property="og:url" content="http://christophorusx.github.io/2017/03/03/Discrete Heat Equation/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="One dimensional random walk
-Let \(X_n\) denotes the step of the walker at time n, \(S_n\) denotes the position of the walker at time n. We have the following relationship: \[
-S_n = x_0 + X_1 + X_2 +">
+<meta property="og:description" content="One dimensional random walkLet $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:$$S_n = x_0 + X_1 + X_2 + \cdots">
 <meta property="og:updated_time" content="2017-03-08T02:27:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Walk, Brownian Motion and Heat Equation">
-<meta name="twitter:description" content="One dimensional random walk
-Let \(X_n\) denotes the step of the walker at time n, \(S_n\) denotes the position of the walker at time n. We have the following relationship: \[
-S_n = x_0 + X_1 + X_2 +">
+<meta name="twitter:description" content="One dimensional random walkLet $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:$$S_n = x_0 + X_1 + X_2 + \cdots">
 
 
 
@@ -411,198 +405,65 @@ S_n = x_0 + X_1 + X_2 +">
 
       
         <hr>
-<h4 id="one-dimensional-random-walk">One dimensional random walk</h4>
-<p>Let <span class="math inline">\(X_n\)</span> denotes the step of the walker at time n, <span class="math inline">\(S_n\)</span> denotes the position of the walker at time n. We have the following relationship: <span class="math display">\[
-S_n = x_0 + X_1 + X_2 + \cdots + X_n    
-\]</span> where <span class="math inline">\(x_0\)</span> is the initial starting point of the walker.</p>
-<p>Here are some properties of each step <span class="math inline">\(X_n\)</span>:</p>
+<h4 id="One-dimensional-random-walk"><a href="#One-dimensional-random-walk" class="headerlink" title="One dimensional random walk"></a>One dimensional random walk</h4><p>Let $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:<br>$$<br>S_n = x_0 + X_1 + X_2 + \cdots + X_n<br>$$<br>where $x_0$ is the initial starting point of the walker.</p>
+<p>Here are some properties of each step $X_n$:</p>
 <ul>
-<li><span class="math inline">\(\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}\)</span></li>
-<li><span class="math inline">\(\mathbb{E} X = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0\)</span></li>
-<li><span class="math inline">\(\text{Var}(S_n) = \mathbb{E} S_n^2 = n\)</span></li>
+<li>$\mathbb{P} \lbrace X_j=1\rbrace = \mathbb{P} \lbrace X_j=-1\rbrace = \frac{1}{2}$</li>
+<li>$\mathbb{E} X = \sum_z z\ \mathbb{P} \lbrace X=z\rbrace = 0$</li>
+<li>$\text{Var}(S_n) = \mathbb{E} S_n^2 = n$</li>
 </ul>
-<h4 id="boundary-value-problems">Boundary value problems</h4>
-<p>Let <span class="math inline">\(T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace\)</span>, then we observe that <span class="math inline">\(\mathbb{P}\lbrace T &lt; \infty\rbrace=1\)</span>. It indicates that the random walk must come back in finite time. Hence, we can define the following function <span class="math inline">\(F\)</span>.</p>
-<p><strong>Definition</strong> <em>Function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]\)</span> <span class="math display">\[
-F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace
-\]</span> then we can get boundary conditions <span class="math inline">\(F(0) = 0,\ F(N) = 1\)</span> and recurrence relation <span class="math inline">\(F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1\)</span>.</em></p>
-<p>By observation, the function <span class="math inline">\(F(x) = x/N\)</span> satisfies the boundary conditions. Actually, we can prove that it is the only such function.</p>
-<p><strong>Theorem</strong> <em>Suppose <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> are real numbers and <span class="math inline">\(N\)</span> is a positive integer. Then the only function <span class="math inline">\(F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}\)</span> satisfying the equation above with <span class="math inline">\(F(0) = a\ \text{and}\ F(N) = b\)</span> is the linear function <span class="math inline">\(F(x) = a + \frac{x(b - a)}{N}\)</span>.</em></p>
-<h4 id="higher-dimensional-case">Higher dimensional case</h4>
-<p>In higher dimensional space, we can do pretty much the same thing. Replace <span class="math inline">\(\lbrace1,\ldots,N\rbrace\)</span> with finite connected subset <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and define <span class="math inline">\(\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace\)</span> to be all the boundary points. Plus, it is helpful to know the following definition.</p>
-<p><strong>Definition</strong> <em><span class="math inline">\(\mathcal{Q},\ \mathcal{L}\)</span> are linear operatos on function <span class="math inline">\(F\)</span>, s.t. <span class="math display">\[
-\begin{align}
-    \mathcal{Q}F(x) = \frac{1}{2 d} \sum_{y \in \mathbb{Z}^d,\ |x-y| = 1} F(y), \qquad \qquad \qquad \\
-    \mathcal{L}F(x) = (\mathcal{Q} - \mathbb{I})F(x) = \frac{1}{2d} \sum_{y \in \mathbb{Z}^d,\ |x-y| = 1} [F(y) - F(x)]
-\end{align}
-\]</span></em></p>
-<h4 id="dirichlet-problem-for-discrete-harmonic-functions">Dirichlet problem for discrete harmonic functions</h4>
-<p>Now we define a harmonic function as the following.</p>
-<p><strong>Definition</strong> <em>Given a set <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> and a function <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span> in an extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span>, <span class="math inline">\(F\)</span> is harmonic in <span class="math inline">\(A\)</span> if <span class="math display">\[
-\mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\mid S_0 = x] = 0\ \text{for all}\ x \in A
-\]</span></em></p>
+<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min \lbrace n:S_n = 0 \ \text{or} \ N\rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
+<p><strong>Definition</strong> <em>Function $F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]$<br>$$<br>F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace<br>$$<br>then we can get boundary conditions $F(0) = 0,\ F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.</em></p>
+<p>By observation, the function $F(x) = x/N$ satisfies the boundary conditions. Actually, we can prove that it is the only such function.</p>
+<p><strong>Theorem</strong> <em>Suppose $a$, $b$ are real numbers and $N$ is a positive integer. Then the only function $F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}$ satisfying the equation above with $F(0) = a\ \text{and}\ F(N) = b$ is the linear function $F(x) = a + \frac{x(b - a)}{N}$.</em></p>
+<h4 id="Higher-dimensional-case"><a href="#Higher-dimensional-case" class="headerlink" title="Higher dimensional case"></a>Higher dimensional case</h4><p>In higher dimensional space, we can do pretty much the same thing. Replace $\lbrace1,\ldots,N\rbrace$ with finite connected subset $A \subset \mathbb{Z}^d$ and define $\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace$ to be all the boundary points. Plus, it is helpful to know the following definition.</p>
+<p><strong>Definition</strong> <em>$\mathcal{Q},\ \mathcal{L}$ are linear operatos on function $F$, s.t.<br>$$<br>\begin{align}<br>    \mathcal{Q}F(x) = \frac{1}{2 d} \sum<em>{y \in \mathbb{Z}^d,\ |x-y| = 1} F(y), \qquad \qquad \qquad \<br>    \mathcal{L}F(x) = (\mathcal{Q} - \mathbb{I})F(x) = \frac{1}{2d} \sum</em>{y \in \mathbb{Z}^d,\ |x-y| = 1} [F(y) - F(x)]<br>\end{align}<br>$$</em></p>
+<h4 id="Dirichlet-problem-for-discrete-harmonic-functions"><a href="#Dirichlet-problem-for-discrete-harmonic-functions" class="headerlink" title="Dirichlet problem for discrete harmonic functions"></a>Dirichlet problem for discrete harmonic functions</h4><p>Now we define a harmonic function as the following.</p>
+<p><strong>Definition</strong>  <em>Given a set $A \subset \mathbb{Z}^d$ and a function $F : \partial A \rightarrow \mathbb{R}$ in an extension of $F$ to $\bar{A}$, $F$ is harmonic in $A$ if<br>$$<br>\mathcal{L}F(x) = \mathbb{E}[F(S_1) - F(S_0)\mid S_0 = x] = 0\ \text{for all}\ x \in A<br>$$</em></p>
 <p>Similar to one dimensional case, we have</p>
 <ul>
-<li><span class="math inline">\(T_A = \min \lbrace n \geq 0 : S_n \notin A \rbrace\)</span></li>
-<li><span class="math inline">\(\mathbb{P} \lbrace T_A &lt; \infty\rbrace = 1\)</span></li>
+<li>$T_A = \min \lbrace n \geq 0 : S_n \notin A \rbrace$</li>
+<li>$\mathbb{P} \lbrace T_A &lt; \infty\rbrace = 1$</li>
 </ul>
 <p>An important theorem therefore follows</p>
-<p><strong>Theorem</strong> <em>If <span class="math inline">\(A \subset \mathbb{Z}^d\)</span> is finite, then for every <span class="math inline">\(F : \partial A \rightarrow \mathbb{R}\)</span>, there is an unique extension of <span class="math inline">\(F\)</span> to <span class="math inline">\(\bar{A}\)</span> that satisfies <span class="math inline">\(\mathcal{L}F(x) = 0\)</span>. <span class="math display">\[
-\begin{align}
-    F(x) = \mathbb{E}[F(S_{T_A})\mid S_0 = x] = \sum_{y \in \partial A} \mathbb{P}\lbrace S_{T_A} = y\mid S_0 = x\rbrace F(y)
-\end{align}
-\]</span></em></p>
-<h4 id="heat-equation">Heat equation</h4>
-<p>Set the temperature at the boundary to be zero at all times and as an initial condition set the temperature at <span class="math inline">\(x \in A\)</span> to be <span class="math inline">\(f_0(x)\)</span>. For <span class="math inline">\(x \in A\)</span>, <span class="math display">\[
-p_{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)
-\]</span></p>
-<p><strong>Definition</strong> <em>Let <span class="math inline">\(\partial_n p_n(x) = p_{n+1}(x) - p_n (x)\)</span>, we have heat equation <span class="math display">\[
-\begin{align}
-    \partial_n p_n(x) &amp;= \mathcal{L} p_n(x), \quad x \in A\\
-    &amp;\\
-    p_0(x) &amp;= f_0(x), \quad x \in A\\
-    p_n(x) &amp;= 0, \quad x \in \partial A.
-\end{align}
-\]</span></em></p>
-<h4 id="brownian-motion">Brownian motion</h4>
-<p>Basic properties of Brownian motion:</p>
+<p><strong>Theorem</strong> <em>If $A \subset \mathbb{Z}^d$ is finite, then for every $F : \partial A \rightarrow \mathbb{R}$, there is an unique extension of $F$ to $\bar{A}$ that satisfies $\mathcal{L}F(x) = 0$.<br>$$<br>\begin{align}<br>    F(x) = \mathbb{E}[F(S_{T_A})\mid S<em>0 = x] = \sum</em>{y \in \partial A} \mathbb{P}\lbrace S_{T_A} = y\mid S_0 = x\rbrace F(y)<br>\end{align}<br>$$</em></p>
+<h4 id="Heat-equation"><a href="#Heat-equation" class="headerlink" title="Heat equation"></a>Heat equation</h4><p>Set the temperature at the boundary to be zero at all times and as an initial condition set the temperature at $x \in A$ to be $f<em>0(x)$. For $x \in A$,<br>$$<br>p</em>{n+1}(x) = \frac{1}{2d} \sum_{|y-x|=1} p_n(y)<br>$$</p>
+<p><strong>Definition</strong> <em>Let $\partial_n p<em>n(x) = p</em>{n+1}(x) - p_n (x)$, we have heat equation<br>$$<br>\begin{align}<br>    \partial_n p_n(x) &amp;= \mathcal{L} p_n(x), \quad x \in A\<br>    &amp;\<br>    p_0(x) &amp;= f_0(x), \quad x \in A\<br>    p_n(x) &amp;= 0, \quad x \in \partial A.<br>\end{align}<br>$$</em></p>
+<h4 id="Brownian-motion"><a href="#Brownian-motion" class="headerlink" title="Brownian motion"></a>Brownian motion</h4><p>Basic properties of Brownian motion:</p>
 <ul>
-<li><span class="math inline">\(W_t\)</span> be the position of the Brownian motion at time <span class="math inline">\(t\)</span>.</li>
-<li><span class="math inline">\(\Delta t = \delta = 1/N\)</span></li>
-<li>For large <span class="math inline">\(N\)</span>, <span class="math display">\[
-\begin{align}
-    W_{k\delta} &amp;\approxeq \Delta x\, S_k\\
-    \mathbb{E}[(W_1)^2] = \mathbb{E}[(\Delta x S_N)^2] &amp;= (\Delta x)^2 \mathbb{E} [S_N^2] = (\Delta x)^2 N = 1
-\end{align}
-\]</span></li>
-<li><span class="math inline">\(\Delta x = 1/ \sqrt{N} = \sqrt{\delta}\)</span></li>
-<li><span class="math inline">\(t = j\delta = j/N \Rightarrow W_t = W_{j/N} = \frac{S_j}{\sqrt{N}}\)</span></li>
-<li><span class="math inline">\(W_t \approx \frac{S_j}{\sqrt{N}} = \frac{S_j}{\sqrt{j}}\sqrt{\frac{j}{N}} = \frac{S_j}{\sqrt{j}} \sqrt{t}\)</span></li>
-<li><span class="math inline">\(W_t\)</span> has a normal distribution with <span class="math inline">\(\mathbb{E}[W_j] = 0\)</span> and <span class="math inline">\(\text{Var}[W_j] = t\)</span>.</li>
-<li><span class="math inline">\(W_t \approx \frac{S_j}{\sqrt{N}} = \frac{S_j}{\sqrt{j}}\sqrt{\frac{j}{N}} = \frac{S_j}{\sqrt{j}} \sqrt{t}\)</span></li>
-<li><span class="math inline">\(W_t\)</span> has a normal distribution with <span class="math inline">\(\mathbb{E}[W_j] = 0\)</span> and <span class="math inline">\(\text{Var}[W_j] = t\)</span>.</li>
+<li>$W_t$ be the position of the Brownian motion at time $t$.</li>
+<li>$\Delta t = \delta = 1/N$</li>
+<li>For large $N$,<br>$$<br>  \begin{align}<pre><code>W_{k\delta} &amp;\approxeq \Delta x\, S_k\\
+\mathbb{E}[(W_1)^2] = \mathbb{E}[(\Delta x S_N)^2] &amp;= (\Delta x)^2 \mathbb{E} [S_N^2] = (\Delta x)^2 N = 1
+</code></pre>  \end{align}<br>$$</li>
+<li>$\Delta x = 1/ \sqrt{N} = \sqrt{\delta}$</li>
+<li>$t = j\delta = j/N \Rightarrow W<em>t = W</em>{j/N} = \frac{S_j}{\sqrt{N}}$</li>
+<li>$W_t \approx \frac{S_j}{\sqrt{N}} = \frac{S_j}{\sqrt{j}}\sqrt{\frac{j}{N}} = \frac{S_j}{\sqrt{j}} \sqrt{t}$</li>
+<li>$W_t$ has a normal distribution with $\mathbb{E}[W_j] = 0$ and $\text{Var}[W_j] = t$.</li>
+<li>$W_t \approx \frac{S_j}{\sqrt{N}} = \frac{S_j}{\sqrt{j}}\sqrt{\frac{j}{N}} = \frac{S_j}{\sqrt{j}} \sqrt{t}$</li>
+<li>$W_t$ has a normal distribution with $\mathbb{E}[W_j] = 0$ and $\text{Var}[W_j] = t$.</li>
 </ul>
 <p>Similarly, we can find if the function is harmonic by the following theorem.</p>
-<p><strong>Theorem</strong> <em>A function <span class="math inline">\(f\)</span> in a domain <span class="math inline">\(U\)</span> is harmonic if and only if <span class="math inline">\(f\)</span> is <span class="math inline">\(C^2\)</span> with <span class="math inline">\(\Delta f(x) = 0\)</span> for all <span class="math inline">\(x \in U\)</span>.</em></p>
-<h4 id="heat-equations">Heat Equations</h4>
-<p><strong>Definition</strong> <em>With <span class="math inline">\(f(x)\)</span> being the initial temperature at <span class="math inline">\(x\)</span>, <span class="math inline">\(u(t,x), t \geq 0, x \in \mathbb{R}^d\)</span> denotes the temperature at <span class="math inline">\(x\)</span> at time <span class="math inline">\(t\)</span>. <span class="math display">\[
-\begin{align}
-    u&amp;(t,x) = \mathbb{E}[f(W_t)\ |\ W_0 = x]\\
-    \\
-    \partial_t &amp;u(t,x) = \frac{1}{2} \mathcal{L}\, u(t,x)\\
-    \partial_t &amp;u(t,x) = \frac{1}{2} \Delta_x u(t,x)
-\end{align}
-\]</span></em></p>
-<h4 id="brownian-meander">Brownian Meander</h4>
-<p>Brownian motion: <span class="math display">\[
-    \psi_t (x) = \frac{1}{\sqrt{2\pi t}} \mathrm{e}^{-\frac{x^2}{2t}}
-\]</span> Brownian meander: <span class="math inline">\(\mathcal{M}\,(t)\)</span> be a Brownian meander, <span class="math inline">\(\mathfrak{M}(t) = \max_{0&lt;s&lt;t} \mathcal{M}\,(s)\)</span> <span class="math display">\[
-\begin{align}
-    \mathbb{P}(\mathcal{M}(1)&lt;x&amp;, \mathfrak{M}(1)&lt;y) = \sum_{k = -\infty}^\infty [\mathrm{e}^{-\frac{(2ky)^2}{2\sigma^2}}-\mathrm{e}^{-\frac{(2ky+x)^2}{2\sigma^2}}]\\
-    \phi(l,s) &amp;= \lim_{dx \rightarrow 0} \frac{1}{dx} \mathbb{P}\lbrace \mathcal{M}(1) \in [l,l+dx], \mathfrak{M}(1)&lt;s\rbrace\\
-    &amp;= \sum_{k = -\infty}^\infty \frac{2ks+l}{\sigma^2}\mathrm{e}^{-\frac{(2ks+l)^2}{2\sigma^2}}
-\end{align}
-\]</span></p>
-<h4 id="one-dimensional-injection-process">One Dimensional Injection Process</h4>
-<p>Constantly injecting from the right endpoint of line segment <span class="math inline">\([0,1]\)</span>, then the density of particle at <span class="math inline">\(x\)</span> from time <span class="math inline">\(-b\)</span> to <span class="math inline">\(-a\)</span> is, <span class="math display">\[
-\begin{align}
-    d(x,a,b) = \int_{a}^{b} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt
-\end{align}
-\]</span> The equilibrium density function at <span class="math inline">\(x\)</span> is, <span class="math display">\[
-\begin{align}
-    d(x) &amp;= \lim_{\substack{a = 0\\ b \rightarrow \infty}} \int_{a}^{b} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\\
-    &amp;= \int_{0}^{\infty} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-    d(x) =&amp; \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \qquad \qquad \qquad \qquad \qquad \\
-    =&amp; \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \frac{x}{\sigma^2} \mathrm{e}^{- \frac{x^2t^2}{2\sigma^2}} dt + \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=1}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \\
-    &amp;+ \lim_{\delta \rightarrow 0} \int_{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum_{k=-1}^{-\infty} \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\\
-    =&amp; \ \cdots\\
-    =&amp; \frac{\sqrt{2\pi}}{\sigma} + \frac{2\sqrt{2\pi}}{\sigma} \left(-\frac{x}{2}\right) = \frac{\sqrt{2\pi}(1-x)}{\sigma}
-\end{align}
-\]</span></p>
-<h4 id="injection-to-planar-domains">Injection to Planar Domains</h4>
-<ul>
-<li>Set <span class="math inline">\(A = \lbrace(a,b)\, |\, a \in [0,1], b \in [0,1]\rbrace \subset \mathbb{R}^2\)</span> being the domain.</li>
-<li>For <span class="math inline">\(\forall \ \text{point}\ x \in \lbrace (a,b)\ |\ b = 0\rbrace\)</span>, <span class="math inline">\(x\)</span> can be an injection point, with intensity function <span class="math inline">\(f(x)\)</span>.</li>
-<li>For <span class="math inline">\(\forall \ \text{point}\ P = (l_1,l_2) \in \lbrace(a,b)\ |\ 0\leq a \leq 1, 0 &lt; b \leq 1\rbrace\)</span>, <span class="math inline">\(P\)</span> has initial density function <span class="math inline">\(d_0(P) = 0\)</span>.</li>
-<li>The motion of the particles can be separated into two independent parts:
-<ul>
-<li>A Brownian motion <span class="math inline">\(\mathcal{B}(t)\)</span> on <span class="math inline">\(x\)</span> axis.</li>
-<li>A Brownian meander <span class="math inline">\(\mathcal{M}(t)\)</span> on <span class="math inline">\(y\)</span> axis.</li>
-</ul></li>
+<p><strong>Theorem</strong> <em>A function $f$ in a domain $U$ is harmonic if and only if $f$ is $C^2$ with $\Delta f(x) = 0$ for all $x \in U$.</em></p>
+<h4 id="Heat-Equations"><a href="#Heat-Equations" class="headerlink" title="Heat Equations"></a>Heat Equations</h4><p><strong>Definition</strong> <em>With $f(x)$ being the initial temperature at $x$, $u(t,x), t \geq 0, x \in \mathbb{R}^d$ denotes the temperature at $x$ at time $t$.<br>$$<br>\begin{align}<br>    u&amp;(t,x) = \mathbb{E}[f(W_t)\ |\ W_0 = x]\<br>    \<br>    \partial_t &amp;u(t,x) = \frac{1}{2} \mathcal{L}\, u(t,x)\<br>    \partial_t &amp;u(t,x) = \frac{1}{2} \Delta_x u(t,x)<br>\end{align}<br>$$</em></p>
+<h4 id="Brownian-Meander"><a href="#Brownian-Meander" class="headerlink" title="Brownian Meander"></a>Brownian Meander</h4><p>Brownian motion:<br>$$<br>    \psi<em>t (x) = \frac{1}{\sqrt{2\pi t}} \mathrm{e}^{-\frac{x^2}{2t}}<br>$$<br>Brownian meander:<br>$\mathcal{M}\,(t)$ be a Brownian meander, $\mathfrak{M}(t) = \max</em>{0&lt;s&lt;t} \mathcal{M}\,(s)$<br>$$<br>\begin{align}<br>    \mathbb{P}(\mathcal{M}(1)&lt;x&amp;, \mathfrak{M}(1)&lt;y) = \sum<em>{k = -\infty}^\infty [\mathrm{e}^{-\frac{(2ky)^2}{2\sigma^2}}-\mathrm{e}^{-\frac{(2ky+x)^2}{2\sigma^2}}]\<br>    \phi(l,s) &amp;= \lim</em>{dx \rightarrow 0} \frac{1}{dx} \mathbb{P}\lbrace \mathcal{M}(1) \in [l,l+dx], \mathfrak{M}(1)&lt;s\rbrace\<br>    &amp;= \sum_{k = -\infty}^\infty \frac{2ks+l}{\sigma^2}\mathrm{e}^{-\frac{(2ks+l)^2}{2\sigma^2}}<br>\end{align}<br>$$</p>
+<h4 id="One-Dimensional-Injection-Process"><a href="#One-Dimensional-Injection-Process" class="headerlink" title="One Dimensional Injection Process"></a>One Dimensional Injection Process</h4><p>Constantly injecting from the right endpoint of line segment $[0,1]$, then the density of particle at $x$ from time $-b$ to $-a$ is\cite{equ},<br>$$<br>\begin{align}<br>    d(x,a,b) = \int<em>{a}^{b} \sum</em>{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt<br>\end{align}<br>$$<br>The equilibrium density function at $x$ is,<br>$$<br>\begin{align}<br>    d(x) &amp;= \lim<em>{\substack{a = 0\ b \rightarrow \infty}} \int</em>{a}^{b} \sum<em>{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\<br>    &amp;= \int</em>{0}^{\infty} \sum<em>{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt<br>\end{align}<br>$$<br>$$<br>\begin{align}<br>    d(x) =&amp; \lim</em>{\delta \rightarrow 0} \int<em>{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum</em>{k=-\infty}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \qquad \qquad \qquad \qquad \qquad \<br>    =&amp; \lim<em>{\delta \rightarrow 0} \int</em>{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \frac{x}{\sigma^2} \mathrm{e}^{- \frac{x^2t^2}{2\sigma^2}} dt + \lim<em>{\delta \rightarrow 0} \int</em>{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum<em>{k=1}^\infty \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt \<br>    &amp;+ \lim</em>{\delta \rightarrow 0} \int<em>{\sqrt{\delta}}^{\frac{1}{\sqrt{\delta}}} \sum</em>{k=-1}^{-\infty} \frac{2k+x}{\sigma^2} \mathrm{e}^{-\frac{(2k+x)^2 t^2}{2\sigma^2}} dt\<br>    =&amp; \ \cdots\<br>    =&amp; \frac{\sqrt{2\pi}}{\sigma} + \frac{2\sqrt{2\pi}}{\sigma} \left(-\frac{x}{2}\right) = \frac{\sqrt{2\pi}(1-x)}{\sigma}<br>\end{align}<br>$$</p>
+<h4 id="Injection-to-Planar-Domains"><a href="#Injection-to-Planar-Domains" class="headerlink" title="Injection to Planar Domains"></a>Injection to Planar Domains</h4><ul>
+<li>Set $A = \lbrace(a,b)\, |\, a \in [0,1], b \in [0,1]\rbrace \subset \mathbb{R}^2$ being the domain.</li>
+<li>For $\forall \ \text{point}\ x \in \lbrace (a,b)\ |\ b = 0\rbrace$, $x$ can be an injection point, with intensity function $f(x)$.</li>
+<li>For $\forall \ \text{point}\ P = (l_1,l_2) \in \lbrace(a,b)\ |\ 0\leq a \leq 1, 0 &lt; b \leq 1\rbrace$, $P$ has initial density function $d_0(P) = 0$.</li>
+<li>The motion of the particles can be separated into two independent parts:<ul>
+<li>A Brownian motion $\mathcal{B}(t)$ on $x$ axis.</li>
+<li>A Brownian meander $\mathcal{M}(t)$ on $y$ axis.</li>
 </ul>
-<p>Since probability density function <span class="math inline">\(\phi\)</span> of Brownian meander <span class="math inline">\(\mathcal{M}(t)\)</span> reaching <span class="math inline">\(l\)</span> in time 1 without touching 1 is, <span class="math display">\[
-    \phi (1,l) = \sum_{k=-\infty}^\infty \frac{2k+l}{\sigma^2} \mathrm{e}^{-\frac{(2k + l)^2}{2\sigma^2}}
-\]</span> We can have probability density <span class="math inline">\(p_1(t,l_2)\)</span> of injected particle with <span class="math inline">\(y\)</span> component at <span class="math inline">\(l_2\)</span> in time <span class="math inline">\(t\)</span>, <span class="math display">\[
-    p_1(t,l_2) = \frac{1}{t} \phi \left(\frac{1}{\sqrt{t}}, \frac{l_2}{\sqrt{t}}\right) = \sum_{k = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}
-\]</span> <span class="math display">\[
-\begin{align}
-    \mathbb{P} \lbrace \mathcal{B}&amp;(t) \in [x_0 + dx, x_0 - dx], \min \mathcal{B}(t) &gt; x_1, \max \mathcal{B}(t) &lt; x_2\rbrace /dx\\
-    \qquad \qquad &amp;=  \sum_{n = -\infty}^\infty \frac{1}{\sigma \sqrt{t}}\, \left[ \, \phi\left( \frac{x_0-2n(x_2-x_1)}{\sigma \sqrt{t}}\right) \right.\\
-    \qquad \qquad &amp;\ - \left.\phi\left( \frac{x_0-2n(x_2-x_1)-2x_1}{\sigma \sqrt{t}}\right)\right]
-\end{align}
-\]</span> The probability density <span class="math inline">\(p_2 (t,l_1,x)\)</span> of a Brownian motion <span class="math inline">\(\mathcal{B}(t)\)</span> starting from <span class="math inline">\(x\)</span> reaches point <span class="math inline">\(l_1\)</span> in time <span class="math inline">\(t\)</span>: <span class="math display">\[
-    p_2 (t,x,l_1) = \sum_{k = -\infty}^\infty \frac{1}{\sigma \sqrt{t}} \left[ \phi \left( \frac{x - l_1 - 2k}{\sigma \sqrt{t}} \right) -\phi \left( \frac{3x - l_1 - 2k}{\sigma \sqrt{t}} \right) \right]
-\]</span> As the Brownian motion and the Brownian meander are independent from each other, <span class="math display">\[
-\begin{align}
-    p(t,x,l_1,l_2) =&amp; p_1 (t,l_2)\, p_2(t,x,l_1)\\
-    =&amp; \left( \sum_{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}} \right) \cdot \\
-     &amp; \left( \sum_{k_2 = -\infty}^\infty \frac{1}{\sigma \sqrt{t}} \left[ \phi \left( \frac{x - l_1 - 2k_2}{\sigma \sqrt{t}} \right) -\phi \left( \frac{3x - l_1 - 2k_2}{\sigma \sqrt{t}} \right) \right] \right)
-\end{align}
-\]</span> <span class="math display">\[
-\begin{align}
-    p(t,x,l_1,l_2) =&amp; \frac{1}{\sqrt{2\pi}} \left( \sum_{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}} \right)\cdot \\
-    &amp; \left( \sum_{k_2 = -\infty}^\infty \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}} \right)
-\end{align}
-\]</span> where <span class="math display">\[
-\begin{align}
-    f_1(l_1,k_2,x) = (l_1 - 2k_2)^2 - 2(l_1 -2k_2)x +x^2\\
-    f_2(l_1,k_2,x) = (l_1 - 2k_2)^2 + 2(l_1 -2k_2)x +x^2
-\end{align}
-\]</span> For <span class="math inline">\(\forall\ y = (l_1,l_2) \in A\)</span>, the accumulated density at <span class="math inline">\(y\)</span> in time <span class="math inline">\(t_0\)</span> is, <span class="math display">\[
-\begin{align}
-    h(t_0,l_1,l_2) =&amp; \int_0^{t_0} \int_0^1 p(t,x,l_1,l_2)\,dxdt\\
-    =&amp; \int_0^{t_0} \frac{1}{\sqrt{2\pi}} \sum_{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\cdot \\
-    &amp; \left(\int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\,dx \right) dt
-\end{align}
-\]</span></p>
-<h4 id="verifying-heat-equation">Verifying Heat Equation</h4>
-We can see function <span class="math inline">\(h\)</span> as <span class="math inline">\(h(t_0,l_1,l_2) = \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt\)</span>,
-<span class="math display">\[\begin{align}
-    p_1(t,l_2) =&amp; \sum_{k_1=-\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\\
-    \widetilde{p_2}(t,l_1) =&amp; \int_0^1 f(x)\, p_2(t,x,l_1)\,dx\\
-    =&amp; \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx
-\end{align}\]</span>
-<span class="math display">\[\begin{align}
-    \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{2t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
-    \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2) &amp;= \sum_{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\\
-    \Rightarrow \frac{\partial p_1}{\partial t}(t,&amp;l_2) = \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2), \quad p_1(t,l_2) = \int_0^t \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(s,l_2)\,ds
-\end{align}\]</span>
-Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right) \,dx\)</span>
-<span class="math display">\[\begin{align}
-    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial}{\partial t} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
-    \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1) &amp;= \int_0^1 f(x) \sum_{k_2 = -\infty}^\infty \frac{\partial^2}{\partial {l_1}^2} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\\
-    \Rightarrow \frac{\partial \widetilde{p_2}}{\partial t}(t,&amp;l_1) = \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1), \quad \widetilde{p_2}(t,l_1) = \int_0^t \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(s,l_1)\,ds
-\end{align}\]</span>
-<p><strong>Theorem</strong> <em>If <span class="math inline">\(u(t,l_1,l_2) = \int_0^t \tilde{h}(s,l_1) \tilde{v}(s,l_2)\,ds\)</span>, then <span class="math inline">\(u_t = \frac{1}{2} \Delta u\)</span>.</em></p>
-<span class="math display">\[\begin{align}
-    \textit{Proof:}\qquad \qquad \because \frac{\partial u}{\partial t} &amp;= \tilde{h}(s,l_1) \tilde{v}(s,l_2).\\
-    \Rightarrow \frac{\partial^2 u}{\partial t^2} &amp;= \frac{\partial \tilde{h}}{\partial t}(t,l_1) \tilde{v}(t,l_2) + \tilde{h}(t,l_1) \frac{\partial \tilde{v}}{\partial t}(t,l_2)\\
-    &amp;= \frac{1}{2} \frac{\partial^2 \tilde{h}}{\partial {l_1}^2}(t,l_1) \tilde{v}(t,l_2) + \frac{1}{2} \tilde{h}(t,l_1) \frac{\partial^2 \tilde{v}}{\partial {l_2}^2}(t,l_2)\\
-    &amp;= \frac{1}{2} \Delta [\tilde{h}(t,l_1) \tilde{v}(t,l_2)]\\
-    &amp;= \frac{1}{2} \Delta \frac{\partial u}{\partial t}
-\end{align}\]</span>
-<strong>Claim:</strong> <em><span class="math inline">\(h(t_0,l_1,l_2)\)</span> satisfies heat equation.</em>
-<span class="math display">\[\begin{align}
-    \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2)\\
-    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1)\\
-    h(t_0,l_1,l_2) &amp;= \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt
-\end{align}\]</span>
-<span class="math display">\[\begin{align}
-    \Rightarrow \frac{\partial^2}{\partial t^2} h(t_0,l_1,l_2) = \frac{1}{2} \Delta \frac{\partial}{\partial t} h(t_0,l_1,l_2)
-\end{align}\]</span>
+</li>
+</ul>
+<p>Since probability density function $\phi$ of Brownian meander $\mathcal{M}(t)$ reaching $l$ in time 1 without touching 1 is,<br>$$<br>    \phi (1,l) = \sum_{k=-\infty}^\infty \frac{2k+l}{\sigma^2} \mathrm{e}^{-\frac{(2k + l)^2}{2\sigma^2}}<br>$$<br>We can have probability density $p_1(t,l_2)$ of injected particle with $y$ component at $l_2$ in time $t$,<br>$$<br>    p_1(t,l_2) = \frac{1}{t} \phi \left(\frac{1}{\sqrt{t}}, \frac{l<em>2}{\sqrt{t}}\right) = \sum</em>{k = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}<br>$$<br>$$<br>\begin{align}<br>    \mathbb{P} \lbrace \mathcal{B}&amp;(t) \in [x_0 + dx, x_0 - dx], \min \mathcal{B}(t) &gt; x_1, \max \mathcal{B}(t) &lt; x<em>2\rbrace /dx\<br>    \qquad \qquad &amp;=  \sum</em>{n = -\infty}^\infty \frac{1}{\sigma \sqrt{t}}\, \left[ \, \phi\left( \frac{x_0-2n(x_2-x_1)}{\sigma \sqrt{t}}\right) \right.\<br>    \qquad \qquad &amp;\ - \left.\phi\left( \frac{x_0-2n(x_2-x_1)-2x_1}{\sigma \sqrt{t}}\right)\right]<br>\end{align}<br>$$<br>The probability density $p_2 (t,l_1,x)$ of a Brownian motion $\mathcal{B}(t)$ starting from $x$ reaches point $l_1$ in time $t$:<br>$$<br>    p_2 (t,x,l<em>1) = \sum</em>{k = -\infty}^\infty \frac{1}{\sigma \sqrt{t}} \left[ \phi \left( \frac{x - l_1 - 2k}{\sigma \sqrt{t}} \right) -\phi \left( \frac{3x - l_1 - 2k}{\sigma \sqrt{t}} \right) \right]<br>$$<br>As the Brownian motion and the Brownian meander are independent from each other,<br>$$<br>\begin{align}<br>    p(t,x,l_1,l_2) =&amp; p_1 (t,l_2)\, p_2(t,x,l<em>1)\<br>    =&amp; \left( \sum</em>{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l<em>2)^2}{2t}} \right) \cdot \<br>     &amp; \left( \sum</em>{k_2 = -\infty}^\infty \frac{1}{\sigma \sqrt{t}} \left[ \phi \left( \frac{x - l_1 - 2k_2}{\sigma \sqrt{t}} \right) -\phi \left( \frac{3x - l_1 - 2k_2}{\sigma \sqrt{t}} \right) \right] \right)<br>\end{align}<br>$$<br>$$<br>\begin{align}<br>    p(t,x,l_1,l<em>2) =&amp; \frac{1}{\sqrt{2\pi}} \left( \sum</em>{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l<em>2)^2}{2t}} \right)\cdot \<br>    &amp; \left( \sum</em>{k_2 = -\infty}^\infty \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}} \right)<br>\end{align}<br>$$<br>where<br>$$<br>\begin{align}<br>    f_1(l_1,k_2,x) = (l_1 - 2k_2)^2 - 2(l_1 -2k_2)x +x^2\<br>    f_2(l_1,k_2,x) = (l_1 - 2k_2)^2 + 2(l_1 -2k_2)x +x^2<br>\end{align}<br>$$<br>For $\forall\ y = (l_1,l_2) \in A$, the accumulated density at $y$ in time $t_0$ is,<br>$$<br>\begin{align}<br>    h(t_0,l_1,l_2) =&amp; \int_0^{t_0} \int_0^1 p(t,x,l_1,l_2)\,dxdt\<br>    =&amp; \int_0^{t<em>0} \frac{1}{\sqrt{2\pi}} \sum</em>{k_1 = -\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\cdot \<br>    &amp; \left(\int<em>0^1 f(x) \sum</em>{k_2 = -\infty}^\infty \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\,dx \right) dt<br>\end{align}<br>$$</p>
+<h4 id="Verifying-Heat-Equation"><a href="#Verifying-Heat-Equation" class="headerlink" title="Verifying Heat Equation"></a>Verifying Heat Equation</h4><p>We can see function $h$ as $h(t_0,l_1,l_2) = \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt$,<br>\begin{align}<br>    p_1(t,l<em>2) =&amp; \sum</em>{k_1=-\infty}^\infty \frac{2k_1+l_2}{t\sqrt{t}} \mathrm{e}^{-\frac{(2 k_1+l_2)^2}{2t}}\<br>    \widetilde{p_2}(t,l_1) =&amp; \int_0^1 f(x)\, p_2(t,x,l_1)\,dx\<br>    =&amp; \int<em>0^1 f(x) \sum</em>{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx<br>\end{align}</p>
+<p>\begin{align}<br>    \frac{\partial p_1}{\partial t}(t,l<em>2) &amp;= \sum</em>{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{2t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\<br>    \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l<em>2) &amp;= \sum</em>{k_1 = -\infty}^\infty \frac{(2k_1 + l_2)(4{k_1}^2 l_2 + {l_2}^2 -3t)}{t^{7/2}} \mathrm{e}^{-\frac{(2k_1 + l_2)^2}{2t}}\<br>    \Rightarrow \frac{\partial p_1}{\partial t}(t,&amp;l_2) = \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2), \quad p_1(t,l_2) = \int_0^t \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(s,l_2)\,ds<br>\end{align}<br>Since $\widetilde{p_2} = \int<em>0^1 f(x) \sum</em>{k_2 = -\infty}^\infty \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right) \,dx$<br>\begin{align}<br>    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \int<em>0^1 f(x) \sum</em>{k_2 = -\infty}^\infty \frac{\partial}{\partial t} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\<br>    \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1) &amp;= \int<em>0^1 f(x) \sum</em>{k_2 = -\infty}^\infty \frac{\partial^2}{\partial {l_1}^2} \left( \mathrm{e}^{-\frac{f_1(l_1,k_2,x)}{2t}} - \mathrm{e}^{-\frac{f_2(l_1,k_2,x)}{2t}}\right)\,dx\<br>    \Rightarrow \frac{\partial \widetilde{p_2}}{\partial t}(t,&amp;l_1) = \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1), \quad \widetilde{p_2}(t,l_1) = \int_0^t \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(s,l_1)\,ds<br>\end{align}</p>
+<p><strong>Theorem</strong> <em>If $u(t,l_1,l_2) = \int_0^t \tilde{h}(s,l_1) \tilde{v}(s,l_2)\,ds$, then $u_t = \frac{1}{2} \Delta u$.</em></p>
+<p>\begin{align}<br>    \textit{Proof:}\qquad \qquad \because \frac{\partial u}{\partial t} &amp;= \tilde{h}(s,l_1) \tilde{v}(s,l_2).\<br>    \Rightarrow \frac{\partial^2 u}{\partial t^2} &amp;= \frac{\partial \tilde{h}}{\partial t}(t,l_1) \tilde{v}(t,l_2) + \tilde{h}(t,l_1) \frac{\partial \tilde{v}}{\partial t}(t,l_2)\<br>    &amp;= \frac{1}{2} \frac{\partial^2 \tilde{h}}{\partial {l_1}^2}(t,l_1) \tilde{v}(t,l_2) + \frac{1}{2} \tilde{h}(t,l_1) \frac{\partial^2 \tilde{v}}{\partial {l_2}^2}(t,l_2)\<br>    &amp;= \frac{1}{2} \Delta [\tilde{h}(t,l_1) \tilde{v}(t,l_2)]\<br>    &amp;= \frac{1}{2} \Delta \frac{\partial u}{\partial t}<br>\end{align}<br><strong>Claim:</strong> <em>$h(t_0,l_1,l_2)$ satisfies heat equation.</em><br>\begin{align}<br>    \frac{\partial p_1}{\partial t}(t,l_2) &amp;= \frac{1}{2} \frac{\partial^2 p_1}{\partial {l_2}^2}(t,l_2)\<br>    \frac{\partial \widetilde{p_2}}{\partial t}(t,l_1) &amp;= \frac{1}{2} \frac{\partial^2 \widetilde{p_2}}{\partial {l_1}^2}(t,l_1)\<br>    h(t_0,l_1,l_2) &amp;= \int_0^{t_0} \frac{1}{\sqrt{2\pi}} p_1(t,l_2)\, \widetilde{p_2}(t,l_1)\,dt<br>\end{align}</p>
+<p>\begin{align}<br>    \Rightarrow \frac{\partial^2}{\partial t^2} h(t_0,l_1,l_2) = \frac{1}{2} \Delta \frac{\partial}{\partial t} h(t_0,l_1,l_2)<br>\end{align}</p>
 
       
     </div>
@@ -789,7 +650,7 @@ Since <span class="math inline">\(\widetilde{p_2} = \int_0^1 f(x) \sum_{k_2 = -\
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#one-dimensional-random-walk"><span class="nav-number">1.</span> <span class="nav-text">One dimensional random walk</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#boundary-value-problems"><span class="nav-number">2.</span> <span class="nav-text">Boundary value problems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#higher-dimensional-case"><span class="nav-number">3.</span> <span class="nav-text">Higher dimensional case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dirichlet-problem-for-discrete-harmonic-functions"><span class="nav-number">4.</span> <span class="nav-text">Dirichlet problem for discrete harmonic functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#heat-equation"><span class="nav-number">5.</span> <span class="nav-text">Heat equation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#brownian-motion"><span class="nav-number">6.</span> <span class="nav-text">Brownian motion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#heat-equations"><span class="nav-number">7.</span> <span class="nav-text">Heat Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#brownian-meander"><span class="nav-number">8.</span> <span class="nav-text">Brownian Meander</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#one-dimensional-injection-process"><span class="nav-number">9.</span> <span class="nav-text">One Dimensional Injection Process</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#injection-to-planar-domains"><span class="nav-number">10.</span> <span class="nav-text">Injection to Planar Domains</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#verifying-heat-equation"><span class="nav-number">11.</span> <span class="nav-text">Verifying Heat Equation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#One-dimensional-random-walk"><span class="nav-number">1.</span> <span class="nav-text">One dimensional random walk</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boundary-value-problems"><span class="nav-number">2.</span> <span class="nav-text">Boundary value problems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Higher-dimensional-case"><span class="nav-number">3.</span> <span class="nav-text">Higher dimensional case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dirichlet-problem-for-discrete-harmonic-functions"><span class="nav-number">4.</span> <span class="nav-text">Dirichlet problem for discrete harmonic functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heat-equation"><span class="nav-number">5.</span> <span class="nav-text">Heat equation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Brownian-motion"><span class="nav-number">6.</span> <span class="nav-text">Brownian motion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Heat-Equations"><span class="nav-number">7.</span> <span class="nav-text">Heat Equations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Brownian-Meander"><span class="nav-number">8.</span> <span class="nav-text">Brownian Meander</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#One-Dimensional-Injection-Process"><span class="nav-number">9.</span> <span class="nav-text">One Dimensional Injection Process</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Injection-to-Planar-Domains"><span class="nav-number">10.</span> <span class="nav-text">Injection to Planar Domains</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Verifying-Heat-Equation"><span class="nav-number">11.</span> <span class="nav-text">Verifying Heat Equation</span></a></li></ol></div>
             
 
           </div>
