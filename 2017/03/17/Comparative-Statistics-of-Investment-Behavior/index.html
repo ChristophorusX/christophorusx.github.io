@@ -107,7 +107,7 @@
 \begin{cases}
 (V(x),w(x;r),0)\quad\mathrm{if}\ x&amp;lt;x_\ast \\
 (x-I,x-I,">
-<meta property="og:updated_time" content="2017-03-18T15:24:33.000Z">
+<meta property="og:updated_time" content="2017-03-18T15:46:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Comparative Statistics of Investment Behavior">
 <meta name="twitter:description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple \[
@@ -445,7 +445,14 @@
 (x-I,x-I,1)\quad \mathrm{o.w.}
 \end{cases}
 \]</span> <em>solves the Bellman system with its boundary condition. Hence, <span class="math inline">\(\hat u\)</span> is an equilibrium stopping rule and <span class="math inline">\(V^e\)</span> is the corresponding value function.</em></p>
-<p><em>Proof</em>: From the boundary condition <span class="math inline">\(w(0;r) = 0\)</span>, it is easy to see that <span class="math inline">\(V (0) = 0\)</span>, which satisfies the boundary condition <span class="math inline">\(V (0) = \max\lbrace 0,x − I\rbrace |_{x=0}\)</span>.</p>
+<p><em>Proof</em>: From the boundary condition <span class="math inline">\(w(0;r) = 0\)</span>, it is easy to see that <span class="math inline">\(V (0) = 0\)</span>, which satisfies the boundary condition <span class="math inline">\(V (0) = \max\lbrace 0,x − I\rbrace {|}_{x=0}\)</span>.</p>
+<p>On the continuation region <span class="math inline">\((0,x_∗)\)</span>, since <span class="math inline">\(V(x)=\int_0^\infty w(x;r)dF(r)\)</span> and since <span class="math inline">\(w(x;r)\)</span> follows the ODE defined on continuation region <span class="math display">\[
+{1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r)-rw(x;r)=0
+\]</span> we can get the equation <span class="math display">\[
+\int_0^\infty {1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r) dF(r)=\int_0^\infty rw(x;r) dF(r)
+\]</span> which is equivalent to <span class="math display">\[
+{1\over2}\sigma^2x^2V_{xx}(x)+bxV_x(x) dF(r)-\int_0^\infty rw(x;r) dF(r)=0
+\]</span></p>
 <p>The triggering boundary <span class="math inline">\(x_∗\)</span> depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from one another and determined by the function <span class="math inline">\(\mu(r)\)</span>, the constant <span class="math inline">\(I\)</span>, and the weighting distribution <span class="math inline">\(F\)</span>, respectively. This observation allows the study of the impact of these factors on the investment decision separately. The following proposition lists several properties of the triggering boundary x∗with respect to the entry costs and payoff process.</p>
 <h4 id="the-impact-of-the-underlying-process-and-entry-cost-on-the-triggering-boundary">The impact of the underlying process and entry cost on the triggering boundary</h4>
 <ul>
