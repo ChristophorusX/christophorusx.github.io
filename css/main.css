@@ -1802,7 +1802,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #aaff03;
+  background: #2bfc62;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3110,6 +3110,10 @@ hr {
   color: #0477ab;
   text-decoration: underline;
 }
-canvas {
-  position: fixed;
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
