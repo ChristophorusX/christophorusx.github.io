@@ -1618,6 +1618,10 @@ pre .javascript .function {
   max-width: 96px;
   height: auto;
   border: 2px solid #333;
+/*round image*/
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
 }
 .site-author-name {
   margin: 5px 0 0;
@@ -1699,7 +1703,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff94;
+  background: #ffaa1c;
 }
 .links-of-blogroll {
   font-size: 13px;
