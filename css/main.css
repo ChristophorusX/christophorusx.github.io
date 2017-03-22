@@ -1802,7 +1802,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffbfff;
+  background: #58ff40;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3024,73 +3024,82 @@ hr {
     text-align: center;
   }
 }
-
 /* Import Bembo Standard font files */
+
 @font-face {
-    font-family: 'Bembo Standard';
-    src:url('../../fonts/BemboStd.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Bembo Standard';
+  src: url('../../fonts/BemboStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Bembo Standard';
-    src:url('../../fonts/BemboStd-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Bembo Standard';
+  src: url('../../fonts/BemboStd-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Bembo Standard';
-    src:url('../../fonts/BemboStd-Italic.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
+  font-family: 'Bembo Standard';
+  src: url('../../fonts/BemboStd-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
 }
+
 
 /* Import CMU Serif font files */
+
 @font-face {
-    font-family: 'CMU Serif';
-    src:url('../../fonts/cmunrm.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'CMU Serif';
-    src:url('../../fonts/cmunbx.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'CMU Serif';
-    src:url('../../fonts/cmunti.otf') format('opentype');
-    font-weight: normal;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'CMU Serif';
-    src:url('../../fonts/cmunbi.otf') format('opentype');
-    font-weight: bold;
-    font-style: italic;
+  font-family: 'CMU Serif';
+  src: url('../../fonts/cmunrm.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../../fonts/cmunbx.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../../fonts/cmunti.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'CMU Serif';
+  src: url('../../fonts/cmunbi.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
 
 
 /* Import Header fonts */
+
 @font-face {
-    font-family: 'Agincourt Std';
-    src:url('../../fonts/AgincourtStd.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Agincourt Std';
+  src: url('../../fonts/AgincourtStd.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Trajan Pro';
-    src:url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Trajan Pro';
+  src: url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 @font-face {
-    font-family: 'Trajan Pro';
-    src:url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'Trajan Pro';
+  src: url('../../fonts/TrajanPro3-Regular.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 .post-body p a {
@@ -3100,4 +3109,53 @@ hr {
 .post-body p a:hover {
   color: #0477ab;
   text-decoration: underline;
+}
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.count-particles {
+  background: #002;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13e8e9;
+  font-size: 0.8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+.js-count-particles {
+  font-size: 1.1em;
+}
+#stats,
+.count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+.count-particles {
+  border-radius: 0 0 3px 3px;
 }
