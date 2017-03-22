@@ -1802,7 +1802,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2bfc62;
+  background: #e8c4a4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3109,6 +3109,11 @@ hr {
 .post-body p a:hover {
   color: #0477ab;
   text-decoration: underline;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 .background {
   position: absolute;
