@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT, Mathematics, ChristophorusX, Computer Science" />
+  <meta name="keywords" content="Mathematics,Proofs," />
 
 
 
@@ -93,15 +93,22 @@
 
 
 
-<meta name="description" content="何でもは知らないわよ、知ってることだけ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:url" content="http://christophorusx.github.io/page/2/index.html">
+<meta name="description" content="Let \(\phi:\mathbb{R}\to\mathbb{C}\) be measurable function and \(1\leq p\leq \infty\).
+
+If $L^(), then the operator \(M_\phi f=f\phi\) for \(f\in L^p(\mathbb{R})\) is a bounded operator from \(L^p(\m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Proof: Bounded and Unbounded Operators on Lp Space">
+<meta property="og:url" content="http://christophorusx.github.io/2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="何でもは知らないわよ、知ってることだけ">
+<meta property="og:description" content="Let \(\phi:\mathbb{R}\to\mathbb{C}\) be measurable function and \(1\leq p\leq \infty\).
+
+If $L^(), then the operator \(M_\phi f=f\phi\) for \(f\in L^p(\mathbb{R})\) is a bounded operator from \(L^p(\m">
+<meta property="og:updated_time" content="2017-03-22T00:47:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Imāginātiōnēs Christophorōrum">
-<meta name="twitter:description" content="何でもは知らないわよ、知ってることだけ">
+<meta name="twitter:title" content="Proof: Bounded and Unbounded Operators on Lp Space">
+<meta name="twitter:description" content="Let \(\phi:\mathbb{R}\to\mathbb{C}\) be measurable function and \(1\leq p\leq \infty\).
+
+If $L^(), then the operator \(M_\phi f=f\phi\) for \(f\in L^p(\mathbb{R})\) is a bounded operator from \(L^p(\m">
 
 
 
@@ -129,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://christophorusx.github.io/page/2/"/>
+  <link rel="canonical" href="http://christophorusx.github.io/2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/"/>
 
 
 
 
 
-  <title> Imāginātiōnēs Christophorōrum </title>
+  <title> Proof: Bounded and Unbounded Operators on Lp Space | Imāginātiōnēs Christophorōrum </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -169,9 +176,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -312,9 +317,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -323,7 +328,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/03/Renyi Parking Problem/">
+    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChristophorusX">
@@ -344,10 +349,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/03/Renyi Parking Problem/" itemprop="url">
-                  Renyi Parking Problem
-                </a>
+                Proof: Bounded and Unbounded Operators on Lp Space
               
             
           </h1>
@@ -362,8 +364,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T19:31:04-05:00">
-                2017-03-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-21T20:37:02-04:00">
+                2017-03-21
               </time>
             
 
@@ -403,8 +405,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/03/Renyi Parking Problem/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/03/Renyi Parking Problem/" itemprop="commentCount"></span>
+                <a href="/2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -430,351 +432,104 @@
       
 
       
-        
-          
-          Renyi’s parking problem (or 1D sequential interval packing problem) dates back to 1958, when Renyi studied the following random process:
+        <p>Let <span class="math inline">\(\phi:\mathbb{R}\to\mathbb{C}\)</span> be measurable function and <span class="math inline">\(1\leq p\leq \infty\)</span>.</p>
+<ul>
+<li>If $L^(), then the operator <span class="math inline">\(M_\phi f=f\phi\)</span> for <span class="math inline">\(f\in L^p(\mathbb{R})\)</span> is a bounded operator from <span class="math inline">\(L^p(\mathbb{R})\)</span> to <span class="math inline">\(L^p(\mathbb{R})\)</span>, and its operator norm is precisely <span class="math inline">\(\Vert M_\phi\Vert=\Vert\phi\Vert_\infty\)</span>.</li>
+<li>Conversely, if <span class="math inline">\(f\phi\in L^p(\mathbb{R})\)</span> for every <span class="math inline">\(f\in L^p(\mathbb{R})\)</span>, then <span class="math inline">\(\phi\in L^\infty(\mathbb{R})\)</span>.</li>
+</ul>
+<p><em>Proof:</em> Since <span class="math inline">\(\phi\in L^\infty(\mathbb{R})\)</span> and there is some fixed number <span class="math inline">\(K=\Vert\phi\Vert_\infty\)</span>, i.e. <span class="math inline">\(\vert\phi\vert\leq K\)</span> a.e., it follows that <span class="math display">\[
+    \Vert M_\phi f\Vert =\Vert f\phi\Vert\leq K\Vert f\Vert=\Vert\phi\Vert_\infty\Vert f\Vert
+    \]</span> We can get the strict equality because <span class="math display">\[
+    \Vert M_\phi\Vert=\sup_{f\in L^\infty(\mathbb{R})}{\Vert M_\phi f\Vert\over \Vert f\Vert}
+    \]</span> and for any <span class="math inline">\(\varepsilon&gt;0\)</span>, there exists a set <span class="math inline">\(E\)</span> with positive measure, s.t. <span class="math inline">\(\vert\phi\vert&gt;K-\varepsilon\)</span>. Let <span class="math inline">\(f=\bbI_{E\cap[-l,l]}\in L^p(\mathbb{R})\)</span> and we have <span class="math display">\[
+    \Vert M_\phi f\Vert =\Vert f\phi\Vert\geq\Vert(K-\varepsilon)f\Vert=(K-\varepsilon)\Vert f\Vert
+    \]</span> Therefore, we conclude <span class="math inline">\(\Vert M_\phi\Vert=\Vert\phi\Vert_\infty\)</span>.</p>
+<pre><code>If $p=\infty$ and for any $f\in L^\infty(\mathbb{R})$ we have $f\phi\in L^\infty(\mathbb{R})$, we claim that $\phi$ must be essentially bounded. Otherwise, $f=\bbI_\mathbb{R}\in L^\infty(\mathbb{R})$ will give $f\phi=\phi\notin L^\infty(\mathbb{R})$.
 
-Consider an interval \(I\) of length \(x\), and sequentially and randomly pack disjoint unit intervals in \(I\) 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/03/Renyi Parking Problem/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+If $p\neq\infty$ and $\phi\notin L^\infty(\mathbb{R})$, there are infinitely many $E_k=\lbrace k\leq|\phi|&lt;k+1\rbrace$ with positive measure, each measurable and disjoint. Choose any $E_{n_k}, k\in \mathbb{N}$, all with positive measure and take $E=\cup E_{n_k}$. Define
+$$
+f(x)=
+\begin{cases}
+    {1\over k^{2/p}\mu(E_{n_k})^{1/p}},\quad x\in E_{n_k}\\
+    0,\quad x\notin E
+\end{cases}
+$$
+Then
+$$
+\int|f|^pd\mu=\sum_{k=1}^\infty\int_{E{n_k}}{1\over k^2\mu(E_{n_k})}=\sum_{k=1}^\infty {1\over k^2}&lt;\infty
+$$
+and
+$$
+\int|f\phi|^pd\mu\geq\sum_{k=1}^\infty\int_{E{n_k}}{k^p\over k^2\mu(E_{n_k})}
+$$
+As $p\geq1$, it is obvious that RHS gives
+$$
+\int|f\phi|^pd\mu\geq\sum_{k=1}^\infty\int_{E{n_k}}{k^p\over k^2\mu(E_{n_k})}\geq \sum_{k=1}^\infty {1\over k}=\infty
+$$
+Contradiction!</code></pre>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/03/Discrete Heat Equation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChristophorusX">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Imāginātiōnēs Christophorōrum">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/03/Discrete Heat Equation/" itemprop="url">
-                  Random Walk, Brownian Motion and Heat Equation
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T18:22:35-05:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Academic/" itemprop="url" rel="index">
-                    <span itemprop="name">Academic</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
           
-
+            <a href="/tags/Proofs/" rel="tag"># Proofs</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/03/Discrete Heat Equation/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/03/Discrete Heat Equation/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-          
-One dimensional random walk
-Let \(X_n\) denotes the step of the walker at time n, \(S_n\) denotes the position of the walker at time n. We have the following relationship: \[
-S_n = x_0 + X_1 + X_2 + \cdots + X_n    
-\] where \(x_0\) is the initial s
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/03/Discrete Heat Equation/#more" rel="contents">
-              Read more &raquo;
-            </a>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/20/Optimal-exit-time-from-casino-gambling/" rel="next" title="Optimal Exit Time From Casino Gambling">
+                <i class="fa fa-chevron-left"></i> Optimal Exit Time From Casino Gambling
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
+          <span class="post-nav-divider"></span>
 
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/2017/03/03/Welcome/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChristophorusX">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Imāginātiōnēs Christophorōrum">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/03/Welcome/" itemprop="url">
-                  Welcome
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-03T18:16:30-05:00">
-                2017-03-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/03/Welcome/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/03/Welcome/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          Welcome to my blog.
-Here we will have some interesting posts on a variety of topics, while most of them are going to relate themselves with Mathematics and Computer Science. Anyway, welcome and have fun! :)
-
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/03/Welcome/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -782,6 +537,17 @@ Here we will have some interesting posts on a variety of topics, while most of t
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -985,6 +751,10 @@ Here we will have some interesting posts on a variety of topics, while most of t
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -1001,9 +771,9 @@ Here we will have some interesting posts on a variety of topics, while most of t
 
     <script type="text/javascript">
       var disqus_shortname = 'imaginationes-christophororum';
-      var disqus_identifier = 'page/2/index.html';
+      var disqus_identifier = '2017/03/21/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/';
 
-      var disqus_title = "";
+      var disqus_title = "Proof: Bounded and Unbounded Operators on Lp Space";
 
 
       function run_disqus_script(disqus_script) {
@@ -1016,6 +786,13 @@ Here we will have some interesting posts on a variety of topics, while most of t
 
       run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
       
 
     </script>
