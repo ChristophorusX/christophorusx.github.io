@@ -1802,7 +1802,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #cbffd7;
+  background: #71d982;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3113,7 +3113,6 @@ hr {
 canvas {
   display: block;
   position: fixed;
-  z-index: -1;
 }
 particles-js {
   position: absolute;
