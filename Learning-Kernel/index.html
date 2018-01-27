@@ -99,7 +99,7 @@
 <meta property="og:url" content="http://christophorusx.github.io/Learning-Kernel/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="We investigate a series of learning kernel problems with polynomial combinations of base kernels, which will help us solve regression and classification problems. We also perform some numerical experi">
-<meta property="og:updated_time" content="2018-01-27T02:37:22.000Z">
+<meta property="og:updated_time" content="2018-01-27T02:49:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Learning-Kernel">
 <meta name="twitter:description" content="We investigate a series of learning kernel problems with polynomial combinations of base kernels, which will help us solve regression and classification problems. We also perform some numerical experi">
@@ -437,6 +437,9 @@
 <p>Starting from the general setting, we look at different algorithms solving the learning kernel problem for the families of kernels that we consider. We analyze the Interpolated Iterative Algorithm (IIA) and the Projection-Based Gradient Descent Algorithm (PGD). For this second one, we furnish some more detail on its convergence. We then look to a slightly modified optimization problem and we derive a Regularized Interpolated Iterative Algorithm (rIIA), for the linear case, and a Regularized Projection-Based Gradient Descent Algorithm (rPGD2), for the polynomial case. We finally briefly discuss about the generalization error for this learning problem.</p>
 <p>The above algorithms are then tested on several UCI datasets. We reported the results from our implementation and briefly commented them. Finally we ask ourselves how the kernel learned with the above algorithms could perform for SVM. Some empirical results are reported and discussed.</p>
 <p>More empirical results are reported in Appendix, together with a more detailed proof of proposition. We also discuss some ideas from manifold optimization which could be used instead of the presented PGD algorithm.</p>
+<h4 id="algorithms-for-kernel-learning">Algorithms for Kernel Learning</h4>
+<h5 id="kernel-ridge-regression">Kernel Ridge Regression</h5>
+<p>We consider the problem of learning the kernel for Kernel Ridge Regression (KRR). Be <span class="math inline">\(S = \{(x_1,y_1),\dots,(x_m,y_m)\}\)</span> the training sample and <span class="math inline">\(y = [y_1,\dots,y_m]^T\in\mathbb{R}^m\)</span> the vector of training set labels and <span class="math inline">\(\Phi(x)\in \mathbb{R}^d\)</span> the feature vector associated to an input data <span class="math inline">\(x\in \mathbb{R}^n\)</span>.</p>
 
       
     </div>
@@ -632,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#algorithms-for-kernel-learning"><span class="nav-number">2.</span> <span class="nav-text">Algorithms for Kernel Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#kernel-ridge-regression"><span class="nav-number">2.1.</span> <span class="nav-text">Kernel Ridge Regression</span></a></li></ol></li></ol></div>
             
 
           </div>
