@@ -431,48 +431,20 @@
 
       
         <p>Few economic hypotheses have advanced so rapidly from the fringe to the mainstream as hyperbolic discounting, which now functions almost as a default option for analyzing the misbehavior of economic agents. The well-known distinguishing feature of hyperbolic agents is that they exhibit steeper discounting for time intervals closer to the present. As a result, intertemporal trade-offs shift with the mere passage of time, and plans or projects that seemed optimal yesterday need no longer be optimal today.</p>
-<h4 id="hyperbolic-discounting">Hyperbolic Discounting</h4>
-<p>In economics, hyperbolic discounting is a time-inconsistent model of discounting. Intertemporal choices are no different from other choices, except that some consequences are delayed and hence must be anticipated and discounted. Given two similar rewards, humans show a preference for one that arrives sooner rather than later. Humans are said to discount the value of the later reward, by a factor that increases with the length of the delay. This process is traditionally modeled in the form of exponential discounting, a time-consistent model of discounting. A large number of studies have since demonstrated that the constant discount rate assumed in exponential discounting is systematically being violated. Hyperbolic discounting is a particular mathematical model devised as an alternative to exponential discounting. According to hyperbolic discounting, valuations fall relatively rapidly for earlier delay periods (as in, from now to one week), but then fall more slowly for longer delay periods.</p>
-<p>Hyperbolic discounting is mathematically described as: <span class="math display">\[
-f_H(D)={1\over {1+kD}}
-\]</span> where <span class="math inline">\(f(D)\)</span> is the discount factor that multiplies the value of the reward, <span class="math inline">\(D\)</span> is the delay in the reward, and <span class="math inline">\(k\)</span> is a parameter governing the degree of discounting. This is compared with the formula for exponential discounting: <span class="math display">\[
-f_E(D)=e^{-kD}
-\]</span></p>
-<h4 id="decreasing-impatience">Decreasing Impatience</h4>
-<p><strong>Definition (Decreasing impatience)</strong> <em>A discount function <span class="math inline">\(h\)</span> satisfies decreasing impatience (DI) if</em> <span class="math display">\[
-P(t)=-{(\log h(t))&#39;&#39;\over (\log h(t))&#39;}
-\]</span> <em>is non-negative.</em></p>
+<h4 id="Hyperbolic-Discounting"><a href="#Hyperbolic-Discounting" class="headerlink" title="Hyperbolic Discounting"></a>Hyperbolic Discounting</h4><p>In economics, hyperbolic discounting is a time-inconsistent model of discounting. Intertemporal choices are no different from other choices, except that some consequences are delayed and hence must be anticipated and discounted. Given two similar rewards, humans show a preference for one that arrives sooner rather than later. Humans are said to discount the value of the later reward, by a factor that increases with the length of the delay. This process is traditionally modeled in the form of exponential discounting, a time-consistent model of discounting. A large number of studies have since demonstrated that the constant discount rate assumed in exponential discounting is systematically being violated. Hyperbolic discounting is a particular mathematical model devised as an alternative to exponential discounting. According to hyperbolic discounting, valuations fall relatively rapidly for earlier delay periods (as in, from now to one week), but then fall more slowly for longer delay periods.</p>
+<p>Hyperbolic discounting is mathematically described as:<br>$$<br>f_H(D)={1\over {1+kD}}<br>$$<br>where $f(D)$ is the discount factor that multiplies the value of the reward, $D$ is the delay in the reward, and $k$ is a parameter governing the degree of discounting. This is compared with the formula for exponential discounting:<br>$$<br>f_E(D)=e^{-kD}<br>$$</p>
+<h4 id="Decreasing-Impatience"><a href="#Decreasing-Impatience" class="headerlink" title="Decreasing Impatience"></a>Decreasing Impatience</h4><p><strong>Definition (Decreasing impatience)</strong> <em>A discount function $h$ satisfies decreasing impatience (DI) if</em><br>$$<br>P(t)=-{(\log h(t))’’\over (\log h(t))’}<br>$$<br><em>is non-negative.</em></p>
 <p><strong>Proposition</strong> <em>All weighted discount functions imply decreasing impatience.</em></p>
-<p><em>Proof:</em> We need to show that <span class="math inline">\(P(t)=-{(\log h(t))&#39;&#39;\over (\log h(t))&#39;}\geq 0\)</span>. Since for every weighted discount function <span class="math inline">\((h^F)(t)\)</span> we have <span class="math inline">\((h^F)&#39;(t)=-\int_0^\infty re^{-rt}dF(r)\)</span>, s.t. <span class="math inline">\((\log h(t))&#39;=h&#39;(t)/h(t)&lt;0\)</span>. Then we need to show that <span class="math inline">\(-(\log h(t))&#39;&#39;\leq 0\)</span>. Let <span class="math inline">\(\xi\)</span> denote a random variable with distribution function <span class="math inline">\(F_\xi(x)={\int_0^x e^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}\)</span>. Then, <span class="math display">\[
-\begin{align}
--(\log h(t))&#39;&#39;&amp;=\left({\int_0^\infty re^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}\right)&#39; \\
-&amp;=-\mathbb{E}\xi^2+\mathbb{E}^2\xi=-\mathrm{Var}(\xi)\leq 0
-\end{align}
-\]</span> <span class="math display">\[
-\tag*{$\Box$}
-\]</span></p>
+<p><em>Proof:</em> We need to show that $P(t)=-{(\log h(t))’’\over (\log h(t))’}\geq 0$. Since for every weighted discount function $(h^F)(t)$ we have $(h^F)’(t)=-\int<em>0^\infty re^{-rt}dF(r)$, s.t. $(\log h(t))’=h’(t)/h(t)&lt;0$. Then we need to show that $-(\log h(t))’’\leq 0$. Let $\xi$ denote a random variable with distribution function $F</em>\xi(x)={\int_0^x e^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}$. Then,<br>$$<br>\begin{align}<br>-(\log h(t))’’&amp;=\left({\int_0^\infty re^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}\right)’ \<br>&amp;=-\mathbb{E}\xi^2+\mathbb{E}^2\xi=-\mathrm{Var}(\xi)\leq 0<br>\end{align}<br>$$<br>$$<br>\tag*{$\Box$}<br>$$</p>
 <p>When studying the investment decisions of groups, due to decreasing impatience, the group is in general time-inconsistent.</p>
-<p><strong>Proposition (Comparative DI and larger discount factors)</strong> <em>Consider weighted discount functions <span class="math inline">\(h^F\)</span> and <span class="math inline">\(h^G\)</span> with weighting distributions <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> and measures of decreasing impatience <span class="math inline">\(P_F\)</span> and <span class="math inline">\(P_G\)</span>, respectively. Let the expectation of <span class="math inline">\(F\)</span> be no less than that of <span class="math inline">\(G\)</span>. Then,</em> <span class="math display">\[
-P_G(t)\geq P_F(t)\ \mathit{for\ all}\ t\geq 0\Longrightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0
-\]</span></p>
-<p><em>Proof:</em> Define <span class="math inline">\(g_F=-(\log h^F)&#39;\)</span>, <span class="math inline">\(g_G=-(\log h^G)&#39;\)</span>. By assumption, we have <span class="math display">\[
-g_F(0)=-{(h^F)&#39;(0)\over h^F(0)}\geq -{(h^G)&#39;(0)\over h^G(0)}=g_G(0)
-\]</span> As <span class="math inline">\(P_i=-g_i&#39;/g_i=-(\log g_i)&#39;\)</span>, the assumption that <span class="math inline">\(P_F(t)\leq P_G(t)\)</span> gives <span class="math inline">\((\log g_F(t))&#39;\geq (\log g_G(t))&#39;\)</span>. Therefore, they together imply that <span class="math inline">\(\log g_F(t)\geq \log g_G(t)\)</span>, which is equivalent to <span class="math inline">\(g_F(t)\geq g_G(t)\)</span>. Finally, we get <span class="math inline">\(h^F(t)\leq h^G(t)\)</span>. <span class="math display">\[
-\tag*{$\Box$}
-\]</span></p>
-<p><strong>Note:</strong> <em>The assumption of <span class="math inline">\(F\)</span> having an equal or larger expectation means that the weighted average of group <span class="math inline">\(F\)</span>’s discount rates (rather than the group’s discount factors) is equal or larger for <span class="math inline">\(F\)</span>.</em></p>
-<p>It is easily verified that the negative of the expectation of <span class="math inline">\(F\)</span> can be computed as <span class="math inline">\((h^F)&#39;(0)\)</span>, i.e. <span class="math inline">\((h^F)&#39;(t)=\int_0^\infty -re^{-rt}dF(r)=-\mathbb{E}F\)</span>. Therefore, an equal or larger expectation means that <span class="math inline">\(h^F\)</span> initially decreases more strongly. If, in addition, <span class="math inline">\(h^F\)</span> is less convex in the sense that its impatience is less decreasing, then <span class="math inline">\(h^F\)</span> must always lie below <span class="math inline">\(h^G\)</span>.</p>
-<p><strong>Note:</strong> <em>From the theorem in our previous post, it follows that <span class="math inline">\(h^G\)</span> having more decreasing impatience and <span class="math inline">\(G\)</span> having less or equal expectation implies greater group diversity.</em></p>
-<h4 id="comparative-patience">Comparative Patience</h4>
-<p><strong>Definition (Comparative patience)</strong> <em>The discount function <span class="math inline">\(h^G\)</span> exhibits more patience than another discount function <span class="math inline">\(h^F\)</span> (denoted by <span class="math inline">\(h^G \succeq_P h^F\)</span>) if</em> <span class="math display">\[
-{h^G(t)\over h^F(t)}\ \textit{is increasing in}\ t
-\]</span></p>
-<p><strong>Proposition (More patient groups have larger discount factors)</strong> <em>Consider weighting distributions <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> and denote the corresponding weighted discount functions with <span class="math inline">\(h^F\)</span> and <span class="math inline">\(h^G\)</span>, respectively. Then we have</em> <span class="math display">\[
-h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0
-\]</span></p>
-<p><em>Proof:</em> Since <span class="math inline">\(h^G(0)=h^F(0)=1\)</span>. Done. <span class="math display">\[
-\tag*{$\Box$}
-\]</span></p>
+<p><strong>Proposition (Comparative DI and larger discount factors)</strong> <em>Consider weighted discount functions $h^F$ and $h^G$ with weighting distributions $F$ and $G$ and measures of decreasing impatience $P_F$ and $P_G$, respectively. Let the expectation of $F$ be no less than that of $G$. Then,</em><br>$$<br>P_G(t)\geq P_F(t)\ \mathit{for\ all}\ t\geq 0\Longrightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0<br>$$</p>
+<p><em>Proof:</em> Define $g_F=-(\log h^F)’$, $g_G=-(\log h^G)’$. By assumption, we have<br>$$<br>g_F(0)=-{(h^F)’(0)\over h^F(0)}\geq -{(h^G)’(0)\over h^G(0)}=g_G(0)<br>$$<br>As $P_i=-g_i’/g_i=-(\log g_i)’$, the assumption that $P_F(t)\leq P_G(t)$ gives $(\log g_F(t))’\geq (\log g_G(t))’$. Therefore, they together imply that $\log g_F(t)\geq \log g_G(t)$, which is equivalent to $g_F(t)\geq g_G(t)$. Finally, we get $h^F(t)\leq h^G(t)$.<br>$$<br>\tag*{$\Box$}<br>$$</p>
+<p><strong>Note:</strong> <em>The assumption of $F$ having an equal or larger expectation means that the weighted average of group $F$’s discount rates (rather than the group’s discount factors) is equal or larger for $F$.</em></p>
+<p>It is easily verified that the negative of the expectation of $F$ can be computed as $(h^F)’(0)$, i.e. $(h^F)’(t)=\int_0^\infty -re^{-rt}dF(r)=-\mathbb{E}F$. Therefore, an equal or larger expectation means that $h^F$ initially decreases more strongly. If, in addition, $h^F$ is less convex in the sense that its impatience is less decreasing, then $h^F$ must always lie below $h^G$.</p>
+<p><strong>Note:</strong> <em>From the theorem in our previous post, it follows that $h^G$ having more decreasing impatience and $G$ having less or equal expectation implies greater group diversity.</em></p>
+<h4 id="Comparative-Patience"><a href="#Comparative-Patience" class="headerlink" title="Comparative Patience"></a>Comparative Patience</h4><p><strong>Definition (Comparative patience)</strong> <em>The discount function $h^G$ exhibits more patience than another discount function $h^F$ (denoted by $h^G \succeq_P h^F$) if</em><br>$$<br>{h^G(t)\over h^F(t)}\ \textit{is increasing in}\ t<br>$$</p>
+<p><strong>Proposition (More patient groups have larger discount factors)</strong> <em>Consider weighting distributions $F$ and $G$ and denote the corresponding weighted discount functions with $h^F$ and $h^G$, respectively. Then we have</em><br>$$<br>h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0<br>$$</p>
+<p><em>Proof:</em> Since $h^G(0)=h^F(0)=1$. Done.<br>$$<br>\tag*{$\Box$}<br>$$</p>
 
       
     </div>
@@ -670,7 +642,7 @@ h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#hyperbolic-discounting"><span class="nav-number">1.</span> <span class="nav-text">Hyperbolic Discounting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#decreasing-impatience"><span class="nav-number">2.</span> <span class="nav-text">Decreasing Impatience</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#comparative-patience"><span class="nav-number">3.</span> <span class="nav-text">Comparative Patience</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Hyperbolic-Discounting"><span class="nav-number">1.</span> <span class="nav-text">Hyperbolic Discounting</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Decreasing-Impatience"><span class="nav-number">2.</span> <span class="nav-text">Decreasing Impatience</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Comparative-Patience"><span class="nav-number">3.</span> <span class="nav-text">Comparative Patience</span></a></li></ol></div>
             
 
           </div>
@@ -692,8 +664,8 @@ h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
