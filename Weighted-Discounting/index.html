@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Open Sans:300,300italic,400,400italic,700,700italic|Julius Sans One:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Mathematics,Economics,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
+<meta name="keywords" content="Mathematics,Economics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weighted Discounting">
+<meta property="og:url" content="http://christophorusx.github.io/Weighted-Discounting/index.html">
+<meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
+<meta property="og:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-03-18T00:42:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weighted Discounting">
+<meta name="twitter:description" content="The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash fl">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: 'undefined',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '3KKNGPDMU2',
+      apiKey: 'f66a93c7fe61cc186afe80af34bef678',
+      indexName: 'blog_Chris',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://christophorusx.github.io/Weighted-Discounting/">
+
+
+
+
+
+  <title>Weighted Discounting | Imāginātiōnēs Christophorōrum</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-93186747-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+
+  <div id="particles-js"></div>
+  <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Imāginātiōnēs Christophorōrum</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">in which we fantasy</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://christophorusx.github.io/Weighted-Discounting/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChristophorusX">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Imāginātiōnēs Christophorōrum">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Weighted Discounting</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-07T18:38:44-05:00">
+                2017-03-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/Academic/" itemprop="url" rel="index">
+                    <span itemprop="name">Academic</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>The standard approach of making investment decision is that the policy maker compares investment opportunities by their net present values (NPVs), i.e., by the sum of their discounted expected cash flows. If we assume that investment decisions are taken by a group of people, rather than by a single individual, the model must incorporate this evidence by allowing for group diversity which is reflected by differences in opinion about the appropriate method of discounting. In addition to group disagreement, we need to allow for the possibility that each individual group member has some uncertainty about what discount rate to use.</p>
+<h4 id="Weighted-Discount-functions"><a href="#Weighted-Discount-functions" class="headerlink" title="Weighted Discount functions"></a>Weighted Discount functions</h4><p>The group’s weighting distribution $F(r)$ assigns a weight to each member or, equivalently, to each (positive) discount rate r. Member $i$ $(i = 1,…,n)$ favors discount rate $r_i$ and thus her discount function is given by $e^{−r_it}$. Letting $f$ denote the probability mass function of $F$, the group discount function (also weighted discount function) is given by</p>
+<p>$$<br>h^F(t)=\sum_{i=1}^n f(r_i)e^{-r_i t}<br>$$</p>
+<p><strong>Definition</strong>  <em>Let $h : [0,\infty) \to (0,1]$ be strictly decreasing with $h(0) = 1$. $h$ is a weighted discount function if there exists a (cumulative) distribution function $F(r)$ (or a density function $f(r)$) concentrated on $[0,\infty)$ such that</em></p>
+<p>$$<br>h(t)=\int_0^\infty e^{-rt}dF(r)=\int_0^\infty e^{-rt}f(r)dr<br>$$</p>
+<p><em>$F$ is called the weighting distribution of $h$.</em></p>
+<p><strong>Example (pseudo-exponential discount function)</strong></p>
+<p>$$<br>h(t)=\delta e^{-rt}+(1-\delta)e^{-(r+\lambda)t}<br>$$</p>
+<p>where $\lambda&gt;0$, $r&gt;0$, $0&lt;\delta&lt;1$. It gives the weighted average of just two opinions.</p>
+<p>The following well-known theorem is attributed to Bernstein (1928), and provides a necessary and sufficient condition for a given discount function to be a weighted discount function.</p>
+<p><strong>Theorem (Bernstein’s Theorem)</strong>  <em>A discount function $h$ is a weighted discount function if and only if it is continuous on $[0,\infty)$, infinitely differentiable on $(0,\infty)$, and satisfies $(−1)^nh^{(n)}(t) \geq 0$, for all non-negative integers $n$ and for all $t &gt; 0$.</em></p>
+<p>Bernstein’s theorem can be used to verify that some commonly used discount functions are indeed weighted discount function. While every weighting distribution $F$ defines a discount function $h^F$, it may not be possible to recover the weighting distribution $F$ in closed form. Even though we may not be able to obtain $h^F$ as the group discount function of any nice distribution function $F$, but we can still study its implications for investment behavior and draw inference on the diversity of the group it represents.</p>
+<p>Yet there are also some weighting distributions that lead to nice weighted discount functions (and vice versa).  In particular, the generalized hyperbolic discount function with parameters $\alpha &gt; 0$, $\beta &gt; 0$ can be written as</p>
+<p>$$<br>h(t)=\frac{1}{(1+\alpha t)^{\beta/\alpha}}=\int_0^\infty e^{-rt}f(f;\frac{\beta}{\alpha},\alpha)dr<br>$$</p>
+<p>where $f(r;k,\theta)=\frac{r^{k-1}e^{-r/\theta}}{\theta^k\Gamma(k)}$ denotes the density function of the Gamma distribution with parameters $k$ and $\theta$ and where $\Gamma(k)$ denotes the Gamma function evaluated at $k$, i.e., $\Gamma(k)=\int_0^\infty x^{k-1}e^{-x}dx$.</p>
+<p><strong>Claim:</strong> <em>There is an economically important observation results from the mathematically simple fact that any weighted average of weighted discount functions is also a weighted discount function.</em></p>
+<p> This implies that the above results are not restricted to groups of exponential discounters, each of whom is certain about what discount rate to use. Instead, we may consider groups with some or all members being with the same weighted discounting, because the latter are also weighted discount functions. Likewise, we may consider groups of individual discounters, each of whom is uncertain about the discount rate to use. Then let us prove the claim.</p>
+<p> Consider an individual, $i$, with weighted discount function</p>
+<p> $$<br> h(t;i)=\int_0^\infty e^{-rt}dF(r;i)<br> $$</p>
+<p> where $F(r,i)$ denotes the weighting distribution used to build the discount function $h(t;i)$. Note that a non-degenerate $F(r;i)$ may reflect individual $i$’s bounded rationality. For example, if $F(r;i)$ is Gamma-distributed, we know that individual $i$ is a generalized hyperbolic discounter. We are interested in the discount function of a group of such individuals, which may consist of a finite number or a continuum of individuals. Let us denote the discount function of this group by $\overline h(t)$. The weights of the individual group members are given by the weighting distribution $G(i)$. In general case, we have $\overline h(t)=\int_0^\infty h(t;i)dG(i)$.</p>
+<p><strong>Proposition</strong> <em>The group discount functions of weighted discounters are weighted discount functions. In particular, there exists a distribution $\overline F$ over exponential discount rates $r$ such that</em></p>
+<p>$$<br>\overline h(t)=\int_0^\infty e^{-rt}d\overline F(r)<br>$$</p>
+<p><em>Moreover, $\overline F$ can be computed as $\overline F(r)=\int_0^\infty F(r;i)dG(i)$.</em></p>
+<h4 id="Group-Diversity"><a href="#Group-Diversity" class="headerlink" title="Group Diversity"></a>Group Diversity</h4><p> The main result is that a group has a uniformly greater discount factor than another group (i.e., discounts less heavily at any future time) if and only if it is more diverse.  Greater group diversity is captured by a more dispersed weighting distribution $F$ of the corresponding weighted discount function $h^F$, and is defined using stochastic dominance.</p>
+<p> <strong>Assumption:</strong> <em>All weighting distributions have their support contained in $[a,b]$, $0 \leq a \leq b &lt; \infty$.</em></p>
+<p> Let $F^0(x)=F(x)$ and $F^i(x)=\int_a^x F^{i-1}(t)dt$, and we define stochastic dominance as the following.</p>
+<p><strong>Definition</strong> <em>The distribution $F$ dominates the distribution $G$ in the sense of Nth-order stochastic dominance, denoted by $G \preceq_{NSD}F$, if i) $F^{N-1}(x)\leq G^{N-1}(x)$ for all $a\leq x\leq b$, ii) $F^i(b)\leq G^i(b)$ for $i=1,2,\ldots,N-2$.</em></p>
+<p><strong>Theorem</strong> <em>$G \preceq_{NSD}F\iff$<br>$$<br>\int_a^b u(x)dF(x)\geq\int_a^b u(x)dG(x)<br>$$<br>for all function $u(x)$, s.t. sgn $u^{(n)}(x)=(-1)^{n+1}$ for $n=1,2,\ldots,N$ and $x\in [a,b]$.</em></p>
+<p>It can be shown that a second-order stochastically dominating distribution must have a higher mean and a lower variance than the distribution that it dominates, with at least one of the two inequalities being strict. Also, we can observe that $G \preceq<em>{NSD}F\Rightarrow G \preceq</em>{(N+1)SD}F$. We can define the “weakest” stochastic dominance order as follows.</p>
+<p><strong>Definition (Infinity-stochastic dominance.)</strong> <em>$F$ dominates $G$ via infinity-stochastic dominance (denoted as $G \preceq_{\infty SD}F$), if<br>$$<br>\int_a^b u(x)dF(x)\geq\int_a^b u(x)dG(x)<br>$$<br>for all function $u(x)$, s.t. sgn $u^{(n)}(x)=(-1)^{n+1}$ for $n\in \mathbb{N}^+$ and $x\in [a,b]$.</em></p>
+<p>Now we can introduce the notion of greater group diversity.</p>
+<p><strong>Definition (Greater group diversity)</strong> <em>Let $F$ and $G$ be weighting distributions of weighted discount functions $h^F$ and $h^G$, respectively. We say that $h^G(G)$ is more diverse than $h^F(F)$ if $G \preceq_{\infty SD}F$.</em></p>
+<p><strong>Note:</strong>  $G \preceq_{\infty SD}F$ means that $F$ is preferred over $G$ because $F$ has less risk (dispersion) in the stochastic dominance sense.</p>
+<p>From the definition of $\infty$-stochastic dominance it follows directly that if $F$ dominates $G$ via stochastic dominance of some order $N$, then $F$ dominates $G$ by $\infty$-stochastic dominance, i.e., $G$ is more diverse than $F$.</p>
+<p><strong>Theorem (Greater group diversity and larger discount factors)</strong> <em>Suppose $F$ and $G$ are weighting distributions with finite support and the corresponding discount functions are given by $h^G$ and $h^F$, respectively. Then:</em><br>$$<br>G \preceq_{\infty SD}F\ \iff h^G(t)\geq h^F(t),\quad \forall t&gt;0<br>$$</p>
+<p>The fact that $h^G(t)\geq h^F(t)$ for any $t&gt;0$ is denoted as an uniformly larger discount factor. A larger discount factor implies less discounting, and uniform means that this is the case at any future time. Graphically, it means that the discount function of a more diverse group always lies above that of a less diverse group. We have already known the fact that the pseudo-exponential discount function $h^G$ lies above the exponential discount function $h^F$ at all times. The intuition behind the theorem for this special case is that exponential functions are convex so that, by Jensen’s inequality, averaging two discount factors whose discount rates average to $r=5\%$, results in a discount factor larger than a single exponential discount factor with rate $r=5\%$.  For general discount functions, however, comparing discount factors is not equivalent to comparing expected discount rates.</p>
+<p><em>Proof of Theorem:</em> $\Longrightarrow$ Suppose first that $G \preceq_{\infty SD}F$. Let $u(x)=-e^{-xt}$, which is increasing with derivatives that alternate in sign on $[0,\infty)$ for each fixed $t &gt; 0$. Therefore, Definition yields that $h^F(t) \leq h^G(t),\ \forall t \geq 0$.</p>
+<p>$\Longleftarrow$ Now suppose that $h^F(t) \leq h^G(t),\ \forall t \geq 0$. For any mixed risk averse utility function $u$, the first derivative of $u$ satisfies the assumptions of Bernstein’s Theorem, which requires $(−1)^nu^{(n)}(t) \geq 0$, for all non-negative integers $n$ and for all $t &gt; 0$. Thus, there exists a distribution function $F_u$ such that $u’(t)=\int_0^\infty e^{-ts}dF_u(s)$. It follows that<br>$$<br>\begin{align}<br>u(t)&amp;=\int_a^x u’(t)dt+u(a) \<br>&amp;=\int_0^\infty {1\over s}(e^{-as}-e^{-xs})dF_u(s)+u(a)<br>\end{align}<br>$$<br>and thus<br>$$<br>\begin{align}<br>\int_a^b u(x)dF(x)&amp;=\int_a^b\int_0^\infty {1\over s}(e^{-as}-e^{-xs})dF_u(s)dF(x)+u(a) \<br>&amp;=\int_0^\infty {1\over s}(e^{-as}-h^F(s))dF<em>u(s)+u(a)<br>\end{align}<br>$$<br>Comparing with the analogous expression for $G$, because $h^F(t) \leq h^G(t)$ for all $t \geq 0$ it follows that $G \preceq</em>{\infty SD}F$.<br>$$<br>\tag*{$\Box$}<br>$$</p>
+<p>For weighted discount functions, the above theorem establishes the necessary and sufficient condition for ordering discount factors. Ordering discount factors is equivalent to comparing the weighting distributions in the $\infty$-stochastic dominance sense. We put the property of larger discount factors (rather than greater group diversity) in the center of our mathematical analysis. Greater group diversity should be kept in mind, though, whenever we speak of larger discount factors.</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Mathematics/" rel="tag"># Mathematics</a>
+          
+            <a href="/tags/Economics/" rel="tag"># Economics</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Renyi Parking Problem/" rel="next" title="Renyi Parking Problem">
+                <i class="fa fa-chevron-left"></i> Renyi Parking Problem
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Decreasing-Impatience/" rel="prev" title="Decreasing Impatience">
+                Decreasing Impatience <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="https://avatars2.githubusercontent.com/u/12285265?v=3&s=400" alt="ChristophorusX">
+            
+              <p class="site-author-name" itemprop="name">ChristophorusX</p>
+              <p class="site-description motion-element" itemprop="description">何でもは知らないわよ、知ってることだけ</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ChristophorusX" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-globe"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Weighted-Discount-functions"><span class="nav-number">1.</span> <span class="nav-text">Weighted Discount functions</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Group-Diversity"><span class="nav-number">2.</span> <span class="nav-text">Group Diversity</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ChristophorusX</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/particles/particles.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: { autoNumber: "AMS" }
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+
+  <a href="https://github.com/ChristophorusX"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
+
+</body>
+</html>
