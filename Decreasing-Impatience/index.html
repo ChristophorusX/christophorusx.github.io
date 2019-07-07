@@ -437,37 +437,20 @@
       
         <p>Few economic hypotheses have advanced so rapidly from the fringe to the mainstream as hyperbolic discounting, which now functions almost as a default option for analyzing the misbehavior of economic agents. The well-known distinguishing feature of hyperbolic agents is that they exhibit steeper discounting for time intervals closer to the present. As a result, intertemporal trade-offs shift with the mere passage of time, and plans or projects that seemed optimal yesterday need no longer be optimal today.</p>
 <h4 id="Hyperbolic-Discounting"><a href="#Hyperbolic-Discounting" class="headerlink" title="Hyperbolic Discounting"></a>Hyperbolic Discounting</h4><p>In economics, hyperbolic discounting is a time-inconsistent model of discounting. Intertemporal choices are no different from other choices, except that some consequences are delayed and hence must be anticipated and discounted. Given two similar rewards, humans show a preference for one that arrives sooner rather than later. Humans are said to discount the value of the later reward, by a factor that increases with the length of the delay. This process is traditionally modeled in the form of exponential discounting, a time-consistent model of discounting. A large number of studies have since demonstrated that the constant discount rate assumed in exponential discounting is systematically being violated. Hyperbolic discounting is a particular mathematical model devised as an alternative to exponential discounting. According to hyperbolic discounting, valuations fall relatively rapidly for earlier delay periods (as in, from now to one week), but then fall more slowly for longer delay periods.</p>
-<p>Hyperbolic discounting is mathematically described as:</p>
-<script type="math/tex; mode=display">
-f_H(D)={1\over {1+kD}}</script><p>where $f(D)$ is the discount factor that multiplies the value of the reward, $D$ is the delay in the reward, and $k$ is a parameter governing the degree of discounting. This is compared with the formula for exponential discounting:</p>
-<script type="math/tex; mode=display">
-f_E(D)=e^{-kD}</script><h4 id="Decreasing-Impatience"><a href="#Decreasing-Impatience" class="headerlink" title="Decreasing Impatience"></a>Decreasing Impatience</h4><p><strong>Definition (Decreasing impatience)</strong> <em>A discount function $h$ satisfies decreasing impatience (DI) if</em></p>
-<script type="math/tex; mode=display">
-P(t)=-{(\log h(t))''\over (\log h(t))'}</script><p><em>is non-negative.</em></p>
+<p>Hyperbolic discounting is mathematically described as:<br>$$<br>f_H(D)={1\over {1+kD}}<br>$$<br>where $f(D)$ is the discount factor that multiplies the value of the reward, $D$ is the delay in the reward, and $k$ is a parameter governing the degree of discounting. This is compared with the formula for exponential discounting:<br>$$<br>f_E(D)=e^{-kD}<br>$$</p>
+<h4 id="Decreasing-Impatience"><a href="#Decreasing-Impatience" class="headerlink" title="Decreasing Impatience"></a>Decreasing Impatience</h4><p><strong>Definition (Decreasing impatience)</strong> <em>A discount function $h$ satisfies decreasing impatience (DI) if</em><br>$$<br>P(t)=-{(\log h(t))’’\over (\log h(t))’}<br>$$<br><em>is non-negative.</em></p>
 <p><strong>Proposition</strong> <em>All weighted discount functions imply decreasing impatience.</em></p>
-<p><em>Proof:</em> We need to show that $P(t)=-{(\log h(t))’’\over (\log h(t))’}\geq 0$. Since for every weighted discount function $(h^F)(t)$ we have $(h^F)’(t)=-\int_0^\infty re^{-rt}dF(r)$, s.t. $(\log h(t))’=h’(t)/h(t)&lt;0$. Then we need to show that $-(\log h(t))’’\leq 0$. Let $\xi$ denote a random variable with distribution function $F_\xi(x)={\int_0^x e^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}$. Then,</p>
-<script type="math/tex; mode=display">
-\begin{align}
--(\log h(t))''&=\left({\int_0^\infty re^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}\right)' \\
-&=-\mathbb{E}\xi^2+\mathbb{E}^2\xi=-\mathrm{Var}(\xi)\leq 0
-\end{align}</script><script type="math/tex; mode=display">
-\tag*{$\Box$}</script><p>When studying the investment decisions of groups, due to decreasing impatience, the group is in general time-inconsistent.</p>
-<p><strong>Proposition (Comparative DI and larger discount factors)</strong> <em>Consider weighted discount functions $h^F$ and $h^G$ with weighting distributions $F$ and $G$ and measures of decreasing impatience $P_F$ and $P_G$, respectively. Let the expectation of $F$ be no less than that of $G$. Then,</em></p>
-<script type="math/tex; mode=display">
-P_G(t)\geq P_F(t)\ \mathit{for\ all}\ t\geq 0\Longrightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0</script><p><em>Proof:</em> Define $g_F=-(\log h^F)’$, $g_G=-(\log h^G)’$. By assumption, we have</p>
-<script type="math/tex; mode=display">
-g_F(0)=-{(h^F)'(0)\over h^F(0)}\geq -{(h^G)'(0)\over h^G(0)}=g_G(0)</script><p>As $P_i=-g_i’/g_i=-(\log g_i)’$, the assumption that $P_F(t)\leq P_G(t)$ gives $(\log g_F(t))’\geq (\log g_G(t))’$. Therefore, they together imply that $\log g_F(t)\geq \log g_G(t)$, which is equivalent to $g_F(t)\geq g_G(t)$. Finally, we get $h^F(t)\leq h^G(t)$.</p>
-<script type="math/tex; mode=display">
-\tag*{$\Box$}</script><p><strong>Note:</strong> <em>The assumption of $F$ having an equal or larger expectation means that the weighted average of group $F$’s discount rates (rather than the group’s discount factors) is equal or larger for $F$.</em></p>
+<p><em>Proof:</em> We need to show that $P(t)=-{(\log h(t))’’\over (\log h(t))’}\geq 0$. Since for every weighted discount function $(h^F)(t)$ we have $(h^F)’(t)=-\int_0^\infty re^{-rt}dF(r)$, s.t. $(\log h(t))’=h’(t)/h(t)&lt;0$. Then we need to show that $-(\log h(t))’’\leq 0$. Let $\xi$ denote a random variable with distribution function $F_\xi(x)={\int_0^x e^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}$. Then,<br>$$<br>\begin{align}<br>-(\log h(t))’’&amp;=\left({\int_0^\infty re^{-rt}dF(r)\over \int_0^\infty e^{-rt}dF(r)}\right)’ \<br>&amp;=-\mathbb{E}\xi^2+\mathbb{E}^2\xi=-\mathrm{Var}(\xi)\leq 0<br>\end{align}<br>$$<br>$$<br>\tag*{$\Box$}<br>$$</p>
+<p>When studying the investment decisions of groups, due to decreasing impatience, the group is in general time-inconsistent.</p>
+<p><strong>Proposition (Comparative DI and larger discount factors)</strong> <em>Consider weighted discount functions $h^F$ and $h^G$ with weighting distributions $F$ and $G$ and measures of decreasing impatience $P_F$ and $P_G$, respectively. Let the expectation of $F$ be no less than that of $G$. Then,</em><br>$$<br>P_G(t)\geq P_F(t)\ \mathit{for\ all}\ t\geq 0\Longrightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0<br>$$</p>
+<p><em>Proof:</em> Define $g_F=-(\log h^F)’$, $g_G=-(\log h^G)’$. By assumption, we have<br>$$<br>g_F(0)=-{(h^F)’(0)\over h^F(0)}\geq -{(h^G)’(0)\over h^G(0)}=g_G(0)<br>$$<br>As $P_i=-g_i’/g_i=-(\log g_i)’$, the assumption that $P_F(t)\leq P_G(t)$ gives $(\log g_F(t))’\geq (\log g_G(t))’$. Therefore, they together imply that $\log g_F(t)\geq \log g_G(t)$, which is equivalent to $g_F(t)\geq g_G(t)$. Finally, we get $h^F(t)\leq h^G(t)$.<br>$$<br>\tag*{$\Box$}<br>$$</p>
+<p><strong>Note:</strong> <em>The assumption of $F$ having an equal or larger expectation means that the weighted average of group $F$’s discount rates (rather than the group’s discount factors) is equal or larger for $F$.</em></p>
 <p>It is easily verified that the negative of the expectation of $F$ can be computed as $(h^F)’(0)$, i.e. $(h^F)’(t)=\int_0^\infty -re^{-rt}dF(r)=-\mathbb{E}F$. Therefore, an equal or larger expectation means that $h^F$ initially decreases more strongly. If, in addition, $h^F$ is less convex in the sense that its impatience is less decreasing, then $h^F$ must always lie below $h^G$.</p>
 <p><strong>Note:</strong> <em>From the theorem in our previous post, it follows that $h^G$ having more decreasing impatience and $G$ having less or equal expectation implies greater group diversity.</em></p>
-<h4 id="Comparative-Patience"><a href="#Comparative-Patience" class="headerlink" title="Comparative Patience"></a>Comparative Patience</h4><p><strong>Definition (Comparative patience)</strong> <em>The discount function $h^G$ exhibits more patience than another discount function $h^F$ (denoted by $h^G \succeq_P h^F$) if</em></p>
-<script type="math/tex; mode=display">
-{h^G(t)\over h^F(t)}\ \textit{is increasing in}\ t</script><p><strong>Proposition (More patient groups have larger discount factors)</strong> <em>Consider weighting distributions $F$ and $G$ and denote the corresponding weighted discount functions with $h^F$ and $h^G$, respectively. Then we have</em></p>
-<script type="math/tex; mode=display">
-h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0</script><p><em>Proof:</em> Since $h^G(0)=h^F(0)=1$. Done.</p>
-<script type="math/tex; mode=display">
-\tag*{$\Box$}</script>
+<h4 id="Comparative-Patience"><a href="#Comparative-Patience" class="headerlink" title="Comparative Patience"></a>Comparative Patience</h4><p><strong>Definition (Comparative patience)</strong> <em>The discount function $h^G$ exhibits more patience than another discount function $h^F$ (denoted by $h^G \succeq_P h^F$) if</em><br>$$<br>{h^G(t)\over h^F(t)}\ \textit{is increasing in}\ t<br>$$</p>
+<p><strong>Proposition (More patient groups have larger discount factors)</strong> <em>Consider weighting distributions $F$ and $G$ and denote the corresponding weighted discount functions with $h^F$ and $h^G$, respectively. Then we have</em><br>$$<br>h^G \succeq_P h^F \Rightarrow h^G(t)\geq h^F(t)\ \mathit{for\ all}\ t\geq 0<br>$$</p>
+<p><em>Proof:</em> Since $h^G(0)=h^F(0)=1$. Done.<br>$$<br>\tag*{$\Box$}<br>$$</p>
+
       
     </div>
     
