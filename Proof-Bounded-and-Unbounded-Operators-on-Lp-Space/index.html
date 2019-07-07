@@ -111,18 +111,18 @@
 
 
 
-<meta name="description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded operat">
+<meta name="description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M_\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded opera">
 <meta name="keywords" content="Mathematics,Functional Analysis,Proofs">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Proof: Bounded and Unbounded Operators on Lp Space">
 <meta property="og:url" content="http://christophorusx.github.io/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded operat">
+<meta property="og:description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M_\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded opera">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2017-04-11T21:48:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Proof: Bounded and Unbounded Operators on Lp Space">
-<meta name="twitter:description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded operat">
+<meta name="twitter:description" content="Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.  If $\phi\in L^\infty(\mathbb{R})$, then the operator $M_\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded opera">
 
 
 
@@ -437,13 +437,32 @@
       
         <p>Let $\phi:\mathbb{R}\to\mathbb{C}$ be measurable function and $1\leq p\leq \infty$.</p>
 <ul>
-<li>If $\phi\in L^\infty(\mathbb{R})$, then the operator $M<em>\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded operator from $L^p(\mathbb{R})$ to $L^p(\mathbb{R})$, and its operator norm is precisely $\Vert M</em>\phi\Vert=\Vert\phi\Vert_\infty$.</li>
+<li>If $\phi\in L^\infty(\mathbb{R})$, then the operator $M_\phi f=f\phi$ for $f\in L^p(\mathbb{R})$ is a bounded operator from $L^p(\mathbb{R})$ to $L^p(\mathbb{R})$, and its operator norm is precisely $\Vert M_\phi\Vert=\Vert\phi\Vert_\infty$.</li>
 <li>Conversely, if $f\phi\in L^p(\mathbb{R})$ for every $f\in L^p(\mathbb{R})$, then $\phi\in L^\infty(\mathbb{R})$.</li>
 </ul>
-<p><em>Proof:</em>     Since $\phi\in L^\infty(\mathbb{R})$ and there is some fixed number $K=\Vert\phi\Vert<em>\infty$, i.e. $\vert\phi\vert\leq K$ a.e., it follows that<br>$$<br>\Vert M</em>\phi f\Vert =\Vert f\phi\Vert\leq K\Vert f\Vert=\Vert\phi\Vert<em>\infty\Vert f\Vert<br>$$<br>We can get the strict equality because<br>$$<br>\Vert M</em>\phi\Vert=\sup<em>{f\in L^\infty(\mathbb{R})}{\Vert M</em>\phi f\Vert\over \Vert f\Vert}<br>$$<br>and for any $\varepsilon&gt;0$, there exists a set $E$ with positive measure, s.t. $\vert\phi\vert&gt;K-\varepsilon$. Let $f=\mathbb{I}<em>{E\cap[-l,l]}\in L^p(\mathbb{R})$ and we have<br>$$<br>\Vert M</em>\phi f\Vert =\Vert f\phi\Vert\geq\Vert(K-\varepsilon)f\Vert=(K-\varepsilon)\Vert f\Vert<br>$$<br>Therefore, we conclude $\Vert M<em>\phi\Vert=\Vert\phi\Vert</em>\infty$.</p>
+<p><em>Proof:</em>     Since $\phi\in L^\infty(\mathbb{R})$ and there is some fixed number $K=\Vert\phi\Vert_\infty$, i.e. $\vert\phi\vert\leq K$ a.e., it follows that</p>
+<script type="math/tex; mode=display">
+\Vert M_\phi f\Vert =\Vert f\phi\Vert\leq K\Vert f\Vert=\Vert\phi\Vert_\infty\Vert f\Vert</script><p>We can get the strict equality because</p>
+<script type="math/tex; mode=display">
+\Vert M_\phi\Vert=\sup_{f\in L^\infty(\mathbb{R})}{\Vert M_\phi f\Vert\over \Vert f\Vert}</script><p>and for any $\varepsilon&gt;0$, there exists a set $E$ with positive measure, s.t. $\vert\phi\vert&gt;K-\varepsilon$. Let $f=\mathbb{I}_{E\cap[-l,l]}\in L^p(\mathbb{R})$ and we have</p>
+<script type="math/tex; mode=display">
+\Vert M_\phi f\Vert =\Vert f\phi\Vert\geq\Vert(K-\varepsilon)f\Vert=(K-\varepsilon)\Vert f\Vert</script><p>Therefore, we conclude $\Vert M_\phi\Vert=\Vert\phi\Vert_\infty$.</p>
 <p>If $p=\infty$ and for any $f\in L^\infty(\mathbb{R})$ we have $f\phi\in L^\infty(\mathbb{R})$, we claim that $\phi$ must be essentially bounded. Otherwise, $f=\mathbb{I}_\mathbb{R}\in L^\infty(\mathbb{R})$ will give $f\phi=\phi\notin L^\infty(\mathbb{R})$.</p>
-<p>If $p\neq\infty$ and $\phi\notin L^\infty(\mathbb{R})$, there are infinitely many $E<em>k=\lbrace k\leq|\phi|&lt;k+1\rbrace$ with positive measure, each measurable and disjoint. Choose any $E</em>{n<em>k}, k\in \mathbb{N}$, all with positive measure and take $E=\cup E</em>{n<em>k}$. Define<br>$$<br>f(x)=<br>\begin{cases}<br>    {1\over k^{2/p}\mu(E</em>{n<em>k})^{1/p}},\quad x\in E</em>{n<em>k} \<br>    0,\quad x\notin E<br>\end{cases}<br>$$<br>Then<br>$$<br>\int|f|^pd\mu=\sum</em>{k=1}^\infty\int_{E{n<em>k}}{1\over k^2\mu(E</em>{n<em>k})}=\sum</em>{k=1}^\infty {1\over k^2}&lt;\infty<br>$$<br>and<br>$$<br>\int|f\phi|^pd\mu\geq\sum<em>{k=1}^\infty\int</em>{E{n<em>k}}{k^p\over k^2\mu(E</em>{n<em>k})}<br>$$<br>As $p\geq1$, it is obvious that RHS gives<br>$$<br>\int|f\phi|^pd\mu\geq\sum</em>{k=1}^\infty\int_{E{n<em>k}}{k^p\over k^2\mu(E</em>{n<em>k})}\geq \sum</em>{k=1}^\infty {1\over k}=\infty<br>$$<br>Contradiction!<br>$$<br>\tag*{$\Box$}<br>$$</p>
-
+<p>If $p\neq\infty$ and $\phi\notin L^\infty(\mathbb{R})$, there are infinitely many $E_k=\lbrace k\leq|\phi|&lt;k+1\rbrace$ with positive measure, each measurable and disjoint. Choose any $E_{n_k}, k\in \mathbb{N}$, all with positive measure and take $E=\cup E_{n_k}$. Define</p>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+    {1\over k^{2/p}\mu(E_{n_k})^{1/p}},\quad x\in E_{n_k} \\
+    0,\quad x\notin E
+\end{cases}</script><p>Then</p>
+<script type="math/tex; mode=display">
+\int|f|^pd\mu=\sum_{k=1}^\infty\int_{E{n_k}}{1\over k^2\mu(E_{n_k})}=\sum_{k=1}^\infty {1\over k^2}<\infty</script><p>and</p>
+<script type="math/tex; mode=display">
+\int|f\phi|^pd\mu\geq\sum_{k=1}^\infty\int_{E{n_k}}{k^p\over k^2\mu(E_{n_k})}</script><p>As $p\geq1$, it is obvious that RHS gives</p>
+<script type="math/tex; mode=display">
+\int|f\phi|^pd\mu\geq\sum_{k=1}^\infty\int_{E{n_k}}{k^p\over k^2\mu(E_{n_k})}\geq \sum_{k=1}^\infty {1\over k}=\infty</script><p>Contradiction!</p>
+<script type="math/tex; mode=display">
+\tag*{$\Box$}</script>
       
     </div>
     
