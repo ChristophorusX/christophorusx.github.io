@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="Solving Bellman Equation by Dynamic ProgrammingGiven geometric Brownian motion $V$ in\begin{equation}\label{eq:geometric}dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}\end{equation}we have the following the">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-07T13:53:45.875Z">
+<meta property="og:updated_time" content="2019-07-09T23:55:40.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Investment Timing">
 <meta name="twitter:description" content="Solving Bellman Equation by Dynamic ProgrammingGiven geometric Brownian motion $V$ in\begin{equation}\label{eq:geometric}dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}\end{equation}we have the following the">
@@ -446,7 +446,7 @@
 <p>\begin{equation}\label{eq:condition2}<br>F(V^\ast)=V^\ast-I \<br>\end{equation}</p>
 <p>\begin{equation}\label{eq:condition3}<br>F’(V^\ast)=1<br>\end{equation}</p>
 <p>Condition $\eqref{eq:condition1}$ arises from the observation that if $V$ goes to zero, it will stay at zero. Therefore the option to invest $F(V)$ will be of no value when $V=0$.</p>
-<p>Since $V^\ast$ is the critical value for optimal investment, condition $\eqref{eq:condition2}$ is a value-matching condition, which says that upon investing, the firm receives a net payoff $\Omega(V^\ast)=V^\ast-I$. As we have<br>\begin{align<em>}<br>F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \<br>&amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace<br>\end{align</em>}</p>
+<p>Since $V^\ast$ is the critical value for optimal investment, condition $\eqref{eq:condition2}$ is a value-matching condition, which says that upon investing, the firm receives a net payoff $\Omega(V^\ast)=V^\ast-I$. As we have<br>$$<br>\begin{align<em>}<br>F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \<br>&amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace<br>\end{align</em>}<br>$$</p>
 <p>Finally, condition $\eqref{eq:condition3}$ is the “smooth-pasting” condition that $F’(V^\ast)=\Omega’(V^\ast)$. If $F(V)$ were not continuous and smooth at the critical exercise point $V^\ast$, on could do better by exercising at a different point.</p>
 <p>Note that equation $\eqref{eq:differential}$ is a second-order differential equation, but there are three boundary conditions that must be satisfied. The reason is that although the position of the first boundary ($V=0$) is known, the position of the second boundary is not. The “free boundary” $V^\ast$ must be determined as part of the solution, which needs the third condition.</p>
 <p>Equation $\eqref{eq:condition2}$ has some intuitive interpretations. $V-F(V)$ means that the firm gets the project valued $V$ and yet gives up the opportunity or option to invest $F(V)$. Thus the gain net of the opportunity cost is $V-F(V)$. The critical value $V^\ast$ is where this net gain equals the direct or tangible cost of investment $I$. Equivalently, we could write the equation as $V^\ast=I+F(V^\ast)$, setting the value of the project equal to the full cost of making the investment.</p>
