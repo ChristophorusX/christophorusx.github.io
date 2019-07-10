@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://christophorusx.github.io/Discrete%20Heat%20Equation/</loc>
+    
+    <lastmod>2019-07-10T02:12:39.619Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://christophorusx.github.io/Investment-Timing/</loc>
     
     <lastmod>2019-07-09T23:55:40.084Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>http://christophorusx.github.io/Proof-Bounded-and-Unbounded-Operators-on-Lp-Space/</loc>
     
     <lastmod>2017-04-11T21:48:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://christophorusx.github.io/Discrete%20Heat%20Equation/</loc>
-    
-    <lastmod>2017-04-11T21:47:58.000Z</lastmod>
     
   </url>
   

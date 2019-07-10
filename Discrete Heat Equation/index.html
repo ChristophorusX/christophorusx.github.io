@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
 <meta property="og:description" content="One dimensional random walkLet $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:  S_n = x_0 + X_1 + X_2 + \cdots">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-04-11T21:47:58.000Z">
+<meta property="og:updated_time" content="2019-07-10T02:12:39.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Random Walk, Brownian Motion and Heat Equation">
 <meta name="twitter:description" content="One dimensional random walkLet $X_n$ denotes the step of the walker at time n, $S_n$ denotes the position of the walker at time n. We have the following relationship:  S_n = x_0 + X_1 + X_2 + \cdots">
@@ -445,10 +445,10 @@ S_n = x_0 + X_1 + X_2 + \cdots + X_n</script><p>where $x_0$ is the initial start
 <li>$\mathbb{E} X = \sum_z z \mathbb{P} \lbrace X=z\rbrace = 0$</li>
 <li>$\text{Var}(S_n) = \mathbb{E} S_n^2 = n$</li>
 </ul>
-<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min \lbrace n:S_n = 0  \text{or}  N\rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
-<p><strong>Definition</strong> *Function $F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]$</p>
+<h4 id="Boundary-value-problems"><a href="#Boundary-value-problems" class="headerlink" title="Boundary value problems"></a>Boundary value problems</h4><p>Let $T = \min \lbrace n:S_n \in \{ 0, N \} \rbrace$, then we observe that $\mathbb{P}\lbrace T &lt; \infty\rbrace=1$. It indicates that the random walk must come back in finite time. Hence, we can define the following function $F$.</p>
+<p><strong>Definition</strong> <em>Function $F : \lbrace 0,\ldots,N\rbrace \rightarrow [0,1]$</em></p>
 <script type="math/tex; mode=display">
-F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace</script><p>then we can get boundary conditions $F(0) = 0, F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.*</p>
+F(x) =\mathbb{P}\lbrace S_T = N\mid S_0 = x\rbrace</script><p><em>then we can get boundary conditions $F(0) = 0, F(N) = 1$ and recurrence relation $F(x) = \frac{1}{2}\, F(x+1) + \frac{1}{2}\, F(x-1),\quad x = 1,\ldots,N-1$.</em></p>
 <p>By observation, the function $F(x) = x/N$ satisfies the boundary conditions. Actually, we can prove that it is the only such function.</p>
 <p><strong>Theorem</strong> <em>Suppose $a$, $b$ are real numbers and $N$ is a positive integer. Then the only function $F : \lbrace 0,\ldots,N\rbrace \rightarrow\mathbb{R}$ satisfying the equation above with $F(0) = a \text{and} F(N) = b$ is the linear function $F(x) = a + \frac{x(b - a)}{N}$.</em></p>
 <h4 id="Higher-dimensional-case"><a href="#Higher-dimensional-case" class="headerlink" title="Higher dimensional case"></a>Higher dimensional case</h4><p>In higher dimensional space, we can do pretty much the same thing. Replace $\lbrace1,\ldots,N\rbrace$ with finite connected subset $A \subset \mathbb{Z}^d$ and define $\partial A = \lbrace z \in \mathbb{Z}^d\, \backslash \, A : \text{dist} (z,A) = 1\rbrace$ to be all the boundary points. Plus, it is helpful to know the following definition.</p>
