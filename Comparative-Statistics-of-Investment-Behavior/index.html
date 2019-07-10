@@ -111,18 +111,18 @@
 
 
 
-<meta name="description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple$$(V^e(x),w^e(x;r),\hat u(x))=\begin{cases}(V(x),w(x;r),0)\quad\mathrm{if}\ x&amp;lt;x_\ast \(x-I,x-I,1)\qu">
+<meta name="description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple  (V^e(x),w^e(x;r),\hat u(x))= \begin{cases} (V(x),w(x;r),0)\quad\mathrm{if}\ x">
 <meta name="keywords" content="Mathematics,Economics,Finance">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Comparative Statistics of Investment Behavior">
 <meta property="og:url" content="http://christophorusx.github.io/Comparative-Statistics-of-Investment-Behavior/index.html">
 <meta property="og:site_name" content="Imāginātiōnēs Christophorōrum">
-<meta property="og:description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple$$(V^e(x),w^e(x;r),\hat u(x))=\begin{cases}(V(x),w(x;r),0)\quad\mathrm{if}\ x&amp;lt;x_\ast \(x-I,x-I,1)\qu">
+<meta property="og:description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple  (V^e(x),w^e(x;r),\hat u(x))= \begin{cases} (V(x),w(x;r),0)\quad\mathrm{if}\ x">
 <meta property="og:locale" content="en">
 <meta property="og:updated_time" content="2019-07-07T01:39:55.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Comparative Statistics of Investment Behavior">
-<meta name="twitter:description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple$$(V^e(x),w^e(x;r),\hat u(x))=\begin{cases}(V(x),w(x;r),0)\quad\mathrm{if}\ x&amp;lt;x_\ast \(x-I,x-I,1)\qu">
+<meta name="twitter:description" content="Proposition (Investment behavior under weighted discounting.) With the notation above, the triple  (V^e(x),w^e(x;r),\hat u(x))= \begin{cases} (V(x),w(x;r),0)\quad\mathrm{if}\ x">
 
 
 
@@ -435,18 +435,41 @@
       
 
       
-        <p><strong>Proposition (Investment behavior under weighted discounting.)</strong> <em>With the notation above, the triple</em><br>$$<br>(V^e(x),w^e(x;r),\hat u(x))=<br>\begin{cases}<br>(V(x),w(x;r),0)\quad\mathrm{if}\ x&lt;x_\ast \<br>(x-I,x-I,1)\quad \mathrm{o.w.}<br>\end{cases}<br>$$<br><em>solves the Bellman system with its boundary condition. Hence, $\hat u$ is an equilibrium stopping rule and $V^e$ is the corresponding value function.</em></p>
+        <p><strong>Proposition (Investment behavior under weighted discounting.)</strong> <em>With the notation above, the triple</em></p>
+<script type="math/tex; mode=display">
+(V^e(x),w^e(x;r),\hat u(x))=
+\begin{cases}
+(V(x),w(x;r),0)\quad\mathrm{if}\ x<x_\ast \\
+(x-I,x-I,1)\quad \mathrm{o.w.}
+\end{cases}</script><p><em>solves the Bellman system with its boundary condition. Hence, $\hat u$ is an equilibrium stopping rule and $V^e$ is the corresponding value function.</em></p>
 <p><em>Proof:</em> From the boundary condition $w(0;r) = 0$, it is easy to see that $V (0) = 0$, which satisfies the boundary condition $V (0) = \max\lbrace 0,x − I\rbrace {|}_{x=0}$.</p>
-<p>On the continuation region $(0,x_∗)$, since $V(x)=\int_0^\infty w(x;r)dF(r)$ and since $w(x;r)$ follows the ODE defined on continuation region<br>$$<br>{1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r)-rw(x;r)=0<br>$$<br>we can get the equation<br>$$<br>\int_0^\infty {1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r) dF(r)=\int_0^\infty rw(x;r) dF(r)<br>$$<br>which is equivalent to<br>$$<br>{1\over2}\sigma^2x^2V_{xx}(x)+bxV_x(x)-\int_0^\infty rw(x;r) dF(r)=0<br>$$<br>This gives that $\mathcal{A}V(x)-\int_0^\infty rw(x;r) dF(r)=0$ in continuation region. But it still remains to check that $V(x)-G(x)&gt;0$, i.e. $V(x)-(x-I)&gt;0$ on continuation region and<br>$$<br>{1\over2}\sigma^2x^2(x-I{)}<em>{xx}+bx(x-I{)}_x-\int_0^\infty r(x-I) dF(r)\leq 0<br>$$<br>on stopping region. Since $\mu(r)&gt;1$ and $V(x)$ convex, the linearity of the payoff function, together with the value matching and smooth pasting conditions, yields inequality $V(x)-(x-I)&gt;0$. As the second inequality<br>$$<br>{1\over2}\sigma^2x^2(x-I{)}</em>{xx}+bx(x-I{)}_x-\int_0^\infty r(x-I) dF(r)\leq 0<br>$$<br>can be simplified as<br>$$<br>\int_0^\infty (r-b)xF(r)\geq \int_0^\infty rIdF(r)<br>$$<br>Since $b&lt;\inf\lbrace r\in [0,\infty)\mid F(r)&gt;0\rbrace$, LHS is increasing in $x$, we only need to prove when $x=x_\ast$. If $b\leq0$, the fact that $\mu(r)&gt;1$ and $x_\ast&gt;I$ gives immediately the above inequality. If $b&gt;0$, plug in the fact that when $x=x_\ast$, $x=A/(A-1)$ which is $\int_0^\infty\mu(r)dF(r)/(\int_0^\infty\mu(r)dF(r)-1)$. Let $\kappa=\int_0^\infty\mu(r)dF(r)$, we have<br>$$<br>\int_0^\infty (r-b){\kappa\over\kappa-1}IdF(r)\geq (\kappa-b){\kappa\over\kappa-1}I<br>$$<br>by taking derivatives, we can prove that<br>$$<br>(\kappa-b){\kappa\over\kappa-1}\geq\kappa\geq \int_0^\infty rdF(r)<br>$$<br>Hence, we obtain the desired inequality.<br>$$<br>\tag*{$\Box$}<br>$$</p>
-<p>The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from one another and determined by the function $\mu(r)$, the constant $I$, and the weighting distribution $F$, respectively. This observation allows the study of the impact of these factors on the investment decision separately. The following proposition lists several properties of the triggering boundary x∗with respect to the entry costs and payoff process.</p>
+<p>On the continuation region $(0,x_∗)$, since $V(x)=\int_0^\infty w(x;r)dF(r)$ and since $w(x;r)$ follows the ODE defined on continuation region</p>
+<script type="math/tex; mode=display">
+{1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r)-rw(x;r)=0</script><p>we can get the equation</p>
+<script type="math/tex; mode=display">
+\int_0^\infty {1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r) dF(r)=\int_0^\infty rw(x;r) dF(r)</script><p>which is equivalent to</p>
+<script type="math/tex; mode=display">
+{1\over2}\sigma^2x^2V_{xx}(x)+bxV_x(x)-\int_0^\infty rw(x;r) dF(r)=0</script><p>This gives that $\mathcal{A}V(x)-\int_0^\infty rw(x;r) dF(r)=0$ in continuation region. But it still remains to check that $V(x)-G(x)&gt;0$, i.e. $V(x)-(x-I)&gt;0$ on continuation region and</p>
+<script type="math/tex; mode=display">
+{1\over2}\sigma^2x^2(x-I{)}_{xx}+bx(x-I{)}_x-\int_0^\infty r(x-I) dF(r)\leq 0</script><p>on stopping region. Since $\mu(r)&gt;1$ and $V(x)$ convex, the linearity of the payoff function, together with the value matching and smooth pasting conditions, yields inequality $V(x)-(x-I)&gt;0$. As the second inequality</p>
+<script type="math/tex; mode=display">
+{1\over2}\sigma^2x^2(x-I{)}_{xx}+bx(x-I{)}_x-\int_0^\infty r(x-I) dF(r)\leq 0</script><p>can be simplified as</p>
+<script type="math/tex; mode=display">
+\int_0^\infty (r-b)xF(r)\geq \int_0^\infty rIdF(r)</script><p>Since $b&lt;\inf\lbrace r\in [0,\infty)\mid F(r)&gt;0\rbrace$, LHS is increasing in $x$, we only need to prove when $x=x_\ast$. If $b\leq0$, the fact that $\mu(r)&gt;1$ and $x_\ast&gt;I$ gives immediately the above inequality. If $b&gt;0$, plug in the fact that when $x=x_\ast$, $x=A/(A-1)$ which is $\int_0^\infty\mu(r)dF(r)/(\int_0^\infty\mu(r)dF(r)-1)$. Let $\kappa=\int_0^\infty\mu(r)dF(r)$, we have</p>
+<script type="math/tex; mode=display">
+\int_0^\infty (r-b){\kappa\over\kappa-1}IdF(r)\geq (\kappa-b){\kappa\over\kappa-1}I</script><p>by taking derivatives, we can prove that</p>
+<script type="math/tex; mode=display">
+(\kappa-b){\kappa\over\kappa-1}\geq\kappa\geq \int_0^\infty rdF(r)</script><p>Hence, we obtain the desired inequality.</p>
+<script type="math/tex; mode=display">
+\tag*{$\Box$}</script><p>The triggering boundary $x_∗$ depends on the project return rate and volatility, the entry cost, and the discount function. In particular, the influence of these economic factors is independent from one another and determined by the function $\mu(r)$, the constant $I$, and the weighting distribution $F$, respectively. This observation allows the study of the impact of these factors on the investment decision separately. The following proposition lists several properties of the triggering boundary x∗with respect to the entry costs and payoff process.</p>
 <h4 id="The-impact-of-the-underlying-process-and-entry-cost-on-the-triggering-boundary"><a href="#The-impact-of-the-underlying-process-and-entry-cost-on-the-triggering-boundary" class="headerlink" title="The impact of the underlying process and entry cost on the triggering boundary"></a>The impact of the underlying process and entry cost on the triggering boundary</h4><ul>
 <li>$x_∗$ is greater than the entry cost $I$.</li>
 <li>$x_∗$ increases with the entry cost $I$.</li>
 <li>$x_∗$ increases with the return rate $b$ and volatility $\sigma$ of the project dynamics.</li>
 </ul>
 <h4 id="The-impact-of-the-discount-factor-on-the-triggering-boundary"><a href="#The-impact-of-the-discount-factor-on-the-triggering-boundary" class="headerlink" title="The impact of the discount factor on the triggering boundary"></a>The impact of the discount factor on the triggering boundary</h4><p><strong>Proposition (Larger discount factors imply later investment)</strong> <em>Consider weighted discount functions $h^F$ and $h^G$ with weighting distributions $F$ and $G$. Then,</em></p>
-<p>$$<br>h^G(t)\geq h^F(t)\ \textit{for all}\ t\geq0\Longrightarrow x_<em>^G\geq x_</em>^F<br>$$</p>
-<p><em>where $x^G_∗$, $x^F_∗$ is the triggering boundary with weighting distribution $h^G$, $h^F$ respectively.</em></p>
+<script type="math/tex; mode=display">
+h^G(t)\geq h^F(t)\ \textit{for all}\ t\geq0\Longrightarrow x_*^G\geq x_*^F</script><p><em>where $x^G_∗$, $x^F_∗$ is the triggering boundary with weighting distribution $h^G$, $h^F$ respectively.</em></p>
 <p>Note that the triggering boundary $x_∗$ is expressed in terms of the weighting distribution $F$ and not in terms of the corresponding weighted discount function $h^F$. Even though the relationship between $F$ and the group discount function $h^F$ is one-to-one, the actual correspondence for each and every case can be quite complicated. The proof’s main idea is to rewrite the intuitive expression for the triggering threshold, through a more complicated and less intuitive expression that, however, involves the original discount function.</p>
 <p><strong>Proposition (Decreasing impatience and later investment)</strong> <em>Consider weighted discount function $h^F$ and $h^G$ with weighting distributions $F$ and $G$ and measures of decreasing impatience $P_F$ and $P_G$, respectively. Let the expectation of $F$ be no less than that of $G$ and $P_G(t) \geq P_F(t)$ $\forall t \geq 0$. Then $x^G_∗\geq x^F_∗$, where $x^G_∗$, $x^F_∗$ are the triggering boundary with discount function $h^G$, $h^F$.</em></p>
 

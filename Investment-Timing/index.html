@@ -436,37 +436,67 @@
 
       
         <h4 id="Solving-Bellman-Equation-by-Dynamic-Programming"><a href="#Solving-Bellman-Equation-by-Dynamic-Programming" class="headerlink" title="Solving Bellman Equation by Dynamic Programming"></a>Solving Bellman Equation by Dynamic Programming</h4><p>Given geometric Brownian motion $V$ in<br>\begin{equation}\label{eq:geometric}<br>dV=\alpha Vdt+\sigma VdW_t \tag{$\star$}<br>\end{equation}<br>we have the following theory.<br>$\newcommand\bbE{\mathbb{E}}$</p>
-<p>Because the investment opportunity, $F(V)$, yields no cash flows up to the time $T$ that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the original Bellman equation for continuation region<br>$$<br>\rho\Delta tF(x,t)=\max_u\left\lbrace\pi(x,u,t)+{1\over dt}\bbE[dF]\right\rbrace<br>$$<br>turns into the following equation with $\pi(x,u,t)=0$ and the optimal stopping strategy $u^\ast$<br>$$<br>\rho Fdt=\mathbb{E}[dF]<br>$$<br>It means that over a time interval $dt$, the total expected return on the investment opportunity, $\rho Fdt$, is equal to its expected rate of capital appreciation.</p>
-<p>We expand $dF$ using Ito’s Lemma, with the element $F_t(V)dt=0$ as $F$ is indifferent regarding to $t$<br>$$<br>dF=F’(V)dV+{1\over 2}F’’(V)(dV)^2<br>$$<br>Substituting equation $\eqref{eq:geometric}$ for $dV$ into the expression, we get</p>
-<p>$$<br>\mathbb{E}[dF]=\alpha VF’(V)dt+{1\over 2}\sigma^2V^2F’’(V)dt<br>$$</p>
-<p>Hence the Bellman equation becomes<br>$$<br>{1\over 2}\sigma^2 V^2 F’’(V)+\alpha VF’(V)-\rho F(V)=0<br>$$<br>i.e.</p>
+<p>Because the investment opportunity, $F(V)$, yields no cash flows up to the time $T$ that the investment is undertaken, the only return from holding it is its capital appreciation. Hence, the original Bellman equation for continuation region</p>
+<script type="math/tex; mode=display">
+\rho\Delta tF(x,t)=\max_u\left\lbrace\pi(x,u,t)+{1\over dt}\bbE[dF]\right\rbrace</script><p>turns into the following equation with $\pi(x,u,t)=0$ and the optimal stopping strategy $u^\ast$</p>
+<script type="math/tex; mode=display">
+\rho Fdt=\mathbb{E}[dF]</script><p>It means that over a time interval $dt$, the total expected return on the investment opportunity, $\rho Fdt$, is equal to its expected rate of capital appreciation.</p>
+<p>We expand $dF$ using Ito’s Lemma, with the element $F_t(V)dt=0$ as $F$ is indifferent regarding to $t$</p>
+<script type="math/tex; mode=display">
+dF=F'(V)dV+{1\over 2}F''(V)(dV)^2</script><p>Substituting equation $\eqref{eq:geometric}$ for $dV$ into the expression, we get</p>
+<script type="math/tex; mode=display">
+\mathbb{E}[dF]=\alpha VF'(V)dt+{1\over 2}\sigma^2V^2F''(V)dt</script><p>Hence the Bellman equation becomes</p>
+<script type="math/tex; mode=display">
+{1\over 2}\sigma^2 V^2 F''(V)+\alpha VF'(V)-\rho F(V)=0</script><p>i.e.</p>
 <p>\begin{equation}\label{eq:differential}<br>{1\over 2}\sigma^2 V^2 F’’(V)+(\rho-\delta) VF’(V)-\rho F(V)=0 \tag{$\ddagger$}<br>\end{equation}</p>
 <p><strong>Note:</strong> For this problem to make sense, we must also assume that $\alpha&lt;\rho$; otherwise the integral in $\eqref{eq:geometric}$ could be made indefinitely larger by choosing a larger $T$. Thus waiting longer would always be a better policy, and the optimum would not exist. Let $\delta$ denote the difference $\rho-\alpha$, which is greater than $0$.</p>
-<p>In addition, $F(V)$ must satisfy the following boundary conditions:<br>\begin{equation}\label{eq:condition1}<br>F(0)=0 \<br>\end{equation}</p>
-<p>\begin{equation}\label{eq:condition2}<br>F(V^\ast)=V^\ast-I \<br>\end{equation}</p>
+<p>In addition, $F(V)$ must satisfy the following boundary conditions:<br>\begin{equation}\label{eq:condition1}<br>F(0)=0 \ <br>\end{equation}</p>
+<p>\begin{equation}\label{eq:condition2}<br>F(V^\ast)=V^\ast-I \\<br>\end{equation}</p>
 <p>\begin{equation}\label{eq:condition3}<br>F’(V^\ast)=1<br>\end{equation}</p>
 <p>Condition $\eqref{eq:condition1}$ arises from the observation that if $V$ goes to zero, it will stay at zero. Therefore the option to invest $F(V)$ will be of no value when $V=0$.</p>
-<p>Since $V^\ast$ is the critical value for optimal investment, condition $\eqref{eq:condition2}$ is a value-matching condition, which says that upon investing, the firm receives a net payoff $\Omega(V^\ast)=V^\ast-I$. As we have<br>$$<br>\begin{align<em>}<br>F(V)&amp;=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \<br>&amp;=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace<br>\end{align</em>}<br>$$</p>
-<p>Finally, condition $\eqref{eq:condition3}$ is the “smooth-pasting” condition that $F’(V^\ast)=\Omega’(V^\ast)$. If $F(V)$ were not continuous and smooth at the critical exercise point $V^\ast$, on could do better by exercising at a different point.</p>
+<p>Since $V^\ast$ is the critical value for optimal investment, condition $\eqref{eq:condition2}$ is a value-matching condition, which says that upon investing, the firm receives a net payoff $\Omega(V^\ast)=V^\ast-I$. As we have</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+F(V)&=\max\left\lbrace\Omega(V),{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace \\
+&=\max\left\lbrace V-I,{1\over 1+\rho dt}\bbE[F(V+dV,t+dt)\mid V]\right\rbrace
+\end{align*}</script><p>Finally, condition $\eqref{eq:condition3}$ is the “smooth-pasting” condition that $F’(V^\ast)=\Omega’(V^\ast)$. If $F(V)$ were not continuous and smooth at the critical exercise point $V^\ast$, on could do better by exercising at a different point.</p>
 <p>Note that equation $\eqref{eq:differential}$ is a second-order differential equation, but there are three boundary conditions that must be satisfied. The reason is that although the position of the first boundary ($V=0$) is known, the position of the second boundary is not. The “free boundary” $V^\ast$ must be determined as part of the solution, which needs the third condition.</p>
 <p>Equation $\eqref{eq:condition2}$ has some intuitive interpretations. $V-F(V)$ means that the firm gets the project valued $V$ and yet gives up the opportunity or option to invest $F(V)$. Thus the gain net of the opportunity cost is $V-F(V)$. The critical value $V^\ast$ is where this net gain equals the direct or tangible cost of investment $I$. Equivalently, we could write the equation as $V^\ast=I+F(V^\ast)$, setting the value of the project equal to the full cost of making the investment.</p>
 <p>Now we start solving $\eqref{eq:differential}$ using $\eqref{eq:condition1}$-$\eqref{eq:condition3}$.</p>
 <p>To satisfy the boundary condition $\eqref{eq:condition1}$, the solution must take the form<br>\begin{equation}\label{eq:fv}<br>F(V)=AV^{\beta_1}<br>\end{equation}<br>where $A$ is to be determined and $\beta_1$ is a known constant depends on $\sigma$, $\rho$, and $\delta$.</p>
 <p>Then utilizing the remaining conditions, we have<br>\begin{equation}\label{eq:Vstar}<br>V^\ast={\beta_1\over \beta_1-1}I<br>\end{equation}<br>and<br>\begin{equation}\label{eq:A}<br>A=(V^\ast-I)/(V^\ast)^{\beta_1}<br>\end{equation}</p>
-<p>Since the second-order homogeneous differential equation $\eqref{eq:differential}$ is linear in the dependent variable $F$ and its derivatives, its general solution can be expressed as a linear combination of any two independent solutions. Substitute $AV^\beta$ in to $\eqref{eq:differential}$, and it provides $\beta$ as a root of the quadratic equation<br>$$<br>{1\over 2}\sigma^2\beta(\beta-1)+(\rho-\delta)\beta-\rho=0<br>$$<br>which gives two roots $\beta_1&gt;1$ and $\beta_2&lt;0$. Hence, the general solution can be written as<br>$$<br>F(V)=A_1V^{\beta_1}+A_2V^{\beta_2}<br>$$<br>where $A_1$ and $A_2$ are to be determined.</p>
+<p>Since the second-order homogeneous differential equation $\eqref{eq:differential}$ is linear in the dependent variable $F$ and its derivatives, its general solution can be expressed as a linear combination of any two independent solutions. Substitute $AV^\beta$ in to $\eqref{eq:differential}$, and it provides $\beta$ as a root of the quadratic equation</p>
+<script type="math/tex; mode=display">
+{1\over 2}\sigma^2\beta(\beta-1)+(\rho-\delta)\beta-\rho=0</script><p>which gives two roots $\beta_1&gt;1$ and $\beta_2&lt;0$. Hence, the general solution can be written as</p>
+<script type="math/tex; mode=display">
+F(V)=A_1V^{\beta_1}+A_2V^{\beta_2}</script><p>where $A_1$ and $A_2$ are to be determined.</p>
 <p>In this problem, boundary condition $\eqref{eq:condition1}$ implies $A_2=0$, leaving the solution $\eqref{eq:fv}$.</p>
-<h4 id="Problem-Setup"><a href="#Problem-Setup" class="headerlink" title="Problem Setup"></a>Problem Setup</h4><p>Consider the opportunity to invest in a project. The payoff process $X$ of the underlying project follows a geometric Brownian motion,<br>$$<br>{dX_t\over X_t}=bdt+\sigma dW_t<br>$$</p>
-<p>Investment in $X$ can be made at any time $t$ at cost $I$, which is known and fixed. The performance functional of the agent, whose time preferences are described by a weighted discount function $h$, which is obtained from some weighting distribution $F$, is given by</p>
-<p>$$<br>J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]<br>$$</p>
-<p>The simple net present value rule is to invest as long as $V&gt;I$, but as McDonald and Siegel demonstrated, this is incorrect. Because future values of $X$ are unknown, there is an opportunity cost to investing today.</p>
+<h4 id="Problem-Setup"><a href="#Problem-Setup" class="headerlink" title="Problem Setup"></a>Problem Setup</h4><p>Consider the opportunity to invest in a project. The payoff process $X$ of the underlying project follows a geometric Brownian motion,</p>
+<script type="math/tex; mode=display">
+{dX_t\over X_t}=bdt+\sigma dW_t</script><p>Investment in $X$ can be made at any time $t$ at cost $I$, which is known and fixed. The performance functional of the agent, whose time preferences are described by a weighted discount function $h$, which is obtained from some weighting distribution $F$, is given by</p>
+<script type="math/tex; mode=display">
+J(x;u)=\mathbb{E}\left[\int_0^\infty e^{-r\tau_u}dF(r)(X_{\tau_u}-I)\right]</script><p>The simple net present value rule is to invest as long as $V&gt;I$, but as McDonald and Siegel demonstrated, this is incorrect. Because future values of $X$ are unknown, there is an opportunity cost to investing today.</p>
 <p>To ensure this to be a well-posed problem, let $b&lt;\inf\lbrace r\in[0,\infty):F(r)&gt;0\rbrace$, otherwise $w$ can grow to infinity as $t$ goes to infinity.</p>
 <h4 id="Investment-Behavior-Under-Weighted-Discounting"><a href="#Investment-Behavior-Under-Weighted-Discounting" class="headerlink" title="Investment Behavior Under Weighted Discounting"></a>Investment Behavior Under Weighted Discounting</h4><p>We solve the Bellman system explicitly when $X$ follows a geometric Brownian Motion and when $G(X)=x-I$ for arbitrary weighted discount functions.</p>
-<p>In this case, the Bellman equation is in the following form<br>$$<br>V(x)=\max_u\left\lbrace G(x),\mathcal{A}V(x)-rV(x)\right\rbrace<br>$$<br>which can be interpreted as<br>\begin{equation}\label{eq:equi}<br>\max\left\lbrace\mathcal{A}V(x)-\int_0^\infty rw(x;r)dF(r),G(x)-V(x)\right\rbrace=0 \tag{$\dagger$}<br>\end{equation}</p>
+<p>In this case, the Bellman equation is in the following form</p>
+<script type="math/tex; mode=display">
+V(x)=\max_u\left\lbrace G(x),\mathcal{A}V(x)-rV(x)\right\rbrace</script><p>which can be interpreted as<br>\begin{equation}\label{eq:equi}<br>\max\left\lbrace\mathcal{A}V(x)-\int_0^\infty rw(x;r)dF(r),G(x)-V(x)\right\rbrace=0 \tag{$\dagger$}<br>\end{equation}</p>
 <p>The solving scheme is based on the following economic intuition. First, in equilibrium, each member of the group uses the same stopping rule. This yields the value matching condition on $w(x;r)$ for all $r\geq0$. Let denote the triggering boundary above which investment is optimal by $x_\ast$. For $x&lt;x_\ast$ it holds that<br>\begin{equation}\label{eq:wpartial}<br>{1\over2}\sigma^2x^2w_{xx}(x;r)+bxw_x(x;r)-rw(x;r)=0<br>\end{equation}<br>with boundary conditions $w(0;r)=0$ and $w(x_\ast;r)=x_\ast-I$.</p>
 <p><strong>Note:</strong> In this setup, $w(x;r)\simeq F(V)$ in previous sector.</p>
-<p>Because the smooth-pasting condition is not imposed on $w$ but on the value function $V$, the solution to the ODE $\eqref{eq:wpartial}$ is given by<br>$$<br>w(x;r)=\left({x\over x_\ast}\right)^{\mu(r)}(x_\ast-I),\quad x&lt;x_\ast<br>$$<br>where $\mu(r)$ is the positive square root of the fundamental quadratic<br>$$<br>{1\over2}\sigma^2\mu^2+(b-{1\over2}\sigma^2)\mu-r=0<br>$$<br>and $x_\ast$ is unknown for now.</p>
-<p>Second, the equilibrium stopping rule maximizes the weighted average of the $w(x;r)$, i.e.,<br>$$<br>V(x)=\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)}dF(r)(x_\ast-I)<br>$$<br>Therefore, the smooth-pasting condition is given by $\int_0^\infty w_x(x_\ast;r)dF(r)=1$ and can be used to identify the triggering threshold $x_\ast$, i.e.,<br>$$<br>\left.\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)-1}{\mu(r)\over x_\ast}dF(r)(x_\ast-I),\right|_{x=x_\ast}=1<br>$$<br>It follows that<br>$$<br>x_\ast={A\over A-1}I<br>$$<br>where<br>$$<br>A=\int_0^\infty\mu(r)dF(r)<br>$$</p>
-
+<p>Because the smooth-pasting condition is not imposed on $w$ but on the value function $V$, the solution to the ODE $\eqref{eq:wpartial}$ is given by</p>
+<script type="math/tex; mode=display">
+w(x;r)=\left({x\over x_\ast}\right)^{\mu(r)}(x_\ast-I),\quad x<x_\ast</script><p>where $\mu(r)$ is the positive square root of the fundamental quadratic</p>
+<script type="math/tex; mode=display">
+{1\over2}\sigma^2\mu^2+(b-{1\over2}\sigma^2)\mu-r=0</script><p>and $x_\ast$ is unknown for now.</p>
+<p>Second, the equilibrium stopping rule maximizes the weighted average of the $w(x;r)$, i.e.,</p>
+<script type="math/tex; mode=display">
+V(x)=\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)}dF(r)(x_\ast-I)</script><p>Therefore, the smooth-pasting condition is given by $\int_0^\infty w_x(x_\ast;r)dF(r)=1$ and can be used to identify the triggering threshold $x_\ast$, i.e.,</p>
+<script type="math/tex; mode=display">
+\left.\int_0^\infty\left({x\over x_\ast}\right)^{\mu(r)-1}{\mu(r)\over x_\ast}dF(r)(x_\ast-I)\,\right|_{x=x_\ast}=1</script><p>It follows that</p>
+<script type="math/tex; mode=display">
+x_\ast={A\over A-1}I</script><p>where</p>
+<script type="math/tex; mode=display">
+A=\int_0^\infty\mu(r)dF(r)</script>
       
     </div>
     
